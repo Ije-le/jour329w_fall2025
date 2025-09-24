@@ -48,4 +48,4 @@ Legal Challenge
 
 I decided to clearly include word limitations in my prompt since that seemed to be a recurrent factor throughout the process. This time the result was way better, and although I would substitute legal challenge if I was really using these as tags, I find the final output more satisfactory.
 
-I don't think this was a very difficult process. It was not too deifficult to think of changes to the prompt, but what I would change about the process would be 
+I don't think this was a very difficult process. It was not too deifficult to think of changes to the prompt, and the only repetitive task was modifying my prompt to produce the desired results, which is quite normal when working with llms generally.
