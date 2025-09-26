@@ -9,7 +9,7 @@ Wes Moore -Maryland Governor
 Sean Duffy -Secretary of Transportation
 
 Organizations
--
+None
 
 Geographical location
 Baltimore
