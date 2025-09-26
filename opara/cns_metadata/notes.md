@@ -326,3 +326,188 @@ Now, compiling all this into the JSON structure as specified.
   "story_type": "feature",
   "impact": 4
 }
+
+Fourth story(Brother of Bel Air murder victim speaks at the Republican convention)
+Prompt:uv run python -m newspaper --url=https://cnsmaryland.org/2024/07/16/brother-of-bel-air-murder-victim-speaks-at-the-republican-convention/ -of=text | uv run llm -
+m groq/qwen/qwen3-32b "Extract structured metadata from this news story and return as JSON with these exa
+ct fields:
+{                                   
+  \"url\": \"the url of the story\",
+  \"people\": [\"list of up to 3 people with their titles/roles\"],
+  \"organizations\": [\"government agencies, companies, groups mentioned\"],  
+  \"locations\": [\"cities, counties, states, specific places\"],
+  \"topics\": [\"3-5 topic tags, max 2 words each\"],
+  \"story_type\": \"breaking news, feature, analysis, investigation, other\",
+  \"impact\": \"a rating of the story's importance on a scale from 1 to 5, taking into account its impact
+ on people\",
+  \"
+}"
+Response:
+<think>
+Okay, let's break this down. The user wants structured JSON from a news story with specific fields. First, I need to identify each field and extract the relevant information.
+
+Starting with the URL: the original story doesn't provide a URL, so this field will be an empty string. The user might expect a placeholder, but since it's not present in the input, just leave it as "".
+
+For people: the main people mentioned are Michael Morin (brother of Rachel Morin, speaking at the convention), Victor Antonio Martinez-Hernandez (the suspect), and Patricia Morin (Rachel's mother). Also mentioned is Randy Rice as the attorney. But the user wants up to 3. So pick Michael, Victor, and Patricia. Their roles are stated in the article.
+
+Organizations: The Harford County Sheriff's Office, Republican National Convention, and the CATO Institute are mentioned. Also, the Harford County Detention Center. The CATO Institute is a think tank. So include those.
+
+Locations: The key locations are Milwaukee (where the RNC was), Churchville, Maryland, Bel Air, Harford County, Maryland, El Salvador (victim's home country), Tulsa, Oklahoma, and Los Angeles. Wait, the arrest in Tulsa led to extradition to Maryland. So list those cities and states.
+
+Topics: Immigration policy debate, murder, border security, political conventions, victim's family. Those are the main themes here.
+
+Story type: This seems like a breaking news story because it's a recent event with ongoing developments (trial scheduled). Maybe "breaking news" or "other". Since it's a report on a current event with a scheduled trial, maybe "breaking news".
+
+Impact: On a scale of 1-5, this story is significant because it's a high-profile case influencing political discourse and potentially policy changes. The impact is high, so I'd rate it a 5.
+
+Need to check the JSON structure and ensure all required fields are included. Also, make sure the counts are correct for each list. Let me verify each part again.
+</think>
+
+{
+  "url": "",
+  "people": [
+    {
+      "name": "Michael Morin",
+      "title": "Brother of Rachel Morin, Speaker at Republican National Convention"
+    },
+    {
+      "name": "Victor Antonio Martinez-Hernandez",
+      "title": "Suspect in Rachel Morin's Murder, Charged with Murder and Rape"
+    },
+    {
+      "name": "Patricia Morin",
+      "title": "Mother of Rachel Morin, Spoke with Fox News Host Sean Hannity"
+    }
+  ],
+  "organizations": [
+    "Republican National Convention",
+    "Harford County Sheriff's Office",
+    "CATO Institute",
+    "Harford County Detention Center"
+  ],
+  "locations": [
+    "Milwaukee, Wisconsin",
+    "Churchville, Maryland",
+    "Bel Air, Maryland",
+    "Harford County, Maryland",
+    "El Salvador",
+    "Tulsa, Oklahoma",
+    "Los Angeles, California"
+  ],
+  "topics": [
+    "Immigration Policy",
+    "Murder Investigation",
+    "Border Security",
+    "Political Conventions",
+    "Victim Advocacy"
+  ],
+  "story_type": "breaking news",
+  "impact": 5
+}
+
+Fifth story (Election taakeaway)
+Prompt: uv run python -m newspaper --url=https://cnsmaryland.org/2023/11/10/election-takeaway-abortion-remains-a-potent-issue-for-voters/ -of=text | uv run llm -m groq/q
+wen/qwen3-32b "Extract structured metadata from this news story and return as JSON with these exact field
+s:
+{                                   
+  \"url\": \"the url of the story\",
+  \"people\": [\"list of up to 3 people with their titles/roles\"],
+  \"organizations\": [\"government agencies, companies, groups mentioned\"],  
+  \"locations\": [\"cities, counties, states, specific places\"],
+  \"topics\": [\"3-5 topic tags, max 2 words each\"],
+  \"story_type\": \"breaking news, feature, analysis, investigation, other\",
+  \"impact\": \"a rating of the story's importance on a scale from 1 to 5, taking into account its impact
+ on people\",
+  \"
+}"
+Response:
+<think>
+Okay, I need to extract structured metadata from the given news story. Let's start by breaking down each required field.
+
+First, the URL. The article mentions it's from Washington, but it doesn't have a specific URL provided. Since the user wants a URL, maybe it's implied to be a placeholder or assume it's an example. But the original text isn't from a real URL, so maybe I should leave it as a generic example or note that it's missing. Wait, the user might expect a placeholder URL. The instruction says to return the URL of the story, but the example in the query doesn't include a real URL. Hmm. Maybe I should use a generic one like "https://www.example.com/abortion-election-takeaway" or note that it's not provided. Since the user didn't specify how to handle missing URLs, perhaps just create a placeholder.
+
+Next, people. The article mentions several people: Kyle Kondik and J. Miles Coleman (authors of Sabato’s Crystal Ball), Jacob Rubashkin (analyst with Inside Elections), Mini Timmaraju (president and CEO of Reproductive Freedom For All), Sen. J.D. Vance, Sherrod Brown, Glenn Youngkin, and others like Nikki Haley, Ron DeSantis, etc. The user wants up to 3 people. The most significant ones are Kondik & Coleman, Rubashkin, and Mini Timmaraju. Let me include these three with their titles.
+
+Organizations: Sabato’s Crystal Ball (from UVA), Inside Elections, Reproductive Freedom For All, Republican National Committee (implied by GOP candidates), Democratic National Committee (since it's about Democrats), GOP (as a political party), and any other groups mentioned. Also, government bodies like the Supreme Court, Ohio Supreme Court, etc. But the user wants to include government agencies, companies, groups. So Sabato’s Crystal Ball is a group, Inside Elections is another, Reproductive Freedom For All, and the Supreme Court. Maybe GOP and Democrats as political parties.
+
+Locations: Ohio, Virginia, Kentucky, Pennsylvania, mentioned states. Specific places like Virginia's House of Delegates, Ohio's Senate, but the user wants states. So the states are Ohio, Virginia, Kentucky, Pennsylvania. Also, Washington as the location of the article's origin, but the user might want states mentioned in the story.
+
+Topics: The main topic is abortion rights. Others include election results, reproductive rights, Supreme Court (Dobbs v. Jackson), political impact, voter trends. Need to make 3-5 topics. Let's pick abortion rights, election, reproductive rights, Supreme Court, voter trends.
+
+Story type: The article is a political analysis of election results related to abortion, so it's a "analysis".
+
+Impact: On a scale of 1-5. Since the story discusses significant political outcomes affecting a key voter issue (abortion), which is a major topic in upcoming elections, impact would be high. Let's say 5.
+
+Double-check each field to ensure they match the required format and don't exceed limits. People list up to 3, organizations list relevant groups, locations as states mentioned. Topics concise and relevant.
+</think>
+
+{
+  "url": "https://www.example.com/abortion-election-takeaway",
+  "people": [
+    {
+      "name": "Kyle Kondik",
+      "role": "Co-author of Sabato’s Crystal Ball"
+    },
+    {
+      "name": "J. Miles Coleman",
+      "role": "Co-author of Sabato’s Crystal Ball"
+    },
+    {
+      "name": "Jacob Rubashkin",
+      "role": "Analyst with Inside Elections"
+    }
+  ],
+  "organizations": [
+    {
+      "name": "Sabato’s Crystal Ball",
+      "type": "Nonpartisan political analysis website"
+    },
+    {
+      "name": "Inside Elections",
+      "type": "Election analysis group"
+    },
+    {
+      "name": "Reproductive Freedom For All",
+      "type": "Advocacy group"
+    },
+    {
+      "name": "Republican Party (GOP)",
+      "type": "Political party"
+    },
+    {
+      "name": "Democratic Party",
+      "type": "Political party"
+    }
+  ],
+  "locations": [
+    {
+      "name": "Ohio",
+      "type": "State"
+    },
+    {
+      "name": "Virginia",
+      "type": "State"
+    },
+    {
+      "name": "Kentucky",
+      "type": "State"
+    },
+    {
+      "name": "Pennsylvania",
+      "type": "State"
+    },
+    {
+      "name": "United States",
+      "type": "Country"
+    }
+  ],
+  "topics": [
+    "abortion rights",
+    "election results",
+    "reproductive rights",
+    "Supreme Court",
+    "voter mobilization"
+  ],
+  "story_type": "analysis",
+  "impact": 5
+}
