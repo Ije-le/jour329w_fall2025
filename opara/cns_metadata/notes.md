@@ -890,6 +890,7 @@ If I had to repeat this process with 50 or 500 stories, editing the prompt to re
 I imagine that the pattern in the feedback from the LLMs would be more consistent if we found a way to run the prompt for all 50 or 500 URLS at the same time.
 This process would still leave us with the problem of manually going to CNS' website to copy and paste URLs in the prompt.
 If there was a way to scrape a website and get all the URLs in the tags we are working with, I think that would significantly improve this process.
-I also think we attempted something similar to this in the last AI class. If I remember correctly (and may be not), we gained access to newsroom's website through their API key and gained access to all their stories. I am not very sure how this can play out, but getting all the links relating to the tags we are working with might make for a faster process.
-
+Something we attempted in the last AI class might be helpful with this process. If I remember correctly (and may be not), we learned that we could gain access to a newsroom's website using their API key and access details about their stories. We did write some python codes then too to get specific information from the website. I am not very sure how this can be made to work in this instance, but getting access to all the stories might also mean getting access to all the links relating to the tags we are working with.
+Putting my prompts and responses in a table might have helped ease the documentation and entire process of this exercise.
+If I had to show these notes to someone else, I'd find a way to put the three outputs in a tabular form. Scrolling through the responses was not very easy for me, and I'm not even sure how you will read it.
 
