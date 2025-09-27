@@ -511,3 +511,8 @@ Double-check each field to ensure they match the required format and don't excee
   "story_type": "analysis",
   "impact": 5
 }
+
+
+EVAL
+I really, really hated that llm had to write out several paragraphs reading back my instructions to me. I really hated that. It felt like a waste of my time. I understand that qwen might have been working like Gemini's thinking model, but I feel like writing out the thought process not only wasted my time, but my space. I had to scroll through my notes to compare my responses with Qwen and Claude's, and the unneccesary details made that totally cumbersome. One thing with Qwen's reaponse: It did not reflect the links while replying, even though I included links to all my prompts. In all of its thinking exercises, it decieved itself into believing that I did not provide it with a url.
+I also feel like Qwen might have had some problems with the organisation section. Some "organizations" were listed which are not actually organizations. For instance, I would not list the Republican National Convention as an organization or 
