@@ -768,7 +768,124 @@ Another thing: Both lLMs had a hard time returning URLs in their responses. Groq
 To address these two issues, I went back into the terminal, asked Groq to give me responses without thoughts and emphaized in my prompt that they should return the link. I also noted that the link is already a part of the prompt.
 Here are the prompts and results:
 
+Claude: uv run python -m newspaper --url=https://cnsmaryland.org/2023/11/10/election-takeaway-abortion-remains-a-potent-issue-for-voters/ -of=text | uv run llm -m anthropic/claude-sonnet-4-0 "Extract structured metadata from the news story in this url: https://cnsmaryland.org/2023/11/10/election-takeaway-abortion-remains-a-potent
+-issue-for-voters/ and return as JSON with these exact fields:
+{                                   
+  \"url\": \"the url of the story\",
+  \"people\": [\"list of up to 3 people with their titles/roles\"],
+  \"organizations\": [\"government agencies, companies, groups mentioned\"],  
+  \"locations\": [\"cities, counties, states, specific places\"],
+  \"topics\": [\"3-5 topic tags, max 2 words each\"],
+  \"story_type\": \"breaking news, feature, analysis, investigation, other\",
+  \"impact\": \"a rating of the story's importance on a scale from 1 to 5, taking into account its impact on people\",
+  \"
+}"
+Response:
+```json
+{
+  "url": "https://cnsmaryland.org/2023/11/10/election-takeaway-abortion-remains-a-potent-issue-for-voters/",
+  "people": [
+    "Andy Beshear - Democratic Governor of Kentucky",
+    "J.D. Vance - Republican Senator from Ohio", 
+    "Glenn Youngkin - Republican Governor of Virginia"
+  ],
+  "organizations": [
+    "Supreme Court",
+    "University of Virginia's Center for Politics",
+    "Sabato's Crystal Ball",
+    "Inside Elections",
+    "Reproductive Freedom For All",
+    "Gallup",
+    "Pennsylvania Supreme Court"
+  ],
+  "locations": [
+    "Ohio",
+    "Virginia", 
+    "Kentucky",
+    "Pennsylvania",
+    "Washington",
+    "Kansas",
+    "California",
+    "New York",
+    "South Carolina",
+    "New Jersey",
+    "Florida"
+  ],
+  "topics": [
+    "abortion rights",
+    "elections",
+    "reproductive freedom",
+    "Dobbs decision",
+    "ballot measures"
+  ],
+  "story_type": "analysis",
+  "impact": 4
+}
+```
+This worked for Claude. I don't understand why I have to paste the URL twice in the same prompt, but, anyway.
 
+Groq: uv run python -m newspaper --url=https://cnsmaryland.org/2023/11/10/election-takeaway-abortion-remains-a-potent-issue-for-voters/ -of=text | uv run llm -m groq/qwen/qwen3-32b "Without including your thinking process, extract structured metadata from the news story in this url: https://cnsmaryland.org/2023/11/10/election-takeaway-abortion-remains-a-potent-issue-for-voters/ and return as JSON with these exact fields. Remember, no yapping:
+{
+  \"url\": \"the url of the story\",
+  \"people\": [\"list of up to 3 people with their titles/roles\"],
+  \"organizations\": [\"government agencies, companies, groups mentioned\"],  
+  \"locations\": [\"cities, counties, states, specific places\"],
+  \"topics\": [\"3-5 topic tags, max 2 words each\"],
+  \"story_type\": \"breaking news, feature, analysis, investigation, other\",
+  \"impact\": \"a rating of the story's importance on a scale from 1 to 5, taking into account its impact on people\",
+  \"
+}"
+Response:
+<think>
+
+</think>
+
+```json
+{
+  "url": "https://cnsmaryland.org/2023/11/10/election-takeaway-abortion-remains-a-potent-issue-for-voters/",
+  "people": [
+    {
+      "name": "Kyle Kondik",
+      "title": "co-author at Sabato’s Crystal Ball"
+    },
+    {
+      "name": "J. Miles Coleman",
+      "title": "co-author at Sabato’s Crystal Ball"
+    },
+    {
+      "name": "Jacob Rubashkin",
+      "title": "analyst with Inside Elections"
+    }
+  ],
+  "organizations": [
+    "University of Virginia’s Center for Politics",
+    "Sabato’s Crystal Ball",
+    "Inside Elections",
+    "Reproductive Freedom For All",
+    "MSNBC’s Morning Joe",
+    "Gallup",
+    "U.S. Supreme Court",
+    "Republican National Committee",
+    "Democratic National Committee"
+  ],
+  "locations": [
+    "Ohio",
+    "Virginia",
+    "Kentucky",
+    "Pennsylvania"
+  ],
+  "topics": [
+    "abortion rights",
+    "elections",
+    "reproductive rights",
+    "political impact",
+    "voting patterns"
+  ],
+  "story_type": "analysis",
+  "impact": 5
+}
+```
+It worked!
 
 
 
