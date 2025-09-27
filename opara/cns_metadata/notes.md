@@ -755,8 +755,21 @@ Response:
 }
 ```
 
+EVALUATION
+My metadata was similar in many ways to the results I got back from the LLMs. Even though there were a few differences, we seemd to be on the same page more often than not, especially with regards to names, locations and story type. I recorded more differnces in tags, and impact, but not significantly. Where I noticed significant differences was with organizations.
+I did not quite agree with the LLM's responses for organizations in three or so cases. An example is Groq's Qwen model listing a bill, Blueprint for Maryland's Future, as an organization. Claude did not do this, but in another instance, both Claude and Qwen listed 'Republican National Convention' under organization.
+This error was rather prominent with my first story, and I assume the reason for this is that there were not that many organizations listed in the story. The llms probably had to scramble to fill the void, and of all the responses provided in that section, only 'Department of Transportation,' included in Groq's response could pass for an organization. The problem is that Department of Transportation was not mentioned in the story. Groq smuggled that in. Again, Claude did not, but her responses included things like Maryland congressional delegation, and port of Baltimore as organizations which don't quite fit.
+
+While most of the three response were alike, both LLMs sounded more like each other than me in a some instances. Their responses for tags were also quite impressive, and for my fourth story, I think they did a much better job than I in creating two-word tags. For instance, both llms gave "border security" and "Immigration Policy" as tags and I didn't even though they are perfect for the story.
+I think that Claude and Groq did an amazing job here. Claude's responses were very impressive and more reliable than Qwen, but considering that I paid Claude for this job, while Qwen did it for free, I am particularly impressed by her output.
+
+One thing I utterly disliked in this process is that Qwen included her thoughts in the responses she gave. And her thoughts were just too long, spanning nine paragraphs in some cases, and mostly just reading back my instructions to me. At first it really upset me, because it would make my notes very rowdy and worsen the already tediuos task of scrolling up and down my notes to compare between responses. But it became a little less upsetting when I noticed that she gave some explanation for her rating under the impact session. Still, I did not need all that information at all. I understand that Qwen might have been working like Gemini's thinking model, but I feel like writing out the thought process not only wasted my time, but my space. And maybe even my tokens?
+Another thing: Both lLMs had a hard time returning URLs in their responses. Groq returned two fake URLs. Claude said "URL not provided," in some cases, even though the URLs were in the prompts, and they had to have accessed the URLs to respond to provide any output anyway.
+To address these two issues, I went back into the terminal, asked Groq to give me responses without thoughts and emphaized in my prompt that they should return the link. I also noted that the link is already a part of the prompt.
+Here are the prompts and results:
 
 
-EVAL
-I really, really hated that llm had to write out several paragraphs reading back my instructions to me. I really hated that. It felt like a waste of my time. I understand that qwen might have been working like Gemini's thinking model, but I feel like writing out the thought process not only wasted my time, but my space. I had to scroll through my notes to compare my responses with Qwen and Claude's, and the unneccesary details made that totally cumbersome. One thing with Qwen's reaponse: It did not reflect the links while replying, even though I included links to all my prompts. In all of its thinking exercises, it decieved itself into believing that I did not provide it with a url.
-I also feel like Qwen might have had some problems with the organisation section. Some "organizations" were listed which are not actually organizations. For instance, I would not list the Republican National Convention as an organization or 
+
+
+
+
