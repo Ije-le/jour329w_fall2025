@@ -886,7 +886,10 @@ Response:
 }
 ```
 It worked!
-
-
+If I had to repeat this process with 50 or 500 stories, editing the prompt to replace the URLS will definitely be a problem. Scrolling back to update the URL for this excercise was very exhausting.
+I imagine that the pattern in the feedback from the LLMs would be more consistent if we found a way to run the prompt for all 50 or 500 URLS at the same time.
+This process would still leave us with the problem of manually going to CNS' website to copy and paste URLs in the prompt.
+If there was a way to scrape a website and get all the URLs in the tags we are working with, I think that would significantly improve this process.
+I also think we attempted something similar to this in the last AI class. If I remember correctly (and may be not), we gained access to newsroom's website through their API key and gained access to all their stories. I am not very sure how this can play out, but getting all the links relating to the tags we are working with might make for a faster process.
 
 
