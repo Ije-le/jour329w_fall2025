@@ -123,7 +123,7 @@ abortion access
 The story is an analysis
 Impact: 5
 
-llm
+llm Groq(Qwen)
 
 First story (Trump administration warns Maryland against “DEI” contracts in Key Bridge rebuild)
 Prompt: uv run python -m newspaper --url=https://cnsmaryland.org/2025/09/19/trump-administration-warns-maryland-against-dei-contracts-in-key-bridge-rebuild/ -of=text | uv run llm -m groq/qwen/qwen3-32b "Extract structured metadata from this news story and return as JSON with these exact fields:
@@ -226,7 +226,7 @@ Impact rating: High, as birthright citizenship is a fundamental issue affecting 
 Now, structuring this into the JSON as per the required fields.
 </think>
 
-```json
+json
 {
   "url": "https://www.capnews.org/2018/05/24/meny-and-the-fight-against-trumps-birthright-citizenship-order/",
   "people": [
@@ -296,7 +296,7 @@ Impact: The story discusses significant changes to education funding and teacher
 Now, compiling all this into the JSON structure as specified.
 </think>
 
-```json
+json
 {
   "url": "",
   "people": [
@@ -511,6 +511,250 @@ Double-check each field to ensure they match the required format and don't excee
   "story_type": "analysis",
   "impact": 5
 }
+
+llm Claude
+First Story()
+Prompt: uv run python -m newspaper --url=https://cnsmaryland.org/2025/09/19/trump-administration-warns-maryland-against-dei-contracts-in-key-bridge-rebuild/ -of=text | uv run llm -m anthropic/claude-sonnet-4-0 "Extract structured metadata from this news story and return as JSON with these exact fields:{
+  \"url\": \"the url of the story\",
+  \"people\": [\"list of up to 3 people with their titles/roles\"],
+  \"organizations\": [\"government agencies, companies, groups mentioned\"],  
+  \"locations\": [\"cities, counties, states, specific places\"],
+  \"topics\": [\"3-5 topic tags, max 2 words each\"],
+  \"story_type\": \"breaking news, feature, analysis, investigation, other\",
+  \"impact\": \"a rating of the story's importance on a scale from 1 to 5, taking into account its impact on people\",
+  \"
+}"
+Response:
+```json
+{
+  "url": "not provided",
+  "people": [
+    "Sean Duffy - Secretary of Transportation",
+    "Wes Moore - Maryland Governor", 
+    "Donald Trump - President"
+  ],
+  "organizations": [
+    "Trump administration",
+    "Maryland congressional delegation",
+    "Congress",
+    "Port of Baltimore"
+  ],
+  "locations": [
+    "Maryland",
+    "Baltimore",
+    "Washington",
+    "Francis Scott Key Bridge"
+  ],
+  "topics": [
+    "DEI contracts",
+    "Bridge reconstruction",
+    "Federal funding",
+    "Infrastructure",
+    "Government oversight"
+  ],
+  "story_type": "breaking news",
+  "impact": 4
+}
+```
+
+Second story()
+Prompt: uv run python -m newspaper --url=https://cnsmaryland.org/2025/05/19/nine-people-stand-between-her-child-and-citizenship-its-a-fight-she-cant-afford-to-lose/ -of=text | uv run llm -m anthropic/claude-
+sonnet-4-0 "Extract structured metadata from this news story and return as JSON with these exact fields:
+{                                   
+  \"url\": \"the url of the story\",
+  \"people\": [\"list of up to 3 people with their titles/roles\"],
+  \"organizations\": [\"government agencies, companies, groups mentioned\"],  
+  \"locations\": [\"cities, counties, states, specific places\"],
+  \"topics\": [\"3-5 topic tags, max 2 words each\"],
+  \"story_type\": \"breaking news, feature, analysis, investigation, other\",
+  \"impact\": \"a rating of the story's importance on a scale from 1 to 5, taking into account its impact on people\",
+  \"
+}"
+
+Response:
+```json
+{
+  "url": "not provided",
+  "people": [
+    "Meny - pregnant plaintiff in birthright citizenship lawsuit",
+    "Donald Trump - President who issued executive order",
+    "Leidy Perez - Policy and communications director at Asylum Seeker Advocacy Project"
+  ],
+  "organizations": [
+    "Asylum Seeker Advocacy Project",
+    "CASA",
+    "Supreme Court",
+    "Department of Justice",
+    "U.S. Citizenship and Immigration Services",
+    "U.S. Customs and Border Protection"
+  ],
+  "locations": [
+    "California",
+    "Honduras", 
+    "Maryland",
+    "El Salvador",
+    "Florida",
+    "Cuba",
+    "New Jersey",
+    "Mexico"
+  ],
+  "topics": [
+    "Birthright Citizenship",
+    "Immigration Law",
+    "Supreme Court",
+    "Asylum Seekers",
+    "Executive Order"
+  ],
+  "story_type": "feature",
+  "impact": 5
+}
+```
+Third story()
+Prompt: uv run python -m newspaper --url=https://cnsmaryland.org/2025/04/08/maryland-will-slow-not-stop-its-investment-in-schools/ -of=text | uv run llm -m anthropic/claude-sonnet-4-0 "Extract structured met
+adata from this news story and return as JSON with these exact fields:
+{                                   
+  \"url\": \"the url of the story\",
+  \"people\": [\"list of up to 3 people with their titles/roles\"],
+  \"organizations\": [\"government agencies, companies, groups mentioned\"],  
+  \"locations\": [\"cities, counties, states, specific places\"],
+  \"topics\": [\"3-5 topic tags, max 2 words each\"],
+  \"story_type\": \"breaking news, feature, analysis, investigation, other\",
+  \"impact\": \"a rating of the story's importance on a scale from 1 to 5, taking into account its impact on people\",
+  \"
+}"
+Response:
+```json
+{
+  "url": "",
+  "people": [
+    "Gov. Wes Moore",
+    "Sen. Jim Rosapepe - Democrat representing Prince George's and Anne Arundel Counties",
+    "Sen. Jack Bailey - Republican representing Calvert and St. Mary's Counties"
+  ],
+  "organizations": [
+    "Maryland General Assembly",
+    "House and Senate",
+    "Department of Education"
+  ],
+  "locations": [
+    "Annapolis",
+    "Maryland",
+    "Prince George's County",
+    "Anne Arundel County",
+    "Calvert County",
+    "St. Mary's County",
+    "Carroll County",
+    "Frederick County",
+    "Eastern Shore"
+  ],
+  "topics": [
+    "Education funding",
+    "Budget cuts",
+    "Teacher recruitment",
+    "School reform",
+    "State politics"
+  ],
+  "story_type": "breaking news",
+  "impact": 4
+}
+```
+Fourth story()
+Prompt: uv run python -m newspaper --url=https://cnsmaryland.org/2024/07/16/brother-of-bel-air-murder-victim-speaks-at-the-republican-convention/ -of=text | uv run llm -m anthropic/claude-sonnet-4-0 "Extract
+ structured metadata from this news story and return as JSON with these exact fields:
+{                                   
+  \"url\": \"the url of the story\",
+  \"people\": [\"list of up to 3 people with their titles/roles\"],
+  \"organizations\": [\"government agencies, companies, groups mentioned\"],  
+  \"locations\": [\"cities, counties, states, specific places\"],
+  \"topics\": [\"3-5 topic tags, max 2 words each\"],
+  \"story_type\": \"breaking news, feature, analysis, investigation, other\",
+  \"impact\": \"a rating of the story's importance on a scale from 1 to 5, taking into account its impact on people\",
+  \"
+}"
+Response:
+```json
+{
+  "url": "",
+  "people": [
+    "Michael Morin - Brother of murder victim, RNC speaker",
+    "Rachel Morin - Murder victim, mother of five",
+    "Victor Antonio Martinez-Hernandez - Suspect charged with murder"
+  ],
+  "organizations": [
+    "Republican National Convention",
+    "Harford County Sheriff's Office",
+    "ICE",
+    "CATO Institute",
+    "Fox News"
+  ],
+  "locations": [
+    "Milwaukee, Wisconsin",
+    "Bel Air, Maryland",
+    "Harford County, Maryland",
+    "El Salvador",
+    "Los Angeles, California",
+    "Tulsa, Oklahoma"
+  ],
+  "topics": [
+    "Immigration Policy",
+    "Border Security",
+    "Murder Case",
+    "Political Convention",
+    "Crime Statistics"
+  ],
+  "story_type": "feature",
+  "impact": 4
+}
+```
+Fifth story()
+Prompt:uv run python -m newspaper --url=https://cnsmaryland.org/2023/11/10/election-takeaway-abortion-remains-a-potent-issue-for-voters/ -of=text | uv run llm -m anthropic/claude-sonnet-4-0 "Extract structu
+red metadata from this news story and return as JSON with these exact fields:
+{                                   
+  \"url\": \"the url of the story\",
+  \"people\": [\"list of up to 3 people with their titles/roles\"],
+  \"organizations\": [\"government agencies, companies, groups mentioned\"],  
+  \"locations\": [\"cities, counties, states, specific places\"],
+  \"topics\": [\"3-5 topic tags, max 2 words each\"],
+  \"story_type\": \"breaking news, feature, analysis, investigation, other\",
+  \"impact\": \"a rating of the story's importance on a scale from 1 to 5, taking into account its impact on people\",
+  \"
+}"
+Response:
+```json
+{
+  "url": "",
+  "people": [
+    "Andy Beshear - Democratic Governor of Kentucky",
+    "Glenn Youngkin - Republican Governor of Virginia", 
+    "J.D. Vance - Republican Senator from Ohio"
+  ],
+  "organizations": [
+    "Supreme Court",
+    "University of Virginia Center for Politics",
+    "Reproductive Freedom For All",
+    "Inside Elections",
+    "Gallup",
+    "MSNBC"
+  ],
+  "locations": [
+    "Ohio",
+    "Virginia", 
+    "Kentucky",
+    "Pennsylvania",
+    "Washington"
+  ],
+  "topics": [
+    "Abortion Rights",
+    "Elections",
+    "Dobbs Decision",
+    "Reproductive Freedom",
+    "Political Impact"
+  ],
+  "story_type": "analysis",
+  "impact": 4
+}
+```
+
 
 
 EVAL
