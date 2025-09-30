@@ -16,5 +16,7 @@ What filters might be useful?:
 A search bar
 An option to filter by beats
 Arrows below search results that let users skip to other pages, like with Google. Since results will be returned alphabetically, this will help with finding results further down.
-                        BUILDING THE BROWSER
-After my first prompt, I got a pretty basic interface. It looked like a table with a list of tags and the number of times they'd been used. It didnt have any filter buttons because I didnt include it initially, so I updated my prompt to incliude that.
+
+                        Notes:
+After my first prompt, I got a pretty basic interface. It had barely any colors and looked like a table with a list of tags and the number of times they'd been used. It didnt have any filter buttons because I didnt include it initially, so I updated my prompt to incliude that. It also had no colors. I sourced for hex codes closer to CNS colors, since I didnt have the hex codes for CNS readily available. Although I wanted the tags to have two story previews under each tag, I wasn't sure how this would work, since we do not have that data available. I decided to try and see what Copilot would do in this instance. My thought was that I would have empty links that can be updated later under each tag, but Copilot produces previews using the summarization of the stories, where available (I didn't realize existed at first).
+I took a look at the webpage and though everything seemed to work just fine, the search bar for the tags was quite limiting because users had to know exactly what tags they were looking for to find anything, so I updated the prompt to return a search bar that doubled as a drop down option. That fixed the problem.

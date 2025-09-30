@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tagsList = document.getElementById('tagsList');
     const pagination = document.getElementById('pagination');
     const beatFilter = document.getElementById('beatFilter');
+    const tagsDatalist = document.getElementById('tagsDatalist');
     let tags = [];
     let filteredTags = [];
     let allStories = [];
@@ -28,6 +29,13 @@ document.addEventListener('DOMContentLoaded', function() {
             count: tag.count
         }));
         tags.sort((a, b) => a.name.localeCompare(b.name));
+        // Populate datalist for search dropdown
+        tagsDatalist.innerHTML = '';
+        tags.forEach(tag => {
+            const option = document.createElement('option');
+            option.value = tag.name;
+            tagsDatalist.appendChild(option);
+        });
         allStories = storiesData;
         filteredTags = tags;
         renderTags();
@@ -63,9 +71,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Add story previews
             const stories = allStories.filter(story => story.tags && story.tags.some(t => t.toLowerCase() === tag.name.toLowerCase()));
+            const previewDiv = document.createElement('div');
+            previewDiv.className = 'story-previews';
             if (stories.length > 0) {
-                const previewDiv = document.createElement('div');
-                previewDiv.className = 'story-previews';
                 for (let i = 0; i < Math.min(2, stories.length); i++) {
                     const story = stories[i];
                     const storyDiv = document.createElement('div');
@@ -73,6 +81,17 @@ document.addEventListener('DOMContentLoaded', function() {
                     storyDiv.innerHTML = `<a href="${story.link}" target="_blank" class="story-title">${story.title}</a><div class="story-summary">${story.summary}</div>`;
                     previewDiv.appendChild(storyDiv);
                 }
+            }
+            if (stories.length < 2) {
+                const missingCount = 2 - stories.length;
+                for (let i = 0; i < missingCount; i++) {
+                    const placeholder = document.createElement('div');
+                    placeholder.className = 'story-preview';
+                    placeholder.innerHTML = '<span class="story-title">Preview to be updated soon.</span>';
+                    previewDiv.appendChild(placeholder);
+                }
+            }
+            if (stories.length > 0 || stories.length < 2) {
                 li.appendChild(previewDiv);
             }
             tagsList.appendChild(li);
