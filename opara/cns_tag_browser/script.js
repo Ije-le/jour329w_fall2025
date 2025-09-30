@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 for (let i = 0; i < missingCount; i++) {
                     const placeholder = document.createElement('div');
                     placeholder.className = 'story-preview';
-                    placeholder.innerHTML = '<span class="story-title">Preview to be updated soon.</span>';
+                    placeholder.innerHTML = '<span class="preview-placeholder">Preview to be updated soon</span>';
                     previewDiv.appendChild(placeholder);
                 }
             }
