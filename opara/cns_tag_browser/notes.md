@@ -12,5 +12,9 @@ How should the tags be sorted by default?:
     The tags should be sorted alphabetically.
 What filters might be useful?:
     Filtering by the beats covered by the newsroom might help. So if a user is searching for "Donald Trump" tag in connection to a health story, it might help to filter your search down to the health beat rather than looking through everything that has that tag in it.
-                    FEATURE WISHLIST
-            
+                           FEATURE WISHLIST
+A search bar
+An option to filter by beats
+Arrows below search results that let users skip to other pages, like with Google. Since results will be returned alphabetically, this will help with finding results further down.
+                        BUILDING THE BROWSER
+After my first prompt, I got a pretty basic interface. It looked like a table with a list of tags and the number of times they'd been used. It didnt have any filter buttons because I didnt include it initially, so I updated my prompt to incliude that.
