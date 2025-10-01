@@ -7,11 +7,9 @@
 </head>
 <body>
     <div class="masthead">
-        <span class="masthead-title">CNS Tag Browser</span>
-    </div>
-    <div class="container">
-        <div class="filters">
-            <select id="beatFilter">
+        <span class="masthead-title" style="margin: 0 auto;">CNS Tag Browser</span>
+        <div class="masthead-controls far-right">
+            <select id="beatFilter" class="masthead-btn">
                 <option value="">All Beats</option>
                 <option value="Community">Community</option>
                 <option value="Crime">Crime</option>
@@ -19,12 +17,28 @@
                 <option value="Lifestyle">Lifestyle</option>
                 <option value="Politics">Politics</option>
             </select>
+            <button id="randomTagBtn" type="button" class="masthead-btn">Show Random Tag</button>
         </div>
-    <input type="text" id="searchBar" placeholder="Search tags..." list="tagsDatalist">
-    <datalist id="tagsDatalist"></datalist>
+    </div>
+    <div class="container">
+        <div class="compare-tags-bar">
+            <select id="compareTag1" class="filter-btn"><option value="">Select Tag 1</option></select>
+            <select id="compareTag2" class="filter-btn"><option value="">Select Tag 2</option></select>
+            <button id="compareBtn" class="filter-btn">Compare Tags</button>
+        </div>
+        <div id="compareTagsSection" style="display:none; margin-bottom: 24px;"></div>
+        <div id="randomTagSection" style="display:none; margin-bottom: 24px;"></div>
+        <input type="text" id="searchBar" placeholder="Search tags..." list="tagsDatalist">
+        <datalist id="tagsDatalist"></datalist>
         <ul id="tagsList"></ul>
     </div>
     <div class="pagination" id="pagination"></div>
+    <div class="similar-tags-bar" style="margin: 40px auto 0 auto; max-width: 900px;">
+        <h3>Find Similar Tags</h3>
+        <select id="similarTagSelect" class="filter-btn"><option value="">Select a Tag</option></select>
+        <button id="findSimilarBtn" class="filter-btn">Find Similar Tags</button>
+        <div id="similarTagsSection" style="margin-top: 18px;"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
