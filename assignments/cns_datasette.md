@@ -138,7 +138,7 @@ Now we can use embeddings to find semantically similar stories.
 On the command line, we can use `llm similar` to do this. We'll need to refer to a _collection_ of embeddings; in our case, that'll be stories. You can see the list of collections like so:
 
 ```bash
-uv run llm collections list
+uv run llm collections list -d cns.db
 ```
 
 And then run the similar command. For example:
