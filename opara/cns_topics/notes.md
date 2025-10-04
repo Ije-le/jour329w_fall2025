@@ -1,9 +1,6 @@
 ## CNS Topic Analysis 10/01/2025
 
-Some topics did seem to overlap and could have been merged to [still give the same effect]
-Examples are Commerce, Trade. Law, Justice.
-
-A Maryland-specific topic that I think is important and csn be added to the list is drug use. There were some stories on cannabis data, driving under its influence and the business side of it.
+A Maryland-specific topic that I think is important and can be added to the list is drug use. There were some stories on cannabis data, driving under its influence and the business side of it.
 
 1. Agriculture and Food: Frequent coverage by CNS and I wouldn't think of this as a topic, but it totally aligns with CNS' coverage of food and agriculture, so I will keep it.
 2. Animals: A weird topic to me, but CNS does cover a lot about pets and animals, and given the premium that people place on their pets in this society, I'll say this is a valid topic.
@@ -12,7 +9,7 @@ A Maryland-specific topic that I think is important and csn be added to the list
 5. Civil Rights
 6. Commerce: Focuses on more local issues, but I feel it can be merged with Trade
 7. Congress: I might consider putting this under a 'Politics' topic, but that might get to broad, so I'll leave as is.
-8. Justice: Would merge this with the Law topic
+8. Justice: Would merge this with "Law"
 9. Budget
 10. Education: Clear, frequesnt coverage
 11. Elections: Clear definition, frequent coverage.
@@ -81,4 +78,4 @@ Description and explanation of updated topics:
 Trade & Commerce: This topic is a merger of two topics that stood alone: Trade, Commerce. While stories under 'Trade' focus on international stories and Commerce is more local, some of the stories on international trade by CNS also highlighted local impact which allows for an intersection of both topics.
 Law & Justice: This combined thee topics "Law" and "Justice" into one. They also seemed to have court proceedings in common.
 Politics: I created this topic by merging "Federal government and politics" and "Maryland government and politics". While I understand that one focuses on state while the other focuses on the federal governnment, I feel that these could have fallen under the topic "politics." The kind of issues reported on CNS about the federal govt and Maryland govt seemed to overlap. 
-Native America: I took this out totally because based on CNS' coverage of issues affecting Native Americans, the Civil Rights topic could have still worked well for this.
+Native Americans: I took this out totally because based on CNS' coverage of issues affecting Native Americans, the Civil Rights topic could have still worked well for this.
