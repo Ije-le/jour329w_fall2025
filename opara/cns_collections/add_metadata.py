@@ -69,13 +69,6 @@ def main():
       "race": ["black", "white" "hispanic"]
     }
     """
-
-    # Process each story
-    enhanced_stories = []
-    for i, story in enumerate(stories):
-        print(f"Processing {i+1}/{len(stories)}: {story['title']}")
-        
-        metadata = extract_metadata(story['title'], story['content'], schema_prompt, args.model)
     # Process each story
     enhanced_stories = []
     for i, story in enumerate(stories):

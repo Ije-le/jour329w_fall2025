@@ -55,8 +55,8 @@ Choose a topic from the list that has a good number of stories (aim for at least
 # Replace 'Elections' with your actual topic name as it appears in the data
 uv run sqlite-utils memory ../../data/story_summaries.json \
   "SELECT * FROM story_summaries 
-   WHERE topic = 'Elections'" \
-  --json-cols > story_summaries_elections.json
+   WHERE topic = 'Baltimore'" \
+  --json-cols > story_summaries_baltimore.json
 ```
 
 **Examples for other topics:**
@@ -237,10 +237,10 @@ Run the script with the required arguments:
 
 ```bash
 # Example usage - replace with your actual input file and preferred model
-uv run python add_metadata.py --model gpt-4o-mini --input story_summaries_housing.json
+uv run python add_metadata.py --model gpt-4o-mini --input story_summaries_baltimore.json
 
 # Or use Claude (if you have the API key set)
-uv run python add_metadata.py --model claude-3.5-haiku --input story_summaries_housing.json
+uv run python add_metadata.py --model claude-3.5-haiku --input story_summaries_baltimore.json
 
 # Run without arguments to see help
 uv run python add_metadata.py
