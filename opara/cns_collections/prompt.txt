@@ -1,0 +1,12 @@
+You are creating a reporter’s guide for someone newly assigned to cover stories about Baltimore.
+Access the enhanced_beat_stories.json file in the cns_collections directory, where each entry contains the following fields:
+
+link: url of the story
+title: the headline of the story
+topic: the beat or general focus area (in this case, “Baltimore”)
+tags: key themes, institutions, and recurring issues
+summary: a short summary of what the story is about
+content: the text of the story
+metadata: information about people, organizations, geography
+
+Using this data, produce a comprehensive guide for a reporter covering the Baltimore beat in your newsroom.

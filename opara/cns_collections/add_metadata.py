@@ -63,10 +63,9 @@ def main():
     # Define your schema prompt based on your beat - CUSTOMIZE THIS!
     schema_prompt = """
     {
-      "people": ["Yvette Gordon", "Tia Hamilton"],
-      "geographic_focus": "Baltimore City",
-      "key_institutions": ["Department of Justice", "Department of Transportation"],
-      "race": ["black", "white" "hispanic"]
+      "people": ["Names of all persons mentioned, for example: Yvette Gordon, Tia Hamilton"],
+      "geographic_focus": "Location the story is focused on, for example: Baltimore City",
+      "key_institutions": ["Private or public organizations mentioned in the story, for example: Department of Justice, Department of Transportation"]
     }
     """
     # Process each story
