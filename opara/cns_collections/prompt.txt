@@ -1,12 +1,7 @@
-You are creating a reporter’s guide for someone newly assigned to cover stories about Baltimore.
-Access the enhanced_beat_stories.json file in the cns_collections directory, where each entry contains the following fields:
+Create a narrative guide in Markdown format that explains, using examples and lessons from the attached JSON, what is important for an early-career journalist who knows the basics to understand about that topic, including the key people, issues and institutions. 
 
-link: url of the story
-title: the headline of the story
-topic: the beat or general focus area (in this case, “Baltimore”)
-tags: key themes, institutions, and recurring issues
-summary: a short summary of what the story is about
-content: the text of the story
-metadata: information about people, organizations, geography
+Taking into account the kinds of stories have been done, suggest other story ideas or undercovered angles. Introduce the journalist to the topic as if you were an expert guide. Be careful about stories that are not resolved, such as ongoing lawsuits or policy debates; include a caveat that these might already be completed, but identify unfinished stories. Focus on the future more than the past; this is more about story ideas than history. Give more weight to more recent coverage.
 
-Using this data, produce a comprehensive guide for a reporter covering the Baltimore beat in your newsroom.
+The language should be business casual, and it should not be primarily a list of bullet points, but you can use bullet points for checklists or proposed sources or locations for a suggested story angle. If a timeline is important for the overall topic, mention that, but don’t over-emphasize older elements.
+
+Make sure you introduce and explain ideas, people and issues with substantive but not overwrought language. Not too many adjectives. Include citations to stories that provide useful context.
