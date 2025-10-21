@@ -1,3 +1,5 @@
+# First response based on prompt generated in class.
+# Model: claude-haiku-4.5
 # Understanding Baltimore's Future: A Guide for Early-Career Journalists
 
 Welcome to Baltimore coverage. This guide will help you navigate the city's most pressing issues and identify promising story angles for the months ahead.
@@ -73,6 +75,7 @@ Here's where the ongoing story lives. [A new bridge design was unveiled in Febru
 ## Housing, Vacancy, and Urban Decay
 
 ### The Structural Problem
+
 
 Baltimore has roughly 13,000 vacant and abandoned homes and more than 20,000 vacant lots. Vacancy is heavily concentrated in lower-income, predominantly Black neighborhoods—a direct legacy of redlining and disinvestment. Property values in areas like Mondawmin average $24,625 per capita income versus $45,263 in Bolton Hill just two miles away, despite similar infrastructure and proximity to transit.
 

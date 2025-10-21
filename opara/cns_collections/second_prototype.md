@@ -1,3 +1,6 @@
+# Class prompt updated to reflect government angle, highlight differences between Baltimore city and county.
+# Model: claude-sonnet-4.5
+
 # Covering Baltimore: A Guide for Early-Career Journalists
 
 Welcome to Baltimore. This city isn't just your assignment—it's a complex, resilient community that demands nuanced understanding and careful reporting. Based on the coverage patterns in your clips, here's what you need to know.
