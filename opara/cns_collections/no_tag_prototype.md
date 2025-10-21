@@ -1,3 +1,6 @@
+# Prompt updated to work on json file with no tags.
+# model: claude-sonnet-4.5
+
 # Baltimore Beat Coverage Guide for Early-Career Journalists
 
 ## Welcome to Baltimore
