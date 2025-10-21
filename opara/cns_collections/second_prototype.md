@@ -93,7 +93,7 @@ Several business-focused stories suggest angles:
 
 **Catherine Pugh scandal**: The former mayor [received three years for "Healthy Holly" fraud](https://cnsmaryland.org/2020/02/27/ex-baltimore-mayor-gets-three-years-for-healthy-holly-fraud/) in 2020. She's likely out of prison now—what happened to her? Has the city recovered the restitution?
 
-**Squeegee workers**: The city announced [a multi-tiered plan in 2022](https://cnsmaryland.org/2022/11/10/baltimore-city-reveals-plan-for-controversial-squeegee-workers/). How's it working? Are conflicts down? Are workforce programs successful?
+**Squeegee workers**: The city announced [a multi-tiered plan in f](https://cnsmaryland.org/2022/11/10/baltimore-city-reveals-plan-for-controversial-squeegee-workers/). How's it working? Are conflicts down? Are workforce programs successful?
 
 **Juvenile justice**: [Coverage noted concerns about juvenile crime](https://cnsmaryland.org/2024/11/15/local-baltimore-residents-and-politicians-call-for-change-as-juvenile-crime-remains-high/) and calls for the removal of DJS Secretary Vincent Schiraldi. This situation may have evolved—verify current status.
 
