@@ -18,6 +18,9 @@ Deapite sll the details the third prototype contained, it left out one of the mo
 I guess that is what the LLM interpreted as cutting down on political focus.
 
 Though I really liked my third draft, I do not think I did too much to influence how it turned out. The improvements I made to the original prompt is pretty much adding a govt angle, a Baltimore county/city emphasis, and then reducing the emphasis on the government angle I added.
-I somehow feel like the third draft being better may have had more to do with chance than me, so though I am very comfortable with this book, I decided to generate another book without the summaries.
+I somehow feel like the third draft being better may have had more to do with chance than me, so though I am very comfortable with this book, I decided to generate another book without the tags.
+So I used the same prompt.txt document that generated my third prototype and only used a json file without tags.
+
+The no_tag_prototype had a lot more bullet points. It also seemed more impersonal than the others.
 
 
