@@ -1,2 +1,7 @@
 # CNS_FINAL 10/20/2025
-A first attempt using the prompt we generated in class produced the new_prototype.md. After making adjustments to the prompt, I got a second document: second_prototype.md
+
+A first attempt using the prompt we generated in class produced a new_prototype.md. 
+After going through that document, I realized it had very little to say about governance in the city and I update my prompt to reflect this. Somehow, in trying to save the result of the new prompt, I erroneously saved it to the same new_prototype doc, rather than creating a new document. In order to salvage that, I tried to kill the new prompt while it was still running, but then, I had already lost the first new_prototype.md. I replaced the prompt with the original one we generateed in class but as expected, I didnt get the exact same thing I had before. This new one had more governemnt information, though still not enough. It also had a slightly different structure in the sense that the first one had bullet points of relevant sources under each section and some sort of recap toward the end. But the new document only listed names at the end, rather than within each section. Still they were similar in content.
+
+I then made adjustments to the prompt, and got a second document: second_prototype.md
+
