@@ -136,12 +136,12 @@ Return only the topic name from the list above.
 #### Script Requirements:
 
 Your script should:
-- Use the `llm` command-line tool with an appropriate model (e.g., `groq/meta-llama/llama-4-scout-17b-16e-instruct` or `groq-kimi-k2` or `groq/meta-llama/llama-4-maverick-17b-128e-instruct`)
+- Use the `llm` command-line tool with an appropriate Groq model (e.g., `groq/meta-llama/llama-4-scout-17b-16e-instruct` or `groq-kimi-k2` or `groq/meta-llama/llama-4-maverick-17b-128e-instruct`)
 - Process each story and add a `topic` field
 - Save the enhanced stories to `stardem_topics_classified.json`
 - Print progress as it processes stories
 
-**Tip**: Use subprocess to call the `llm` command, similar to the `add_metadata.py` script in the CNS Collections assignment. You can even provide the `add_metadata.py` script as a reference.
+**Tip**: Have the script use subprocess to call the `llm` command. You should provide this document (`stardem_topics.md`) as a reference.
 
 ### Run Your Script
 
@@ -151,7 +151,7 @@ Execute your classification script:
 uv run python classify_topics.py
 ```
 
-This may take a few minutes depending on how many stories you have. Document any errors or issues in your `notes.md`.
+This may take a bit of time, but not too long. Document any errors or issues in your `notes.md`.
 
 ### Load into Datasette
 
@@ -161,20 +161,13 @@ Now explore your results using Datasette:
 # Create a SQLite database from your classified stories
 uv run sqlite-utils insert stardem_topics.db stories stardem_topics_classified.json --pk id
 
-# Count stories by topic
-uv run sqlite-utils stardem_topics.db \
-  "SELECT topic, COUNT(*) as count 
-   FROM stories 
-   GROUP BY topic 
-   ORDER BY count DESC"
-
 # Launch Datasette to explore
 uv run datasette stardem_topics.db
 ```
 
 ### Analyze Your Results
 
-In Datasette (or using sqlite-utils queries), examine:
+In Datasette, examine:
 
 1. **Topic Distribution**: How many stories are in each topic?
 2. **Topic Consistency**: Do similar stories get the same topic?
@@ -199,11 +192,6 @@ Create a section in your `notes.md` called "Results Analysis" and address:
 - Did your chosen approach (Option 1 or 2) work well?
 - Would the other approach have been better? Why or why not?
 - What surprised you about the results?
-
-### Reflection
-
-Conclude your `notes.md` with a reflection section:
-
 
 ### Submission
 
