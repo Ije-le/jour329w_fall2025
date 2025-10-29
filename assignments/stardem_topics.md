@@ -35,6 +35,14 @@ You can choose one of two approaches:
 
 ### Getting Started
 
+Install the llm-groq plugin plugin and set your API key if needed:
+
+```bash
+uv run llm install llm-groq
+uv run llm keys get groq # if you see a value, you don't need to proceed
+uv run llm keys set groq # only run if the above command didn't show you an API key
+```
+
 1. In the Terminal, cd into the directory with your last name
 2. Create a directory called `stardem_topics` using mkdir
 3. cd into that new directory
@@ -43,7 +51,7 @@ You can choose one of two approaches:
 
 ### Understand Your Data
 
-I will provide you with a JSON file containing 200 Star-Democrat stories. Copy this file into your `stardem_topics` directory.
+I will provide you with a JSON file containing 200 Star-Democrat stories. Copy this file into your `stardem_topics` directory and rename it to `stardem_sample.json`.
 
 First, explore what's in your data:
 
@@ -87,13 +95,12 @@ Your script should ask the LLM to:
 - Analyze the story title and summary
 - Determine the most appropriate single topic
 - Create consistent topic names across all stories
-- Return just the topic name as a string
 
 Example prompt structure:
 ```python
 prompt = f"""
 Analyze this news story and assign it a single topic category.
-Create a topic that best represents what this story is about.
+Choose a 1 or 2-word broad topic that best represents what this story is about.
 Use consistent topic names - if you've used a topic before, use the same name.
 
 Title: {story['title']}
@@ -128,16 +135,8 @@ Return only the topic name from the list above.
 
 #### Script Requirements:
 
-Install the llm-groq plugin and set your Groq API key if needed:
-
-```bash
-uv run llm install llm-groq
-uv run llm keys get groq # if you see a value, you don't need to proceed
-uv run llm keys set groq # only run if the above command didn't show you an API key
-```
-
 Your script should:
-- Use the `llm` command-line tool with an appropriate model (e.g., `groq/meta-llama/llama-4-scout-17b-16e-instruct` or `groq/qwen/qwen3-32b` or `groq-kimi-k2`)
+- Use the `llm` command-line tool with an appropriate model (e.g., `groq/meta-llama/llama-4-scout-17b-16e-instruct` or `groq-kimi-k2` or `groq/meta-llama/llama-4-maverick-17b-128e-instruct`)
 - Process each story and add a `topic` field
 - Save the enhanced stories to `stardem_topics_classified.json`
 - Print progress as it processes stories
