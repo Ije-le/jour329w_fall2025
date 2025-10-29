@@ -114,7 +114,7 @@ Return only the topic name as a single string.
 
 Your script should provide your topic list and ask the LLM to:
 - Choose the single best-fitting topic from your list
-- Return just the topic name from your list
+- Make sure your list has an option for "Other" or "None" if it's not exhaustive
 
 Example prompt structure:
 ```python
