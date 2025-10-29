@@ -51,7 +51,7 @@ uv run llm keys set groq # only run if the above command didn't show you an API 
 
 ### Understand Your Data
 
-I will provide you with a JSON file containing 200 Star-Democrat stories. Copy this file into your `stardem_topics` directory and rename it to `stardem_sample.json`.
+Choose one of the JSON files posted in this Google Drive: https://drive.google.com/drive/folders/1SkGouI-wutVuZrE1rDeLof0fMtqshQ7R?usp=sharing. Download this file into your `stardem_topics` directory and rename it to `stardem_sample.json`.
 
 First, explore what's in your data:
 
