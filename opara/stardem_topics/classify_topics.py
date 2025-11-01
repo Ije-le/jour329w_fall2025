@@ -53,10 +53,10 @@ TOPICS = [
 
 # Candidate CLI invocations to try. Adjust if your 'llm' uses a different command layout.
 LLM_CANDIDATES = [
-    ["uv", "run", "llm", "query", "--model", "anthropic/claude-sonnet-4.5", "--input"],
-    ["llm", "query", "--model", "anthropic/claude-sonnet-4.5", "--input"],
-    ["uv", "run", "llm", "chat", "--model", "anthropic/claude-sonnet-4.5", "--input"],
-    ["llm", "chat", "--model", "anthropic/claude-sonnet-4.5", "--input"]
+    ["uv", "run", "llm", "query", "--model", "anthropic/claude-sonnet-4-5", "--input"],
+    ["llm", "query", "--model", "anthropic/claude-sonnet-4-5", "--input"],
+    ["uv", "run", "llm", "chat", "--model", "anthropic/claude-sonnet-4-5", "--input"],
+    ["llm", "chat", "--model", "anthropic/claude-sonnet-4-5", "--input"]
 ]
 
 # Delay between LLM calls, seconds

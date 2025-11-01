@@ -63,6 +63,7 @@ Change to the script directory:
 Run the script:
 Notes and tips
 
+
 The script assumes the llm CLI is installed and configured. If you use a different CLI layout or model name, edit LLM_CANDIDATES near the top of the script.
 If you prefer an HTTP API approach (Anthropic or OpenAI) instead of the llm CLI, I can modify the script to support that (you'd provide an API key).
 After you run the script, I can help verify the output (check that each story has a topic field and that values are in the allowed list) and produce a short report on topic distribution.
@@ -85,3 +86,6 @@ Ensure `llm` is installed and accessible (or run via `uv run llm`).. Setting top
 [#27/200] LLM call failed: Unable to call LLM CLI with the configured command candidates.
 Ensure `llm` is installed and accessible (or run via `uv run llm`).. Setting topic='Other'.
 [#27/200] -> Other
+...
+I thought it might have been a problem in the way I installed anthropic or called in anthropic, so I changed it from 'anthropic/claude-sonnet-4.5' to 'anthropic/claude-sonnet-4-5'.
+Nothing changed.
