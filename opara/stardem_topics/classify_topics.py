@@ -22,11 +22,13 @@ Notes:
 - If your `llm` CLI uses different subcommands/flags, adjust the `LLM_CANDIDATES` list below.
 """
 
+import argparse
 import json
 import subprocess
 import shutil
 import time
 import sys
+import os
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -52,36 +54,52 @@ TOPICS = [
 ]
 
 # Candidate CLI invocations to try. Adjust if your 'llm' uses a different command layout.
+# We expect the CLI to accept the prompt as a final positional argument after a flag like --input
 LLM_CANDIDATES = [
-    ["uv", "run", "llm", "query", "--model", "anthropic/claude-sonnet-4-5", "--input"],
-    ["llm", "query", "--model", "anthropic/claude-sonnet-4-5", "--input"],
-    ["uv", "run", "llm", "chat", "--model", "anthropic/claude-sonnet-4-5", "--input"],
-    ["llm", "chat", "--model", "anthropic/claude-sonnet-4-5", "--input"]
+    # Common 'llm' CLI forms. We'll replace the model token at runtime if the user overrides it.
+    ["uv", "run", "llm", "query", "--model", "anthropic/claude-sonnet-4-5"],
+    ["llm", "query", "--model", "anthropic/claude-sonnet-4-5"],
+    ["uv", "run", "llm", "chat", "--model", "anthropic/claude-sonnet-4-5"],
+    ["llm", "chat", "--model", "anthropic/claude-sonnet-4-5"]
 ]
 
 # Delay between LLM calls, seconds
 DELAY = 0.6
 
 
-def call_llm(prompt, timeout=90):
+def call_llm(prompt, model_override=None, timeout=90, verbose=False):
     """Try to call the LLM CLI with a list of candidate commands. Returns stdout on success or
     raises RuntimeError if none of the candidates work.
     """
+    last_err = None
     for base in LLM_CANDIDATES:
         # check the CLI binary exists
         if shutil.which(base[0]) is None:
             continue
         cmd = list(base)
-        cmd.append(prompt)
+        # if user provided a model override, replace the token after --model if present
+        if model_override:
+            if "--model" in cmd:
+                idx = cmd.index("--model")
+                if idx + 1 < len(cmd):
+                    cmd[idx + 1] = model_override
+                else:
+                    cmd.extend(["--model", model_override])
+            else:
+                cmd.extend(["--model", model_override])
         try:
-            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
-        except Exception:
+            # send the prompt on stdin; many 'llm' CLIs accept input this way
+            proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout)
+        except Exception as e:
+            last_err = str(e)
             continue
         if proc.returncode == 0 and proc.stdout.strip():
             return proc.stdout.strip()
-        # try next candidate
+        # capture stderr/stdout for debugging and try next candidate
+        last_err = (proc.stderr or proc.stdout or '').strip()
     raise RuntimeError("Unable to call LLM CLI with the configured command candidates.\n"
-                       "Ensure `llm` is installed and accessible (or run via `uv run llm`).")
+                       "Ensure `llm` is installed and accessible (or run via `uv run llm`).\n"
+                       f"Last error: {last_err}")
 
 
 def choose_topic_from_response(resp):
@@ -123,6 +141,13 @@ def build_prompt(story):
 
 
 def main():
+    parser = argparse.ArgumentParser(description='Classify Star-Democrat stories by topic using llm CLI.')
+    parser.add_argument('--model', help='LLM model id to use (overrides built-in default)')
+    parser.add_argument('--dry-run', action='store_true', help='Do not call LLM; assign "Other" (useful for testing)')
+    parser.add_argument('--verbose', action='store_true', help='Enable verbose CLI output')
+    parser.add_argument('--delay', type=float, default=DELAY, help='Delay between LLM calls in seconds')
+    args = parser.parse_args()
+
     if not INPUT_FILE.exists():
         print(f"Input file not found: {INPUT_FILE}\nPlease place `stardem_sample.json` in this directory.")
         sys.exit(2)
@@ -138,18 +163,27 @@ def main():
     total = len(data)
     print(f"Processing {total} stories...")
 
+    model = args.model or os.getenv('LLM_MODEL') or None
+    if model:
+        print(f"Using model: {model}")
+    if args.dry_run:
+        print("Dry-run mode: no LLM calls will be made; topics will be set to 'Other'.")
+
     for i, story in enumerate(data, start=1):
         try:
             prompt = build_prompt(story)
-            resp = call_llm(prompt)
-            topic = choose_topic_from_response(resp)
+            if args.dry_run:
+                topic = "Other"
+            else:
+                resp = call_llm(prompt, model_override=model, timeout=90, verbose=args.verbose)
+                topic = choose_topic_from_response(resp)
         except Exception as e:
             print(f"[#{i}/{total}] LLM call failed: {e}. Setting topic='Other'.")
             topic = "Other"
         story['topic'] = topic
         enhanced.append(story)
         print(f"[#{i}/{total}] -> {topic}")
-        time.sleep(DELAY)
+        time.sleep(args.delay)
 
     with OUTPUT_FILE.open('w', encoding='utf-8') as f:
         json.dump(enhanced, f, ensure_ascii=False, indent=2)
