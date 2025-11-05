@@ -291,6 +291,7 @@ Take your `enhanced_beat_stories.json` file and `notes.md` evaluation and create
 ```bash
 cat prompt.txt enhanced_beat_stories.json | uv run llm -m REPLACE WITH YOUR MODEL > prototype.md
 ```
+cat prompt.txt enhanced_beat_stories.json | uv run llm -m "claude-sonnet-4.5" > third_prototype.md
 
 ### Evaluation
 
