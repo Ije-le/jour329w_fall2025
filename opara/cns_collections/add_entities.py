@@ -6,8 +6,6 @@ import sys
 import shutil
 from pathlib import Path
 
-DEFAULT_MODEL = "groq/moonshotai/kimi-k2-instruct-0905"
-
 
 def extract_entities(title, summary, examples_text, model, timeout=60):
     """Call the LLM to extract people, places, organizations as JSON arrays."""
@@ -25,9 +23,9 @@ Return only JSON. Example output format:
 {{"people": ["Name A", "Name B"], "places": ["Place A"], "organizations": ["Org A"]}}
 """
 
+    # Use the uv wrapper in this environment — keep a single, explicit
+    # invocation pattern: `uv run llm chat --model <model>`.
     candidates = [
-        ["llm", "chat", "--model", model],
-        ["llm", "query", "--model", model],
         ["uv", "run", "llm", "chat", "--model", model],
     ]
 
@@ -67,7 +65,8 @@ Return only JSON. Example output format:
 
 def main():
     parser = argparse.ArgumentParser(description='Add metadata to CNS beat stories using LLM')
-    parser.add_argument('--model', required=True, help='LLM model to use (e.g., gpt-4o-mini, claude-3.5-haiku)')
+    parser.add_argument('--model', default='groq/moonshotai/kimi-k2-instruct-0905',
+                        help='LLM model to use (default: groq/moonshotai/kimi-k2-instruct-0905)')
     parser.add_argument('--input', default='story_summaries_elections.json', help='Input JSON file with stories')
     
     # Show help if no arguments provided
