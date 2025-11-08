@@ -3,22 +3,5 @@ Type 'exit' or 'quit' to exit
 Type '!multi' to enter multiple lines, then '!end' to finish
 Type '!edit' to open your default editor and modify the prompt
 Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
-> > Headline: “Apple to Buy AI Startup Xnor.ai for $200 Million”  
-Summary: “Apple has acquired Seattle-based artificial intelligence company Xnor.ai, sources say, in a deal worth about $200 million. Xnor.ai’s low-power edge-based computer-vision tools will likely be integrated into future iPhones.”
-
-Entities  
-- Apple  
-- Xnor.ai  
-- Seattle  
-- iPhone
-> {"people": [], "places": ["Seattle"], "organizations": ["Apple", "Xnor.ai"]}
-> {"people":[],"places":["Seattle"],"organizations":["Apple","Xnor.ai"]}
-> > {"people":[],"places":["Seattle"],"organizations":["Apple","Xnor.ai"]}
-> > {"people":[],"places":["Seattle"],"organizations":["Apple","Xnor.ai"]}
-> {"people":[],"places":["Seattle"],"organizations":["Apple","Xnor.ai"]}
-> > > {"people":[],"places":["Seattle"],"organizations":["Apple","Xnor.ai"]}
-> {"people":[],"places":[],"organizations":[]}
-> {"people":[],"places":[],"organizations":[]}
-> > {"people":[],"places":[],"organizations":[]}
-> {"people":[],"places":[],"organizations":[]}
-> 
+> > Sure, I can help with that. Please share the news story you'd like me to analyze for entities.
+> > 

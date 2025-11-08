@@ -7,12 +7,14 @@ import sys
 import shutil
 from pathlib import Path
 
-def extract_entities(title, summary, examples_text, model, timeout=60, retries=5, log_prefix=None):
-    """Call the LLM to extract people, places, organizations as JSON arrays."""
+def extract_entities(title, summary, fulltext, examples_text, model, timeout=60, retries=5, log_prefix=None):
+    """Call the LLM to extract people, places, organizations as JSON arrays.
+    Prefer `fulltext` when available; otherwise use `summary`.
+    """
     prompt = f"""
 Extract the entities mentioned in this news story. VERY IMPORTANT:
 
-- Do NOT ask for more input. Use ONLY the provided Headline and Summary. Do not attempt to read external sources.
+- Do NOT ask for more input. Use ONLY the provided Headline and Article Text (or Summary if no full text is present). Do not attempt to read external sources.
 - Return EXACTLY one JSON object and NOTHING ELSE (no preface, no explanation, no markdown). The JSON must contain exactly these three keys in this order: "people", "places", "organizations".
 - Each value must be an array of strings. If none, return an empty array [].
 - Normalize entity strings: trim whitespace, remove surrounding punctuation, do not include titles (Mr., Ms., Dr.) or roles (mayor, governor) — return the name only.
@@ -21,15 +23,15 @@ Extract the entities mentioned in this news story. VERY IMPORTANT:
 Examples (input → expected output):
 Headline: "Council honors Jane Doe for service"
 Summary: "City council honored councilwoman Jane Doe on Monday for her long service."
-Output: {"people": ["Jane Doe"], "places": [], "organizations": ["City Council"]}
+Output: {{"people": ["Jane Doe"], "places": [], "organizations": ["City Council"]}}
 
 Headline: "Local hospital expands" 
 Summary: "St. Mary's Hospital in Annapolis announced a $10 million expansion to its emergency department."
-Output: {"people": [], "places": ["Annapolis"], "organizations": ["St. Mary's Hospital"]}
+Output: {{"people": [], "places": ["Annapolis"], "organizations": ["St. Mary's Hospital"]}}
 
-Input (Headline and Summary):
+Input (Headline and Article Text):
 Headline: {title}
-Summary: {summary}
+Article Text: {fulltext}
 
 Return only the JSON object.
 """
@@ -189,7 +191,10 @@ def main():
         print(f"Processing {i+1}/{len(stories)}: {story.get('title')}")
 
         log_prefix = str(logs_dir / f"story_{i+1:04d}")
-        entities = extract_entities(story.get('title', ''), story.get('summary', ''), examples_text, args.model, timeout=args.timeout, log_prefix=log_prefix)
+        # Use full article text (`content`) when available for better entity extraction.
+        full_text = story.get('content') or story.get('summary') or ''
+        summary = story.get('summary') or ''
+        entities = extract_entities(story.get('title', ''), summary, full_text, examples_text, args.model, timeout=args.timeout, log_prefix=log_prefix)
 
         if 'error' in entities:
             print(f"Warning: LLM failed for story {i+1}: {entities.get('detail')}")

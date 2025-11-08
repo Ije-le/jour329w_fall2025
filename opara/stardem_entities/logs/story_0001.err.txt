@@ -1,1 +1,37 @@
-Aborted!
+Traceback (most recent call last):
+  File "/workspaces/jour329w_fall2025/.venv/bin/llm", line 10, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 1462, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 1383, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 1850, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 1246, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 814, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/llm/cli.py", line 1234, in chat
+    for chunk in response:
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/llm/models.py", line 1638, in __iter__
+    yield from response_item
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/llm/models.py", line 1162, in __iter__
+    for chunk in self.model.execute(
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/llm_groq.py", line 250, in execute
+    resp = client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/groq/resources/chat/completions.py", line 448, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `moonshotai/kimi-k2-instruct-0905` in organization `org_01j97v25gpen6b0r150s7exhsm` service tier `on_demand` on requests per day (RPD): Limit 1000, Used 1000, Requested 1. Please try again in 1m26.4s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'requests', 'code': 'rate_limit_exceeded'}}
