@@ -154,10 +154,10 @@ Return only the JSON object.
 
 def main():
     parser = argparse.ArgumentParser(description='Extract people, places and organizations from Star-Democrat stories')
-    parser.add_argument('--model', default='groq/moonshotai/kimi-k2-instruct-0905',
-                        help='LLM model to use (default: groq/moonshotai/kimi-k2-instruct-0905)')
+    parser.add_argument('--model', default='groq/meta-llama/llama-4-maverick-17b-128e-instruct',
+                        help='LLM model to use (default: groq/meta-llama/llama-4-maverick-17b-128e-instruct)')
     parser.add_argument('--input', default='stardem_sample.json', help='Input JSON file with stories')
-    parser.add_argument('--output', default='stories_with_entities.json', help='Output JSON file to write')
+    parser.add_argument('--output', default='stories_with_entities_second.json', help='Output JSON file to write')
     parser.add_argument('--timeout', type=int, default=60, help='Timeout seconds for each LLM call')
 
     # Show help if no arguments provided

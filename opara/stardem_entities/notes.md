@@ -20,10 +20,7 @@ My first attempt at getting entities returned a json file with empty lists. The 
  ##   Output: {"people": ["Jane Doe"], "places": [], "organizations": ["City Council"]}
  ##           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ## ValueError: Invalid format specifier ' ["Jane Doe"], "places": [], "organizations": ["City Council"]' for object of type 'str'
-I figured it might have been from the way I asked codespaces to structure, so I asked it to recreate the structure.
-
-
-
+I figured it might have been from the way I asked codespaces to structure, so I asked it to recreate the structure. So I edited the prompt to this:
 Using this groq model: groq/moonshotai/kimi-k2-instruct-0905 modify the add_entities.py script. From the stardem_sample.json file, let the script extract people, places and organizations into arrays.
 People in this context means every person mention in the json file. Places means every place mentioned in the json file. Organization means every organization mentioned in the json file. Here are two examples each of people, places and organization are as follows:
 people: David Breimhurst, Kristen Greenaway. places: Denton, Kennard African American Cultural Heritage. organizations: National Down Syndrome Society, Dorchester County Emergency Medical Services. Change the output file to 'stories_with_entities.json' and save it to the output file. The json output should have this structure:
@@ -37,6 +34,23 @@ places:
   - Washington, Easton
 organizations:
   - City Council, Medical Center
-
 Remember to change the model used to run the script to: groq/moonshotai/kimi-k2-instruct-0905
+Remove DEFAULT_MODEL from the script and call llm using uv run. Do this just once.
+
+This returned values only for headlines. So I changed the prompt and the model:
+
+Using this groq model: groq/meta-llama/llama-4-maverick-17b-128e-instruct modify the add_entities.py script. From the stardem_sample.json file, let the script extract people, places and organizations into arrays.
+People in this context means every person mention in the json file. Places means every place mentioned in the json file. Organization means every organization mentioned in the json file. Here are two examples each of people, places and organization are as follows:
+people: David Breimhurst, Kristen Greenaway. places: Denton, Kennard African American Cultural Heritage. organizations: National Down Syndrome Society, Dorchester County Emergency Medical Services. Change the output file to 'stories_with_entities_second.json' and save it to the output file. The json output should have this structure:
+story number:
+  - 1
+headline:
+  - Jane Doe visits Biden
+people:
+  - David Breimhurst, Kristen Greenaway
+places:
+  - Denton, Kennard African American Cultural Heritage
+organizations:
+  - National Down Syndrome Society, Dorchester County Emergency Medical Services
+Remember to change the model used to run the script to: groq/meta-llama/llama-4-maverick-17b-128e-instruct
 Remove DEFAULT_MODEL from the script and call llm using uv run. Do this just once.
