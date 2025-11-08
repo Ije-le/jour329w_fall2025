@@ -6,9 +6,6 @@ import sys
 import shutil
 from pathlib import Path
 
-DEFAULT_MODEL = "groq/moonshotai/kimi-k2-instruct-0905"
-
-
 def extract_entities(title, summary, examples_text, model, timeout=60):
     """Call the LLM to extract people, places, organizations as JSON arrays."""
     prompt = f"""
@@ -25,9 +22,10 @@ Return only JSON. Example output format:
 {{"people": ["Name A", "Name B"], "places": ["Place A"], "organizations": ["Org A"]}}
 """
 
+    # Use the uv wrapper to call the llm plugin. We only need a single
+    # invocation pattern here (uv run llm chat ...) — keep it simple and
+    # explicit for the environment this repo uses.
     candidates = [
-        ["llm", "chat", "--model", model],
-        ["llm", "query", "--model", model],
         ["uv", "run", "llm", "chat", "--model", model],
     ]
 
@@ -67,9 +65,10 @@ Return only JSON. Example output format:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Add metadata to CNS beat stories using LLM')
-    parser.add_argument('--model', required=True, help='LLM model to use (e.g., gpt-4o-mini, claude-3.5-haiku)')
-    parser.add_argument('--input', default='story_summaries_elections.json', help='Input JSON file with stories')
+    parser = argparse.ArgumentParser(description='Extract people, places and organizations from Star-Democrat stories')
+    parser.add_argument('--model', default='groq/moonshotai/kimi-k2-instruct-0905',
+                        help='LLM model to use (default: groq/moonshotai/kimi-k2-instruct-0905)')
+    parser.add_argument('--input', default='stardem_sample.json', help='Input JSON file with stories')
     parser.add_argument('--output', default='stories_with_entities.json', help='Output JSON file to write')
     parser.add_argument('--timeout', type=int, default=60, help='Timeout seconds for each LLM call')
 
