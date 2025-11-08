@@ -1,44 +1,69 @@
 import json
-import json
 import subprocess
 import time
 import argparse
 import sys
+import shutil
 from pathlib import Path
 
-def extract_metadata(story_title, story_content, schema_prompt, model):
-    """Use LLM to extract structured metadata from story title and summary."""
+DEFAULT_MODEL = "groq/moonshotai/kimi-k2-instruct-0905"
+
+
+def extract_entities(title, summary, examples_text, model, timeout=60):
+    """Call the LLM to extract people, places, organizations as JSON arrays."""
     prompt = f"""
-Extract metadata from this news story in JSON format using only the title and summary provided.
+Extract the entities mentioned in this news story. Return ONLY valid JSON with keys: "people", "places", "organizations".
+Each value must be an array of strings (may be empty). Do not include any other keys.
 
-Schema to follow:
-{schema_prompt}
+Examples to guide formatting (do not treat these as exhaustive):
+{examples_text}
 
-Story Title: {story_title}
-Story Summary: {story_content}
+Story Headline: {title}
+Story Summary: {summary}
 
-Return only valid JSON with the metadata. If information is not available, use an empty array:
+Return only JSON. Example output format:
+{{"people": ["Name A", "Name B"], "places": ["Place A"], "organizations": ["Org A"]}}
 """
-    
-    try:
-        result = subprocess.run([
-            'llm', '-m', model, prompt
-        ], capture_output=True, text=True, timeout=30)
-        
-        if result.returncode == 0:
-            # Parse and validate the JSON response
-            response_text = result.stdout.strip()
-            # Remove any markdown code blocks if present
-            if response_text.startswith('```'):
-                response_text = response_text.split('\n', 1)[1]
-                response_text = response_text.rsplit('\n', 1)[0]
-            
-            metadata = json.loads(response_text)
-            return metadata
-        else:
-            return {"error": "LLM failed", "stderr": result.stderr}
-    except Exception as e:
-        return {"error": str(e)}
+
+    candidates = [
+        ["llm", "chat", "--model", model],
+        ["llm", "query", "--model", model],
+        ["uv", "run", "llm", "chat", "--model", model],
+    ]
+
+    last_err = None
+    for cmd in candidates:
+        if shutil.which(cmd[0]) is None:
+            continue
+        try:
+            proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout)
+        except Exception as e:
+            last_err = str(e)
+            continue
+
+        out = (proc.stdout or '').strip()
+        err = (proc.stderr or '').strip()
+        if proc.returncode == 0 and out:
+            # strip code fences
+            if out.startswith('```'):
+                parts = out.split('\n')
+                if parts[0].startswith('```'):
+                    out = '\n'.join(parts[1:])
+                    if out.rstrip().endswith('```'):
+                        out = out.rstrip()[:-3].rstrip()
+            try:
+                data = json.loads(out)
+                # ensure keys exist and are lists
+                people = data.get('people', []) if isinstance(data.get('people', []), list) else []
+                places = data.get('places', []) if isinstance(data.get('places', []), list) else []
+                orgs = data.get('organizations', []) if isinstance(data.get('organizations', []), list) else []
+                return {'people': people, 'places': places, 'organizations': orgs}
+            except Exception as e:
+                last_err = f"JSON parse error: {e}; output: {out[:200]}"
+                continue
+        last_err = err or out or f"returncode={proc.returncode}"
+
+    return {'error': 'LLM failed', 'detail': last_err}
 
 def main():
     parser = argparse.ArgumentParser(description='Add metadata to CNS beat stories using LLM')
