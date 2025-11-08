@@ -1,0 +1,27 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+“Apple Buys AI Startup to Boost Siri, Sources Say”
+
+**Summary:**  
+Apple has acquired the San Francisco-based machine-learning firm Xnor.ai for about $200 million, according to people familiar with the matter. Xnor.ai specializes in low-power, edge-based artificial-intelligence tools that could help Apple put more AI processing directly on devices rather than relying on cloud services.
+
+**Entities extracted:**  
+- Apple  
+- Xnor.ai  
+- San Francisco  
+- Siri
+> {"people": [], "places": ["San Francisco"], "organizations": ["Apple", "Xnor.ai", "Siri"]}
+> {"people": [], "places": ["San Francisco"], "organizations": ["Apple", "Xnor.ai", "Siri"]}
+> > {"people": [], "places": ["San Francisco"], "organizations": ["Apple", "Xnor.ai", "Siri"]}
+> > {"people": [], "places": ["San Francisco"], "organizations": ["Apple", "Xnor.ai", "Siri"]}
+> {"people": [], "places": ["San Francisco"], "organizations": ["Apple", "Xnor.ai", "Siri"]}
+> > > {"people": [], "places": ["San Francisco"], "organizations": ["Apple", "Xnor.ai", "Siri"]}
+> {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
+> > {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
+> 

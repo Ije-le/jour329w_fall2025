@@ -1,0 +1,28 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+“Apple to Buy AI Startup DarwinAI in Push to Boost On-Device Intelligence”
+
+**Summary:**  
+Apple has agreed to acquire DarwinAI, a Canadian artificial-intelligence firm whose technology makes AI systems smaller and faster, for an undisclosed sum. The deal, completed earlier this year, adds dozens of DarwinAI engineers to Apple’s machine-learning division and is seen as part of Apple’s effort to catch up with Google and Microsoft in generative AI.
+
+**Entities extracted:**  
+- Apple  
+- DarwinAI  
+- Canadian  
+- Google  
+- Microsoft
+> {"people": [], "places": ["Canadian"], "organizations": ["Apple", "DarwinAI", "Google", "Microsoft"]}
+> {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI", "Google", "Microsoft"]}
+> > {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI", "Google", "Microsoft"]}
+> > {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI", "Google", "Microsoft"]}
+> {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI", "Google", "Microsoft"]}
+> > > {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI", "Google", "Microsoft"]}
+> {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
+> > {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
+> 

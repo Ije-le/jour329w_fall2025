@@ -1,0 +1,29 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro with M3 Chip, Promises 22-Hour Battery Life"
+
+**Summary:**  
+Apple on Tuesday introduced its latest MacBook Pro lineup powered by the new M3 processor. The 14-inch and 16-inch models feature improved performance, a brighter Liquid Retina XDR display, and up to 22 hours of battery life. The base 14-inch model starts at $1,599, while the high-end 16-inch configuration tops out at $3,999. Pre-orders open Friday, with shipments beginning next month.
+
+**Entities extracted:**  
+- Apple  
+- MacBook Pro  
+- M3 chip / M3 processor  
+- 14-inch model  
+- 16-inch model  
+- Liquid Retina XDR display
+> {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Apple"]}
+> > {"people":[],"places":[],"organizations":["Apple"]}
+> > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Apple"]}
+> > > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":["Times Square","Maryland"],"organizations":[]}
+> {"people":[],"places":["Times Square","Maryland"],"organizations":[]}
+> > {"people":[],"places":["Times Square","Maryland"],"organizations":[]}
+> {"people":[],"places":["Times Square","Maryland"],"organizations":[]}
+> 

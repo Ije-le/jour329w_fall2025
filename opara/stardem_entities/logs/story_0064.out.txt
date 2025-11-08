@@ -1,0 +1,21 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro with M3 Chip, Promising 22-Hour Battery Life"
+
+**Summary:**  
+Apple on Tuesday introduced its latest MacBook Pro lineup powered by the new M3 processor. The 14-inch and 16-inch models feature Liquid Retina XDR displays, up to 128GB unified memory, and a battery life Apple claims reaches 22 hours. Pre-orders start Friday, with shipments beginning next month.
+> {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Apple"]}
+> > {"people":[],"places":[],"organizations":["Apple"]}
+> > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Apple"]}
+> > > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":["St. Michaels"],"organizations":["St. Michaels Commissioners"]}
+> {"people":[],"places":["St. Michaels"],"organizations":["St. Michaels Commissioners"]}
+> > {"people":[],"places":["St. Michaels"],"organizations":["St. Michaels Commissioners"]}
+> {"people":[],"places":["St. Michaels"],"organizations":["St. Michaels Commissioners"]}
+> 

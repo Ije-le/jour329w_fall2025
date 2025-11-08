@@ -1,0 +1,26 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > Headline:  
+“Apple to Buy Intel’s Smartphone-Modem Unit for $1 Billion”
+
+Summary:  
+“Apple Inc. has agreed to purchase the majority of Intel Corp.’s smartphone-modem business in a deal valued at roughly $1 billion, the companies said Thursday, a move that would give the iPhone maker control over a critical component of its devices.”
+
+Extracted entities:  
+- Apple Inc.  
+- Intel Corp.  
+- iPhone
+> {"people": [], "places": [], "organizations": ["Apple Inc.", "Intel Corp."]}
+> {"people":[],"places":[],"organizations":["Apple Inc.","Intel Corp."]}
+> > {"people":["Tim Cook","Bob Swan"],"places":["Cupertino","Santa Clara"],"organizations":["Apple Inc.","Intel Corp."]}
+> > {"people":[],"places":[],"organizations":["Apple Inc.","Intel Corp."]}
+> {"people":[],"places":[],"organizations":["Apple Inc.","Intel Corp."]}
+> > > {"people":[],"places":[],"organizations":["Apple Inc.","Intel Corp."]}
+> {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> > {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> 

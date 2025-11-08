@@ -1,0 +1,26 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > Headline:  
+“Apple to Buy AI Startup XNOR.ai for $200 Million, Sources Say”
+
+Summary:  
+“Apple has struck a deal to acquire Seattle-based artificial intelligence firm XNOR.ai for about $200 million, according to people familiar with the matter. XNOR.ai specializes in low-power, edge-based machine-learning tools that could bolster Apple’s on-device AI capabilities.”
+
+Entities  
+- Apple  
+- XNOR.ai  
+- Seattle
+> {"people": [], "places": ["Seattle"], "organizations": ["Apple", "XNOR.ai"]}
+> {"people": [], "places": ["Seattle"], "organizations": ["Apple", "XNOR.ai"]}
+> > {"people": ["Tim Cook"], "places": ["Cupertino", "Seattle"], "organizations": ["Apple", "XNOR.ai"]}
+> > {"people": [], "places": ["Seattle"], "organizations": ["Apple", "XNOR.ai"]}
+> {"people": [], "places": ["Dorchester County"], "organizations": ["Dorchester County Emergency Medical Services"]}
+> > > {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": ["AL"], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
+> > {"people": [], "places": ["AL"], "organizations": []}
+> {"people": [], "places": ["AL"], "organizations": []}
+> 

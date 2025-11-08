@@ -1,4 +1,5 @@
 import json
+import re
 import subprocess
 import time
 import argparse
@@ -6,20 +7,31 @@ import sys
 import shutil
 from pathlib import Path
 
-def extract_entities(title, summary, examples_text, model, timeout=60):
+def extract_entities(title, summary, examples_text, model, timeout=60, retries=5, log_prefix=None):
     """Call the LLM to extract people, places, organizations as JSON arrays."""
     prompt = f"""
-Extract the entities mentioned in this news story. Return ONLY valid JSON with keys: "people", "places", "organizations".
-Each value must be an array of strings (may be empty). Do not include any other keys.
+Extract the entities mentioned in this news story. VERY IMPORTANT:
 
-Examples to guide formatting (do not treat these as exhaustive):
-{examples_text}
+- Do NOT ask for more input. Use ONLY the provided Headline and Summary. Do not attempt to read external sources.
+- Return EXACTLY one JSON object and NOTHING ELSE (no preface, no explanation, no markdown). The JSON must contain exactly these three keys in this order: "people", "places", "organizations".
+- Each value must be an array of strings. If none, return an empty array [].
+- Normalize entity strings: trim whitespace, remove surrounding punctuation, do not include titles (Mr., Ms., Dr.) or roles (mayor, governor) — return the name only.
+- Prefer full names when available. Do not return duplicate entries.
 
-Story Headline: {title}
-Story Summary: {summary}
+Examples (input → expected output):
+Headline: "Council honors Jane Doe for service"
+Summary: "City council honored councilwoman Jane Doe on Monday for her long service."
+Output: {"people": ["Jane Doe"], "places": [], "organizations": ["City Council"]}
 
-Return only JSON. Example output format:
-{{"people": ["Name A", "Name B"], "places": ["Place A"], "organizations": ["Org A"]}}
+Headline: "Local hospital expands" 
+Summary: "St. Mary's Hospital in Annapolis announced a $10 million expansion to its emergency department."
+Output: {"people": [], "places": ["Annapolis"], "organizations": ["St. Mary's Hospital"]}
+
+Input (Headline and Summary):
+Headline: {title}
+Summary: {summary}
+
+Return only the JSON object.
 """
 
     # Use the uv wrapper to call the llm plugin. We only need a single
@@ -30,36 +42,110 @@ Return only JSON. Example output format:
     ]
 
     last_err = None
+    def _extract_last_json(s: str):
+        """Find the last balanced JSON object in the string and return it (or None)."""
+        if not s:
+            return None
+        # simple stack-based scan for the last balanced {...}
+        last_obj = None
+        stack = 0
+        start = None
+        for i, ch in enumerate(s):
+            if ch == '{':
+                if stack == 0:
+                    start = i
+                stack += 1
+            elif ch == '}':
+                if stack > 0:
+                    stack -= 1
+                    if stack == 0 and start is not None:
+                        last_obj = s[start:i+1]
+                        start = None
+        return last_obj
     for cmd in candidates:
         if shutil.which(cmd[0]) is None:
             continue
-        try:
-            proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout)
-        except Exception as e:
-            last_err = str(e)
-            continue
-
-        out = (proc.stdout or '').strip()
-        err = (proc.stderr or '').strip()
-        if proc.returncode == 0 and out:
-            # strip code fences
-            if out.startswith('```'):
-                parts = out.split('\n')
-                if parts[0].startswith('```'):
-                    out = '\n'.join(parts[1:])
-                    if out.rstrip().endswith('```'):
-                        out = out.rstrip()[:-3].rstrip()
+        attempt = 0
+        while attempt < retries:
             try:
-                data = json.loads(out)
+                proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout)
+            except Exception as e:
+                last_err = str(e)
+                attempt += 1
+                time.sleep(1 * attempt)
+                continue
+
+            # always write a diagnostic log if requested
+            if log_prefix:
+                try:
+                    with open(f"{log_prefix}.out.txt", 'w') as lof:
+                        lof.write((proc.stdout or '')[:10000])
+                    with open(f"{log_prefix}.err.txt", 'w') as le:
+                        le.write((proc.stderr or '')[:10000])
+                except Exception:
+                    pass
+
+            out = (proc.stdout or '').strip()
+            err = (proc.stderr or '').strip()
+            # if the CLI returned success and there is output, try to parse
+            if proc.returncode == 0 and out:
+                # strip code fences
+                if out.startswith('```'):
+                    parts = out.split('\n')
+                    if parts[0].startswith('```'):
+                        out = '\n'.join(parts[1:])
+                        if out.rstrip().endswith('```'):
+                            out = out.rstrip()[:-3].rstrip()
+                # The CLI may include conversation transcripts and fragments. Try to extract
+                # the last balanced JSON object from the output if simple json.loads fails.
+                data = None
+                try:
+                    data = json.loads(out)
+                except Exception:
+                    candidate = _extract_last_json(out)
+                    if candidate:
+                        try:
+                            data = json.loads(candidate)
+                        except Exception:
+                            data = None
+                if data is None:
+                    raise ValueError('no valid JSON found in LLM output')
+                    # ensure keys exist and are lists
                 # ensure keys exist and are lists
                 people = data.get('people', []) if isinstance(data.get('people', []), list) else []
                 places = data.get('places', []) if isinstance(data.get('places', []), list) else []
                 orgs = data.get('organizations', []) if isinstance(data.get('organizations', []), list) else []
                 return {'people': people, 'places': places, 'organizations': orgs}
-            except Exception as e:
-                last_err = f"JSON parse error: {e}; output: {out[:200]}"
-                continue
-        last_err = err or out or f"returncode={proc.returncode}"
+                # if we reach here, the except earlier would have handled invalid JSON
+            # If the process failed with an error likely from the provider
+            if proc.returncode != 0:
+                last_err = err or out or f"returncode={proc.returncode}"
+                # detect temporary provider errors and retry
+                low = (err or out or '').lower()
+                # handle common transient provider messages
+                if ('over capacity' in low or '503' in low or 'internal_server_error' in low or 'try again' in low
+                        or 'rate limit' in low or '429' in low):
+                    # try to parse an explicit wait time from the message like 'Please try again in 1m26.4s'
+                    m = re.search(r'please try again in\s*(?:(\d+)m)?\s*(?:(\d+(?:\.\d+)?)s)?', low)
+                    sleep_secs = None
+                    if m:
+                        mins = int(m.group(1)) if m.group(1) else 0
+                        secs = float(m.group(2)) if m.group(2) else 0.0
+                        sleep_secs = mins * 60 + secs
+                    # fallback exponential backoff if no explicit time provided
+                    if sleep_secs is None:
+                        attempt += 1
+                        sleep_secs = 1 * (2 ** (attempt - 1))
+                    # cap sleep to a reasonable max (5 minutes)
+                    sleep_secs = min(sleep_secs, 300)
+                    time.sleep(sleep_secs + 1)
+                    attempt += 1
+                    continue
+                else:
+                    # non-retryable error for this command
+                    break
+            # if we reach here without returning, break out of retry loop
+            break
 
     return {'error': 'LLM failed', 'detail': last_err}
 
@@ -96,10 +182,14 @@ def main():
 
     # Process each story and build simplified output
     simplified = []
+    # ensure logs directory exists
+    logs_dir = Path('opara/stardem_entities/logs')
+    logs_dir.mkdir(parents=True, exist_ok=True)
     for i, story in enumerate(stories):
         print(f"Processing {i+1}/{len(stories)}: {story.get('title')}")
 
-        entities = extract_entities(story.get('title', ''), story.get('summary', ''), examples_text, args.model, timeout=args.timeout)
+        log_prefix = str(logs_dir / f"story_{i+1:04d}")
+        entities = extract_entities(story.get('title', ''), story.get('summary', ''), examples_text, args.model, timeout=args.timeout, log_prefix=log_prefix)
 
         if 'error' in entities:
             print(f"Warning: LLM failed for story {i+1}: {entities.get('detail')}")

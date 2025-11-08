@@ -1,0 +1,26 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > Headline:  
+“Apple to Buy AI Startup Xnor.ai for About $200 Million, Sources Say”
+
+Summary:  
+“Apple has acquired Seattle-based artificial intelligence startup Xnor.ai for roughly $200 million, according to people familiar with the matter. The deal gives Apple access to Xnor’s low-power, edge-based AI tools and could bolster on-device AI capabilities for iPhones and other devices.”
+
+Extracted entities:  
+- Apple  
+- Xnor.ai  
+- Seattle
+> {"people": [], "places": ["Seattle"], "organizations": ["Apple", "Xnor.ai"]}
+> {"people":[],"places":["Seattle"],"organizations":["Apple","Xnor.ai"]}
+> > {"people":[],"places":[],"organizations":[]}
+> > {"people":[],"places":["Seattle"],"organizations":["Apple","Xnor.ai"]}
+> {"people":[],"places":["Dorchester County"],"organizations":["Dorchester County Emergency Medical Services"]}
+> > > {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":["Queen Anne's County"],"organizations":["Queen Anne's County Department of Health"]}
+> {"people":[],"places":["Queen Anne's County"],"organizations":["Queen Anne's County Department of Health"]}
+> > {"people":[],"places":["Queen Anne's County"],"organizations":["Queen Anne's County Department of Health"]}
+> {"people":[],"places":[],"organizations":[]}
+> 

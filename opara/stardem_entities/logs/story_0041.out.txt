@@ -1,0 +1,38 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro with M3 Chip, Promises 22-Hour Battery Life"
+
+**Summary:**  
+Apple on Tuesday introduced its latest MacBook Pro lineup powered by the new M3 processor. The 14-inch and 16-inch models feature Liquid Retina XDR displays, up to 128GB unified memory, and a starting price of $1,599. The devices will be available starting November 7. CEO Tim Cook highlighted the performance gains, while Senior VP of Hardware John Ternus detailed the thermal design improvements. The announcement was made at Apple Park in Cupertino, California, alongside updates to the Mac Mini and iMac.
+
+**Extracted Entities:**  
+- Apple  
+- MacBook Pro  
+- M3 chip / M3 processor  
+- 14-inch (model)  
+- 16-inch (model)  
+- Liquid Retina XDR display  
+- 128GB unified memory  
+- $1,599 (price)  
+- November 7 (release date)  
+- Tim Cook (CEO)  
+- John Ternus (Senior VP of Hardware)  
+- Apple Park  
+- Cupertino, California  
+- Mac Mini  
+- iMac
+> {"people":["Tim Cook","John Ternus"],"places":["Cupertino, California","Apple Park"],"organizations":["Apple"]}
+> {"people":["Tim Cook","John Ternus"],"places":["Apple Park","Cupertino, California"],"organizations":["Apple"]}
+> > {"people":[],"places":[],"organizations":[]}
+> > {"people":["Tim Cook","John Ternus"],"places":["Apple Park","Cupertino, California"],"organizations":["Apple"]}
+> {"people":[],"places":["Dorchester County"],"organizations":["Dorchester County Emergency Medical Services"]}
+> > > {"people":[],"places":["Cupertino, California","Apple Park"],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Dems"]}
+> {"people":[],"places":[],"organizations":["Dems"]}
+> > {"people":[],"places":[],"organizations":["Dems"]}
+> {"people":["Name A","Name B"],"places":["Place A"],"organizations":["Org A"]}
+> 

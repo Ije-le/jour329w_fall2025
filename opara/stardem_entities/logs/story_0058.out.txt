@@ -1,0 +1,31 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro With M3 Chip, Available Next Week"
+
+**Summary:**  
+Apple announced its latest MacBook Pro lineup featuring the new M3 chip, promising faster performance and better battery life. The 14-inch and 16-inch models will be available starting November 7, with preorders opening this Friday. The base 14-inch model starts at $1,599, while the high-end 16-inch configuration exceeds $3,999. Apple also introduced updated MacBook Air models with the M3 chip, starting at $1,099.
+
+**Entities:**  
+- Apple  
+- MacBook Pro  
+- M3 chip  
+- 14-inch model  
+- 16-inch model  
+- November 7  
+- Friday  
+- MacBook Air
+> {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Apple"]}
+> > {"people":[],"places":["Silicon Valley","Cupertino"],"organizations":["Apple","Google"]}
+> > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":["Dorchester County"],"organizations":["Dorchester County Emergency Medical Services"]}
+> > > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":["Moore"],"places":["New Orleans"],"organizations":["Eagles"]}
+> {"people":["Moore"],"places":["New Orleans"],"organizations":["Eagles"]}
+> > {"people":["Moore"],"places":["New Orleans"],"organizations":["Eagles"]}
+> {"people":["Moore"],"places":["New Orleans"],"organizations":["Eagles"]}
+> 

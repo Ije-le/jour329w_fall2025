@@ -1,0 +1,32 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro with M3 Chip, Promising 22-Hour Battery Life"
+
+**Summary:**  
+Apple on Tuesday introduced its latest MacBook Pro lineup powered by the new M3 chip, which the company says delivers up to 22 hours of battery life. The 14-inch and 16-inch models feature Liquid Retina XDR displays, up to 128GB of unified memory, and start at $1,599. Pre-orders begin Friday, with shipments starting November 7.
+
+**Entities:**  
+- Apple  
+- MacBook Pro  
+- M3 chip  
+- Liquid Retina XDR displays  
+- 14-inch (MacBook Pro model)  
+- 16-inch (MacBook Pro model)  
+- $1,599 (starting price)  
+- Friday (pre-order date)  
+- November 7 (ship date)
+> {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Apple"]}
+> > {"people":[],"places":[],"organizations":["Apple"]}
+> > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Apple"]}
+> > > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":["Queen Anne's County"],"organizations":[]}
+> {"people":[],"places":["Queen Anne's County"],"organizations":[]}
+> > {"people":[],"places":["Queen Anne's County"],"organizations":[]}
+> {"people":[],"places":["Queen Anne's County"],"organizations":[]}
+> 

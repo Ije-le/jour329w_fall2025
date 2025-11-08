@@ -1,0 +1,23 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > Headline: “Apple to Buy AI Startup XNOR.ai for $200 Million”  
+Summary: “Apple has acquired Seattle-based artificial intelligence firm XNOR.ai, known for low-power edge-based image recognition tools, in a deal reportedly worth about $200 million.”
+
+Entities  
+- Apple  
+- XNOR.ai  
+- Seattle
+> {"people": [], "places": ["Seattle"], "organizations": ["Apple", "XNOR.ai"]}
+> {"people":[],"places":["Seattle"],"organizations":["Apple","XNOR.ai"]}
+> > {"people":[],"places":["Seattle"],"organizations":["Apple","XNOR.ai"]}
+> > {"people": [], "places": ["Seattle"], "organizations": ["Apple", "XNOR.ai"]}
+> {"people": [], "places": ["Seattle"], "organizations": ["Apple", "XNOR.ai"]}
+> > > {"people": [], "places": ["Seattle"], "organizations": ["Apple", "XNOR.ai"]}
+> {"people":[],"places":["Easton Airport"],"organizations":[]}
+> {"people":[],"places":["Easton Airport"],"organizations":[]}
+> > {"people":[],"places":["Easton Airport"],"organizations":[]}
+> {"people":[],"places":["Easton Airport"],"organizations":[]}
+> 

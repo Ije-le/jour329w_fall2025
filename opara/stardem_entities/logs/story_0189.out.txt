@@ -1,0 +1,11 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro with M3 Chip, Promising 22-Hour Battery Life"
+
+**Summary:**  
+Apple on Tuesday introduced its latest MacBook Pro lineup powered by the new M3 chip, claiming up to 22 hours of battery life and a 40% performance boost over M2 models. The devices, available in 14-inch and 16-inch models, start at $1,599 and will ship next week.
+> 

@@ -1,0 +1,29 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro with M3 Chip, Promising 22-Hour Battery Life"
+
+**Summary:**  
+Apple on Tuesday introduced its latest MacBook Pro lineup powered by the new M3 chip, claiming up to 22 hours of battery life. The 14-inch and 16-inch models start at $1,599 and $2,499 respectively, and will ship next month. CEO Tim Cook hailed the launch as a milestone for professional users. The devices feature Liquid Retina XDR displays, up to 128GB unified memory, and support for Wi-Fi 6E. Analysts expect strong demand from creatives and developers.
+
+**Extracted Entities:**
+
+- **Organizations:** Apple  
+- **Products:** MacBook Pro, M3 chip, Liquid Retina XDR display  
+- **Person:** Tim Cook  
+- **Technical Specifications:** 22-hour battery life, 14-inch, 16-inch, $1,599, $2,499, 128GB unified memory, Wi-Fi 6E  
+- **User Groups:** professional users, creatives, developers
+> {"people":["Tim Cook"],"places":[],"organizations":["Apple"]}
+> {"people":["Tim Cook"],"places":[],"organizations":["Apple"]}
+> > {"people":["Tim Cook"],"places":[],"organizations":["Apple"]}
+> > {"people":["Tim Cook"],"places":[],"organizations":["Apple"]}
+> {"people":["Tim Cook"],"places":[],"organizations":["Apple"]}
+> > > {"people":["Tim Cook"],"places":[],"organizations":["Apple"]}
+> {"people":["Frederick Douglass"],"places":[],"organizations":[]}
+> {"people":["Frederick Douglass"],"places":[],"organizations":[]}
+> > {"people":["Frederick Douglass"],"places":[],"organizations":[]}
+> {"people":["Frederick Douglass"],"places":[],"organizations":[]}
+> 

@@ -1,0 +1,18 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline and Summary not provided.**  
+Please supply the headline and summary so I can extract the entities.
+> {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> > {"people":["Elon Musk","Tim Cook"],"places":["Silicon Valley","Austin"],"organizations":["Apple","Tesla"]}
+> > {"people":["David Breimhurst","Kristen Greenaway"],"places":["Denton"],"organizations":["Kennard African American Cultural Heritage"]}
+> {"people":[],"places":["Dorchester County"],"organizations":["Dorchester County Emergency Medical Services"]}
+> > > {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":["Wells Cove"],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> > {"people":[],"places":["Wells Cove"],"organizations":[]}
+> {"people":["Name A","Name B"],"places":["Place A"],"organizations":["Org A"]}
+> 

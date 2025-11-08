@@ -1,0 +1,17 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > Sure, please provide the headline and summary of the news story so I can extract the entities.
+> {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> > {"people":["Jane Smith","John Doe"],"places":["New York","Berlin"],"organizations":["United Nations","TechCorp"]}
+> > {"people": ["David Breimhurst", "Kristen Greenaway"], "places": ["Denton"], "organizations": ["Kennard African American Cultural Heritage"]}
+> {"people": [], "places": ["Dorchester County"], "organizations": ["Dorchester County Emergency Medical Services"]}
+> > > {"people":[],"places":[],"organizations":[]}
+> {"people":["Hoesy Corona"],"places":["Academy Art Museum"],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> > {"people":["Hoesy Corona"],"places":["Academy Art Museum"],"organizations":[]}
+> {"people":["Name A","Name B"],"places":["Place A"],"organizations":["Org A"]}
+> 

@@ -1,0 +1,24 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+“Apple Buys AI Startup to Boost Siri’s Smarts”
+
+**Summary:**  
+Apple has acquired the San Francisco–based machine-learning firm Laserlike, founded by ex-Google engineers Anand Shukla, Srinivasan Narayanan and Zachary Rae, for an undisclosed sum to improve Siri’s search capabilities.
+
+**Entities:**  
+Apple, Laserlike, San Francisco, Siri, Anand Shukla, Srinivasan Narayanan, Zachary Rae, Google
+> {"people": ["Anand Shukla", "Srinivasan Narayanan", "Zachary Rae"], "places": ["San Francisco"], "organizations": ["Apple", "Laserlike", "Google", "Siri"]}
+> {"people": ["Anand Shukla", "Srinivasan Narayanan", "Zachary Rae"], "places": ["San Francisco"], "organizations": ["Apple", "Laserlike", "Google", "Siri"]}
+> > {"people": ["Anand Shukla", "Srinivasan Narayanan", "Zachary Rae"], "places": ["San Francisco"], "organizations": ["Apple", "Laserlike", "Google", "Siri"]}
+> > {"people": ["Anand Shukla", "Srinivasan Narayanan", "Zachary Rae"], "places": ["San Francisco"], "organizations": ["Apple", "Laserlike", "Google", "Siri"]}
+> {"people": ["Anand Shukla", "Srinivasan Narayanan", "Zachary Rae"], "places": ["San Francisco"], "organizations": ["Apple", "Laserlike", "Google", "Siri"]}
+> > > {"people": ["Anand Shukla", "Srinivasan Narayanan", "Zachary Rae"], "places": ["San Francisco"], "organizations": ["Apple", "Laserlike", "Google", "Siri"]}
+> {"people": ["Santa"], "places": [], "organizations": []}
+> {"people": ["Santa"], "places": [], "organizations": []}
+> > {"people": ["Santa"], "places": [], "organizations": []}
+> {"people": ["Santa"], "places": [], "organizations": []}
+> 

@@ -1,0 +1,33 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro with M3 Chip, Promising 22-Hour Battery Life"
+
+**Summary:**  
+Apple on Tuesday introduced its latest MacBook Pro lineup powered by the new M3 chip, claiming up to 22 hours of battery life. The 14-inch and 16-inch models start at $1,599 and $2,499 respectively, and will be available next week. CEO Tim Cook highlighted the performance gains over Intel-based models during the virtual event. The laptops feature Liquid Retina XDR displays, up to 128GB unified memory, and support for Wi-Fi 6E. Apple also announced updated MacBook Air models with the M3 chip, starting at $1,099.
+
+---
+
+**Extracted Entities:**  
+- Apple  
+- MacBook Pro  
+- M3 chip  
+- Tim Cook  
+- Intel  
+- Liquid Retina XDR  
+- Wi-Fi 6E  
+- MacBook Air
+> {"people": ["Tim Cook"], "places": [], "organizations": ["Apple", "Intel"]}
+> {"people": ["Tim Cook"], "places": [], "organizations": ["Apple", "Intel"]}
+> > {"people": ["Tim Cook"], "places": [], "organizations": ["Apple", "Intel"]}
+> > {"people": ["Tim Cook"], "places": [], "organizations": ["Apple", "Intel"]}
+> {"people": ["Tim Cook"], "places": [], "organizations": ["Apple", "Intel"]}
+> > > {"people": ["Tim Cook"], "places": [], "organizations": ["Apple", "Intel"]}
+> {"people": [], "places": ["Talbot"], "organizations": ["Talbot Board of Ed"]}
+> {"people": [], "places": ["Talbot"], "organizations": ["Talbot Board of Ed"]}
+> > {"people": [], "places": ["Talbot"], "organizations": ["Talbot Board of Ed"]}
+> {"people": [], "places": ["Talbot"], "organizations": ["Talbot Board of Ed"]}
+> 

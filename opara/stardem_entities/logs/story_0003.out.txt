@@ -1,0 +1,17 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > Of course, please provide the Headline and Summary so I can extract the entities.
+> {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
+> {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
+> > {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
+> > {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
+> {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
+> > > {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
+> {"people":[],"places":[],"organizations":["Eagles"]}
+> {"people":[],"places":[],"organizations":["Eagles"]}
+> > {"people":[],"places":[],"organizations":["Eagles"]}
+> {"people":[],"places":[],"organizations":["Eagles"]}
+> 

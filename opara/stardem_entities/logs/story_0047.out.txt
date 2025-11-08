@@ -1,0 +1,32 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro With M3 Chip, Available Next Week"
+
+**Summary:**  
+Apple on Tuesday introduced its latest MacBook Pro lineup powered by the new M3 processor. The 14-inch and 16-inch models feature improved battery life, brighter displays, and faster performance. Pre-orders begin Friday, with shipments starting November 7. The base 14-inch model starts at $1,599, while the 16-inch version begins at $2,499.
+
+**Extracted Entities:**  
+- Apple  
+- MacBook Pro  
+- M3 chip / M3 processor  
+- 14-inch (model)  
+- 16-inch (model)  
+- Friday (pre-order date)  
+- November 7 (shipment date)  
+- $1,599 (base 14-inch price)  
+- $2,499 (16-inch price)
+> {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Apple"]}
+> > {"people":[],"places":[],"organizations":["Apple"]}
+> > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":["Apple"]}
+> > > {"people":[],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> > {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> 

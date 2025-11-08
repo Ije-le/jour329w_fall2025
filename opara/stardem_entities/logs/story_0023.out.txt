@@ -1,0 +1,24 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+“Apple to Buy AI Startup DarwinAI in Push for On-Device Intelligence”
+
+**Summary:**  
+Apple has acquired DarwinAI, a Canadian company that makes vision-based AI tools for inspecting manufacturing components. The deal, completed earlier this year, adds dozens of DarwinAI engineers to Apple’s machine-learning division. DarwinAI’s technology is expected to help Apple run AI on devices rather than in the cloud.
+
+**Extracted Entities:**  
+Apple, DarwinAI, Canadian, DarwinAI engineers, Apple’s machine-learning division
+> {"people": ["DarwinAI engineers"], "places": ["Canadian"], "organizations": ["Apple", "DarwinAI", "Apple’s machine-learning division"]}
+> {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI"]}
+> > {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI"]}
+> > {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI"]}
+> {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI"]}
+> > > {"people": [], "places": ["Canada"], "organizations": ["Apple", "DarwinAI"]}
+> {"people": [], "places": ["Caroline County"], "organizations": ["Caroline County's Problem Solving Court"]}
+> {"people": [], "places": ["Caroline County"], "organizations": ["Caroline County's Problem Solving Court"]}
+> > {"people": [], "places": ["Caroline County"], "organizations": ["Caroline County's Problem Solving Court"]}
+> {"people": [], "places": ["Caroline County"], "organizations": ["Caroline County's Problem Solving Court"]}
+> 

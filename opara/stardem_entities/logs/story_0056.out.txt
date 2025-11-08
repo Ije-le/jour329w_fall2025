@@ -1,0 +1,24 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+“Apple Buys AI Startup to Boost Siri’s Smarts”
+
+**Summary:**  
+Apple has acquired the San Francisco–based machine-learning firm Gumloop for a reported $200 million. Gumloop’s 40-person team, including co-founders Ankit Jain and Sahil Aggarwal, will join Apple’s Siri division.
+
+**Extracted Entities:**  
+Apple, Gumloop, San Francisco, Ankit Jain, Sahil Aggarwal, Siri
+> {"people": ["Ankit Jain", "Sahil Aggarwal"], "places": ["San Francisco"], "organizations": ["Apple", "Gumloop", "Siri"]}
+> {"people": ["Ankit Jain", "Sahil Aggarwal"], "places": ["San Francisco"], "organizations": ["Apple", "Gumloop", "Siri"]}
+> > {"people": ["Ankit Jain", "Sahil Aggarwal"], "places": ["San Francisco"], "organizations": ["Apple", "Gumloop", "Siri"]}
+> > {"people": ["Ankit Jain", "Sahil Aggarwal"], "places": ["San Francisco"], "organizations": ["Apple", "Gumloop", "Siri"]}
+> {"people": ["Ankit Jain", "Sahil Aggarwal"], "places": ["San Francisco"], "organizations": ["Apple", "Gumloop", "Siri"]}
+> > > {"people": ["Ankit Jain", "Sahil Aggarwal"], "places": ["San Francisco"], "organizations": ["Apple", "Gumloop", "Siri"]}
+> {"people": [], "places": ["Talbot County"], "organizations": []}
+> {"people": [], "places": ["Talbot County"], "organizations": []}
+> > {"people": [], "places": ["Talbot County"], "organizations": []}
+> {"people": [], "places": ["Talbot County"], "organizations": []}
+> 

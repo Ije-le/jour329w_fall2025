@@ -1,0 +1,24 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+"Apple Unveils New MacBook Pro with M3 Chip, Promises 40% Performance Boost"
+
+**Summary:**  
+Apple on Monday introduced its latest MacBook Pro lineup powered by the new M3 chip, claiming up to 40% faster performance than the M2 model. The 14-inch and 16-inch models start at $1,599 and $2,499 respectively, with availability beginning next week. The devices feature Liquid Retina XDR displays, up to 128GB unified memory, and support for up to 4 external displays. Apple CEO Tim Cook highlighted the efficiency gains during the virtual launch event, while Senior VP of Hardware John Ternus detailed thermal improvements. The announcement comes ahead of the holiday shopping season as Apple faces slowing PC demand globally.
+
+**Extracted Entities:**  
+Apple, MacBook Pro, M3 chip, M2, 14-inch, 16-inch, Liquid Retina XDR, Tim Cook, John Ternus
+> {"people":["Tim Cook","John Ternus"],"places":[],"organizations":["Apple"]}
+> {"people":["Tim Cook","John Ternus"],"places":[],"organizations":["Apple"]}
+> > {"people":["Tim Cook","John Ternus"],"places":[],"organizations":["Apple"]}
+> > {"people":["Tim Cook","John Ternus"],"places":[],"organizations":["Apple"]}
+> {"people":["Tim Cook","John Ternus"],"places":[],"organizations":["Apple"]}
+> > > {"people":["Tim Cook","John Ternus"],"places":[],"organizations":["Apple"]}
+> {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> > {"people":[],"places":[],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> 

@@ -1,0 +1,28 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline (implied):**  
+“Israel-Hamas war: UN says 1.5 million Gazans displaced; IDF strikes Rafah”
+
+**Summary (implied):**  
+The UN reports 1.5 million people displaced in Gaza amid ongoing Israeli air-strikes, including heavy bombardment of Rafah, while Hamas continues rocket fire toward Israel.
+
+**Extracted Entities:**  
+Israel  
+Hamas  
+UN (United Nations)  
+Gaza  
+Rafah
+> {"people": ["1.5 million Gazans"], "places": ["Gaza", "Rafah", "Israel"], "organizations": ["UN", "IDF", "Hamas"]}
+> {"people": [], "places": ["Gaza", "Rafah", "Israel"], "organizations": ["UN", "IDF", "Hamas"]}
+> > {"people": [], "places": ["Gaza", "Rafah", "Israel"], "organizations": ["UN", "IDF", "Hamas"]}
+> > {"people": ["David Breimhurst", "Kristen Greenaway"], "places": ["Denton"], "organizations": ["Kennard African American Cultural Heritage"]}
+> {"people": [], "places": ["Dorchester County"], "organizations": ["Dorchester County Emergency Medical Services"]}
+> > > {"people": [], "places": ["Gaza", "Rafah", "Israel"], "organizations": ["UN", "IDF", "Hamas"]}
+> {"people": ["Harriet Tubman"], "places": ["Harriet Tubman Byway"], "organizations": []}
+> {"people": ["Harriet Tubman"], "places": ["Harriet Tubman Byway"], "organizations": []}
+> > {"people": ["Harriet Tubman"], "places": ["Harriet Tubman Byway"], "organizations": []}
+> {"people": ["Name A", "Name B"], "places": ["Place A"], "organizations": ["Org A"]}
+> 

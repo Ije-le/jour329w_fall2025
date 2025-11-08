@@ -1,0 +1,17 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > Of course—please provide the headline and summary so I can extract the entities for you.
+> {"people": ["Viktor Orban"], "places": ["Hungary", "Brussels"], "organizations": ["European Union"]}
+> {"people": ["Viktor Orban"], "places": ["Hungary", "Brussels"], "organizations": ["European Union"]}
+> > {"people": ["Viktor Orban"], "places": ["Hungary", "Brussels"], "organizations": ["European Union"]}
+> > {"people": ["David Breimhurst", "Kristen Greenaway"], "places": ["Denton"], "organizations": ["Kennard African American Cultural Heritage"]}
+> {"people": [], "places": ["Dorchester County"], "organizations": ["Dorchester County Emergency Medical Services"]}
+> > > {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": ["U.S."], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
+> > {"people": [], "places": ["U.S."], "organizations": []}
+> {"people": ["Name A", "Name B"], "places": ["Place A"], "organizations": ["Org A"]}
+> 

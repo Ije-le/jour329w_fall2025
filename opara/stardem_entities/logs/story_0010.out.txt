@@ -1,0 +1,29 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > **Headline:**  
+“Apple to Buy AI Startup DarwinAI in Push to Catch Microsoft, Google”
+
+**Summary:**  
+Apple Inc. has quietly acquired Canada-based DarwinAI, a startup specializing in vision-based AI for inspecting manufacturing components, to bolster its own generative-AI capabilities ahead of iOS 18. The deal closed earlier this year and saw multiple DarwinAI employees join Apple’s AI division.
+
+**Entities extracted:**  
+- Apple Inc.  
+- DarwinAI  
+- Canada  
+- Microsoft  
+- Google  
+- iOS 18
+> {"people": [], "places": ["Canada"], "organizations": ["Apple Inc.", "DarwinAI", "Microsoft", "Google"]}
+> {"people":[],"places":["Canada"],"organizations":["Apple Inc.","DarwinAI","Microsoft","Google"]}
+> > {"people":[],"places":["Canada"],"organizations":["Apple Inc.","DarwinAI","Microsoft","Google"]}
+> > {"people":[],"places":["Canada"],"organizations":["Apple Inc.","DarwinAI","Microsoft","Google"]}
+> {"people":[],"places":["Canada"],"organizations":["Apple Inc.","DarwinAI","Microsoft","Google"]}
+> > > {"people":[],"places":["Canada"],"organizations":["Apple Inc.","DarwinAI","Microsoft","Google"]}
+> {"people":[],"places":["St. Michaels"],"organizations":[]}
+> {"people":[],"places":["St. Michaels"],"organizations":[]}
+> > {"people":[],"places":["St. Michaels"],"organizations":[]}
+> {"people":[],"places":[],"organizations":[]}
+> 
