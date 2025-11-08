@@ -98,7 +98,12 @@ def main():
     for i, story in enumerate(stories):
         print(f"Processing {i+1}/{len(stories)}: {story['title']}")
         
-        metadata = extract_metadata(story['title'], story['summary'], schema_prompt, args.model)
+        # Backwards-compat wrapper: some older call sites use extract_metadata
+        # while the new extraction function is named extract_entities.
+        try:
+            metadata = extract_entities(story['title'], story['summary'], schema_prompt, args.model)
+        except NameError:
+            metadata = extract_metadata(story['title'], story['summary'], schema_prompt, args.model)
         
         # Add metadata fields as separate columns instead of nested object
         enhanced_story = story.copy()
