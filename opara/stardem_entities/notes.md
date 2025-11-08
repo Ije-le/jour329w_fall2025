@@ -37,10 +37,12 @@ organizations:
 Remember to change the model used to run the script to: groq/moonshotai/kimi-k2-instruct-0905
 Remove DEFAULT_MODEL from the script and call llm using uv run. Do this just once.
 
-This returned values only for headlines. So I changed the prompt and the model:
+This returned values only for headlines, but after further trial, copilot created a new file: stories_with_entities_recovered.json. This one had some of the metadata I needed, but there were a good number of stories did not have any information. Some names also had weird values like  "1.5 million Gazans."
+
+To get a third script, I changed the prompt and the model, asking only for names 'prominently featured in the stories:
 
 Using this groq model: groq/meta-llama/llama-4-maverick-17b-128e-instruct modify the add_entities.py script. From the stardem_sample.json file, let the script extract people, places and organizations into arrays.
-People in this context means every person mention in the json file. Places means every place mentioned in the json file. Organization means every organization mentioned in the json file. Here are two examples each of people, places and organization are as follows:
+People in this context means every person mention in the json file. Places means every place mentioned in the json file. Organization means every organization mentioned in the json file. Only return values for people prominently featured in the stories. Here are two examples each of people, places and organization are as follows:
 people: David Breimhurst, Kristen Greenaway. places: Denton, Kennard African American Cultural Heritage. organizations: National Down Syndrome Society, Dorchester County Emergency Medical Services. Change the output file to 'stories_with_entities_second.json' and save it to the output file. The json output should have this structure:
 story number:
   - 1
