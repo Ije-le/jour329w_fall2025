@@ -1,7 +1,6 @@
-Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Chatting with groq/meta-llama/llama-4-maverick-17b-128e-instruct
 Type 'exit' or 'quit' to exit
 Type '!multi' to enter multiple lines, then '!end' to finish
 Type '!edit' to open your default editor and modify the prompt
 Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
-> > Sure, I can help with that. Please share the news story you'd like me to analyze.
 > > 

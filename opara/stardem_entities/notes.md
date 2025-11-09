@@ -56,3 +56,10 @@ organizations:
   - National Down Syndrome Society, Dorchester County Emergency Medical Services
 Remember to change the model used to run the script to: groq/meta-llama/llama-4-maverick-17b-128e-instruct
 Remove DEFAULT_MODEL from the script and call llm using uv run. Do this just once.
+After two tries, it returned a single empty list. After a little bit of back and forth, it populated the stories_with_entities_second.json with metadata.
+
+# stories_with_entities_recovered vs. stories_with_entities_second
+Because I made the mistake of loading the empty json file to Datasette at first, the stories_with_entities_recovered document returned 400 instead of 200 rows in Datasette.
+The json file did have some names of sources, places, organizations. But there were empty lists in so many columns. It also did not look accurate because most of the stories did not have ALL the entities in them. Maybe I should have said ALL in my prompt, but what seemed very concerning was that the metadata in some cases seemed like they were pulled out from somewhere other than the story. For instance, story 27 (227 in Datasette) had this headline: Two candidates run for Oxford commission seats. The metadata generated for it included no names, even though the names of the candidates were mentioned. It also listed places like Gaza Strip, Israel, and Rafah, and Israel Defence Forces as organizations, but when I read the story, I found no mention of these places.
+The story on Matt Blanc had Jane Doe, John Smith as names which were very weird and totalaly did not appear in that story. other metadata it suggested which were not anywhere in the story are: New York and Berlin as places and United Nations and TechCorp as places.
+The stories_with_entities_second was not much different. I traced the same stories in this json file using Datasette, and the results were the same. I suspect copilot copied one file into the other. While trying to generate the stories_with_entities_second json file, I saw that copilot had suggested doing this when it was takin too long to generate the file. I told it not to, but looking at both documents, I think it went ahead to do that.

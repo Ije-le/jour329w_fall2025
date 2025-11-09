@@ -1,28 +1,16 @@
-Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Chatting with groq/meta-llama/llama-4-maverick-17b-128e-instruct
 Type 'exit' or 'quit' to exit
 Type '!multi' to enter multiple lines, then '!end' to finish
 Type '!edit' to open your default editor and modify the prompt
 Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
-> > **Headline (implied):**  
-“Israel-Hamas war: UN says 1.5 million Gazans displaced; IDF strikes Rafah”
+> > It seems like you forgot to include the news story!
 
-**Summary (implied):**  
-The UN reports 1.5 million people displaced in Gaza amid ongoing Israeli air-strikes, including heavy bombardment of Rafah, while Hamas continues rocket fire toward Israel.
+Please go ahead and provide the news story, and I'll be more than happy to extract the entities mentioned in it. I'll identify and categorize the entities, such as people, organizations, locations, and more.
 
-**Extracted Entities:**  
-Israel  
-Hamas  
-UN (United Nations)  
-Gaza  
-Rafah
-> {"people": ["1.5 million Gazans"], "places": ["Gaza", "Rafah", "Israel"], "organizations": ["UN", "IDF", "Hamas"]}
-> {"people": [], "places": ["Gaza", "Rafah", "Israel"], "organizations": ["UN", "IDF", "Hamas"]}
-> > {"people": [], "places": ["Gaza", "Rafah", "Israel"], "organizations": ["UN", "IDF", "Hamas"]}
-> > {"people": ["David Breimhurst", "Kristen Greenaway"], "places": ["Denton"], "organizations": ["Kennard African American Cultural Heritage"]}
-> {"people": [], "places": ["Dorchester County"], "organizations": ["Dorchester County Emergency Medical Services"]}
-> > > {"people": [], "places": ["Gaza", "Rafah", "Israel"], "organizations": ["UN", "IDF", "Hamas"]}
-> {"people": ["Harriet Tubman"], "places": ["Harriet Tubman Byway"], "organizations": []}
-> {"people": ["Harriet Tubman"], "places": ["Harriet Tubman Byway"], "organizations": []}
-> > {"people": ["Harriet Tubman"], "places": ["Harriet Tubman Byway"], "organizations": []}
-> {"people": ["Name A", "Name B"], "places": ["Place A"], "organizations": ["Org A"]}
+Just paste the news story, and I'll get started!
+> > You want me to extract entities from the given text without asking for more information. However, you haven't provided any text. Let's proceed with the understanding that I will work with the information given.
+
+Since there's no text provided, I'll state that there's no information to extract entities from. If you provide the text, I'll identify the entities.
+> {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
 > 

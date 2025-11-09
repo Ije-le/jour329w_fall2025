@@ -1,7 +1,15 @@
-Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Chatting with groq/meta-llama/llama-4-maverick-17b-128e-instruct
 Type 'exit' or 'quit' to exit
 Type '!multi' to enter multiple lines, then '!end' to finish
 Type '!edit' to open your default editor and modify the prompt
 Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
-> > Sure, please provide the Headline and Summary of the news story, and I’ll extract the entities for you.
+> > It seems like you forgot to include the news story.
+
+Please go ahead and provide the news story, and I'll be happy to extract the entities mentioned in it. I'll identify the key entities such as people, organizations, locations, etc.
+> > You didn't provide a news story. Please provide the headline and article text, and I'll extract the entities.
+> You didn't provide a news story.
+> {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
+> > {"people": [], "places": [], "organizations": []}
 > 

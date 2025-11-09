@@ -1,17 +1,7 @@
-Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Chatting with groq/meta-llama/llama-4-maverick-17b-128e-instruct
 Type 'exit' or 'quit' to exit
 Type '!multi' to enter multiple lines, then '!end' to finish
 Type '!edit' to open your default editor and modify the prompt
 Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
-> > Of course, please provide the Headline and Summary so I can extract the entities.
-> {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
-> {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
-> > {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
-> > {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
-> {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
-> > > {"people":[],"places":["Gaza Strip","Israel","Egypt"],"organizations":["Israel Defense Forces","Hamas"]}
-> {"people":[],"places":[],"organizations":["Eagles"]}
-> {"people":[],"places":[],"organizations":["Eagles"]}
-> > {"people":[],"places":[],"organizations":["Eagles"]}
-> {"people":[],"places":[],"organizations":["Eagles"]}
-> 
+> > It seems like you forgot to include the news story. Please go ahead and share it, and I'll be happy to help extract the entities mentioned in it. I'll make sure to pay extra attention since you mentioned it's VERY IMPORTANT!
+> > 
