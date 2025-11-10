@@ -1,0 +1,2 @@
+11-10-2025      Star-Dem Topic Entities
+I chose the topic: Arts_Culture because I was interested in knowing what stories were eeventually classified under this topic, since I wasn't sure how to differentiate it from Community Events.
