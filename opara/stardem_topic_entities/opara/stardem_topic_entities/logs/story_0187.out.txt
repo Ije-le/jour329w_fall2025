@@ -1,0 +1,1 @@
+{"people": ["Paige Connelly", "John Deeter"], "places": ["Country School field house", "Easton, MD"], "organizations": ["Guyette and Deeter", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Ward's brother"]}

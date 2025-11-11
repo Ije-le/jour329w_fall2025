@@ -1,0 +1,1 @@
+{"people": ["Mabel Savage", "Shannon"], "places": ["Easton, MD", "Greece"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

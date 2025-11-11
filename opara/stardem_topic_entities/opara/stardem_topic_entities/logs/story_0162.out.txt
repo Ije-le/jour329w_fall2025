@@ -1,0 +1,1 @@
+{"people": ["Elizabeth Fischer", "Tom Ledvina"], "places": ["Eastern Shore", "Harris Creek", "Tickler's Crab Shack", "Wyder Hotel", "Easton", "MD", "Mid-Shore"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

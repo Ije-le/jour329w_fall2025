@@ -1,0 +1,1 @@
+{"people": ["Lesley Aaron"], "places": ["Easton", "Idlewild Avenue", "Bayleigh Chase Senior Living"], "organizations": ["Bay Country Chorus", "Star Democrat", "Chesapeake Publishing Group", "Ted Mueller Photography"]}

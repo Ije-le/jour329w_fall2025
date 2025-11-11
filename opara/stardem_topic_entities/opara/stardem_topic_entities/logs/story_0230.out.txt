@@ -1,0 +1,1 @@
+{"people": ["Tom Mccall", "Skylar Blunt"], "places": ["Federalsburg", "Hurlock", "Preston", "Denton", "North Main Street", "Town Hall", "Easton", "MD", "Cordova"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Grace Upon Grace Dance Studio", "North Dorchester Middle School", "Colonel Richardson High School"]}

@@ -1,0 +1,1 @@
+{"people": ["Mike Starling"], "places": ["Easton", "Talbot", "Dorchester", "Caroline", "Wicomico", "Southern Maryland", "Cambridge", "Mid-Shore"], "organizations": ["WHCP", "NPR", "The Star Democrat", "Premier Movie Theaters", "Chesapeake Publishing Group", "APGMedia", "Alexa"]}

@@ -1,0 +1,1 @@
+{"people": ["William Storck", "Naoto Nakagawa", "Laura Era", "Peg Fitzgerald"], "places": ["Easton", "Annapolis", "Vermont", "Chesapeake Bay", "Maryland", "Eastern Shore", "Harrison Street"], "organizations": ["Troika Gallery", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "American Society of Marine Artist", "Maryland Institute College of Art"]}

@@ -109,7 +109,8 @@ def main():
                         help='Input topic JSON file')
     parser.add_argument('--output', default='opara/stardem_topic_entities/stories_with_entities_v1.json',
                         help='Output simplified JSON file')
-    parser.add_argument('--limit', type=int, default=10, help='Process only the first N stories (default 10)')
+    # Default --limit 0 means process all stories in the input file
+    parser.add_argument('--limit', type=int, default=0, help='Process only the first N stories (default 0 = all)')
     args = parser.parse_args()
 
     input_path = Path(args.input)
@@ -120,7 +121,12 @@ def main():
     with open(input_path) as f:
         stories = json.load(f)
 
-    stories = stories[: args.limit if args.limit and args.limit > 0 else len(stories)]
+    # If --limit > 0, process that many stories; otherwise process all
+    if args.limit and args.limit > 0:
+        stories = stories[: args.limit]
+    else:
+        # process the full file
+        stories = stories
 
     # Create model using the llm Python API
     model = llm.get_model(args.model)

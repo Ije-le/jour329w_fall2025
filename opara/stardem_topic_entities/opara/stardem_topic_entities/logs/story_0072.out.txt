@@ -1,0 +1,1 @@
+{"people": ["Steve", "Lowe Downs", "Emma Myers", "Kat Parsons"], "places": ["Easton", "Easton Farmers Market", "Harrison Street"], "organizations": ["Avalon Foundation", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Avalon"]}

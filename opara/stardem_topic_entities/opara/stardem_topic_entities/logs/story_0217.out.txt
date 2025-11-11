@@ -1,0 +1,1 @@
+{"people": ["Giovanna Dell'Orto"], "places": ["Jerusalem", "Easton", "San Clemente", "Temple", "Western Wall"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Associated Press", "The Conversation US", "Lilly Endowment Inc.", "Chabad of San Clemente"]}

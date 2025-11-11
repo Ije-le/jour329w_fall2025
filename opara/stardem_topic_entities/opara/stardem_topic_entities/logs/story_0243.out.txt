@@ -1,0 +1,1 @@
+{"people": ["Marie Savage"], "places": ["Eastern Shore of Maryland", "Italy", "Atlantic", "Maryland", "Easton"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "METRO CREATIVE SERVICES"]}

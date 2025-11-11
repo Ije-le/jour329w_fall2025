@@ -1,0 +1,1 @@
+{"people": ["Sharron Owens"], "places": ["Choptank River", "Easton, MD"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

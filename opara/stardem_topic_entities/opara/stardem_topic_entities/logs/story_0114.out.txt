@@ -1,0 +1,1 @@
+{"people": ["Tom Mccall", "Steve Mosher", "Andrew Carter", "Steven E. Mosher", "Kirsten Mosher"], "places": ["St. Michaels", "Easton", "MD", "Earth"], "organizations": ["Christ Church", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

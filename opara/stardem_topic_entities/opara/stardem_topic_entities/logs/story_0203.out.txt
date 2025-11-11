@@ -1,0 +1,1 @@
+{"people": ["Kristin Rutkowksi", "Kate Dumhart"], "places": ["Chesapeake Bay", "St. Michaels Library", "Easton, MD"], "organizations": ["Star Democrat", "Friends of the Library", "Chesapeake Bay Maritime Museum", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

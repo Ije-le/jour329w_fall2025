@@ -1,0 +1,1 @@
+{"people": ["Nanny Trippe", "Beth Bathe"], "places": ["Easton", "Talbot County", "California", "Canada", "Norway", "Harrison St"], "organizations": ["Trippe Gallery", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

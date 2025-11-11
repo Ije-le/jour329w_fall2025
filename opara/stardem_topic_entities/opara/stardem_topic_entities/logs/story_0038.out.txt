@@ -1,0 +1,1 @@
+{"people": ["Mike Detmer", "Elizabeth Ferguson"], "places": ["Trappe", "Easton", "MD", "Backtown Road", "Main Street"], "organizations": ["Rural Life Museum", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

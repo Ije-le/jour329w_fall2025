@@ -1,0 +1,1 @@
+{"people": ["Kristin Rutkowski", "Jen Dolde", "Judy Bixler", "Kate Dumhart", "Vera Meredith"], "places": ["Chesapeake Bay", "St. Michaels", "Easton", "Maryland", "Oxford", "Bellevue"], "organizations": ["Chesapeake Bay Maritime Museum", "CBMM", "Maryland State Arts Council", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}

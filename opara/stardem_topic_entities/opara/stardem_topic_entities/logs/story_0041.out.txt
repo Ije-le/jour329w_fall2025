@@ -1,0 +1,1 @@
+{"people": ["Marie Savage"], "places": ["Easton", "America", "MD"], "organizations": ["Star Democrat", "The Country Cook", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

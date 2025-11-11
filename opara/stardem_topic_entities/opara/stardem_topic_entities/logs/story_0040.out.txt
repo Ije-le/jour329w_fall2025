@@ -1,0 +1,1 @@
+{"people": ["Peter Friesen", "George Sass"], "places": ["Cambridge", "Maryland", "St. Mary's City", "Long Wharf", "Easton"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Maryland Heritage Areas Authority", "Historic St. Mary's City", "Yacht Club"]}

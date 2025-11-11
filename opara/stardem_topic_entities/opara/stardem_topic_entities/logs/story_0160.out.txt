@@ -1,0 +1,1 @@
+{"people": ["Patty Quimby", "Nicholas Casale", "Kristy Casale"], "places": ["Easton", "Talbot County"], "organizations": ["Talbot Humane", "Star Democrat", "Chesapeake Publishing Group", "APGMedia"]}

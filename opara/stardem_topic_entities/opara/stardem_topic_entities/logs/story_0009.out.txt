@@ -1,1 +1,1 @@
-{"people": ["Wes Williams", "George Sass"], "places": ["St. Michaels", "Chesapeake Bay", "Easton", "MD"], "organizations": ["Chesapeake Bay Maritime Museum", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}
+{"people": ["Wes Williams", "George Sass"], "places": ["St. Michaels", "Chesapeake Bay", "Easton", "MD"], "organizations": ["Chesapeake Bay Maritime Museum", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}

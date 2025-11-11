@@ -1,0 +1,1 @@
+{"people": ["Phillip Alder", "Richard Brinsley Sheridan", "Mrs. Malaprop"], "places": ["Easton", "Nile"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

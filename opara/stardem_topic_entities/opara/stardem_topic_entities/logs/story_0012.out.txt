@@ -1,0 +1,1 @@
+{"people": ["Ken Rose", "Rebecca Placek"], "places": ["Easton", "Kent Island"], "organizations": ["Kent Island Federation of Art", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

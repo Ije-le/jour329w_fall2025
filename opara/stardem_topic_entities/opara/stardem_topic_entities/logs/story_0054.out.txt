@@ -1,0 +1,1 @@
+{"people": ["Jimmy Carter", "Mabel Savage"], "places": ["Eastern Shore", "Easton", "MD"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Congress"]}

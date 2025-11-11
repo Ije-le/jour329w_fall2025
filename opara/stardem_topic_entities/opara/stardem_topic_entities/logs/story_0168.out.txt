@@ -1,0 +1,1 @@
+{"people": ["Marie Savage", "Shannon"], "places": ["Easton", "Pittsville"], "organizations": ["Ard Brac Acres", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

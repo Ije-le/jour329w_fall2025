@@ -1,0 +1,1 @@
+{"people": ["Mary Hunt", "Debbie", "Kelly"], "places": ["Easton", "MD", "Florida", "New Orleans"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Creators", "EverydayCheapskate", "Accessory Wholesale"]}

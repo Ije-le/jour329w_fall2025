@@ -1,0 +1,1 @@
+{"people": ["Deena Kilmon"], "places": ["Easton", "Chesapeake", "Maryland"], "organizations": ["Easton Economic Development Corporation", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

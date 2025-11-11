@@ -1,0 +1,1 @@
+{"people": ["Francisco Salazar", "B.L. Strang-Moya"], "places": ["Easton", "Ocean City", "Academy Art Museum"], "organizations": ["Ocean City Film Festival", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "AAM Summer Series"]}

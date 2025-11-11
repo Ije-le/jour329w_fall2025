@@ -1,0 +1,1 @@
+{"people": ["Neil King", "Jeff McGuinness"], "places": ["Easton", "Academy Art Museum", "East Coast", "Washington, DC", "New York City", "Maryland", "Pennsylvania", "New Jersey", "Eastern Shore"], "organizations": ["Chesapeake Forum", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Star Democrat"]}

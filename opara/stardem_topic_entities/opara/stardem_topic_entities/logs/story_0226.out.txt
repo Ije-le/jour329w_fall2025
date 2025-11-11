@@ -1,0 +1,1 @@
+{"people": ["Lesley Giles"], "places": ["Cambridge", "Easton", "Main Street"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "APGMedia", "Main Street Gallery"]}

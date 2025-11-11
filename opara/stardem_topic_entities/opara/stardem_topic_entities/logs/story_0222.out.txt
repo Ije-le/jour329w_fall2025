@@ -1,0 +1,1 @@
+{"people": [], "places": ["Easton", "South Street"], "organizations": ["Academy Art Museum", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Star Democrat"]}

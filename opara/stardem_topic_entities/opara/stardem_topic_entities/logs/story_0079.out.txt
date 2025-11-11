@@ -1,0 +1,1 @@
+{"people": ["Imani Watson", "Dave Ramsey", "T.D. Jakes", "Madison Harris", "Teresa Tucker"], "places": ["Maryland", "Calvert County", "Calvert High School", "Easton"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Timeless Studios Photography", "Amazon"]}

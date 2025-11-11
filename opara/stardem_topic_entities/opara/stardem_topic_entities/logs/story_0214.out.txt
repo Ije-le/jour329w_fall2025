@@ -1,0 +1,1 @@
+{"people": ["Kristen Greenaway", "Anthony Turk Cannon", "Wilson Turk Cannon"], "places": ["Chesapeake Bay", "St. Michaels", "Easton", "MD"], "organizations": ["Chesapeake Bay Maritime Museum", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

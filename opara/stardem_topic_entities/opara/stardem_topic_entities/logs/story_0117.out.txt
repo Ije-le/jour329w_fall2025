@@ -1,0 +1,1 @@
+{"people": ["Denise Haddaway"], "places": ["Branson", "Missouri", "Easton", "MD", "Heartland"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

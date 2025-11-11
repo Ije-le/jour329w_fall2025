@@ -1,0 +1,1 @@
+{"people": ["Helen Lindsey", "Ted Black", "Sophia Joyce", "Fiona"], "places": ["Solomons", "Florida", "Massachusetts", "Easton", "Dowell Road", "Annmarie Sculpture Garden & Arts Center", "Annmarie Gardens", "La Plata"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Annmarie Garden & Sculpture Center"]}

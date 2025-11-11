@@ -1,0 +1,1 @@
+{"people": ["Doug Morley", "Henry Wadsworth Longfellow", "Jesus"], "places": ["Easton, MD", "Ukraine", "Israel"], "organizations": ["Greater Impact", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

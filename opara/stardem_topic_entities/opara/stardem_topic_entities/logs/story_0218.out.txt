@@ -1,0 +1,1 @@
+{"people": [], "places": ["CAPITOL HILL", "Easton", "Richwood", "Washington", "U.S. Capitol", "West Front"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Lumberjack Express", "Richwood High School"]}

@@ -1,0 +1,1 @@
+{"people": ["Nicholas Tindall", "Tom Mccall", "Sue Simmons", "Sean Parker"], "places": ["Caroline County", "Denton", "Easton", "Maryland"], "organizations": ["Caroline County Arts Council", "Star Democrat", "Chesapeake Publishing Group", "APGMedia", "Pizza Empire"]}

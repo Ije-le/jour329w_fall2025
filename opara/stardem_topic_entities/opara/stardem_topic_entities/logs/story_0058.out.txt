@@ -1,0 +1,1 @@
+{"people": ["Midge Menzies", "Leslie Ware", "Karla Wieland-Cherry"], "places": ["Talbot County", "Easton", "Tidewater Inn"], "organizations": ["Talbot Hospice Foundation", "Friends of Hospice", "Festival of Trees", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}

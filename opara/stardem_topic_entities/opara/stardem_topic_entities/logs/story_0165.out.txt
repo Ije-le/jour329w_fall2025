@@ -1,0 +1,1 @@
+{"people": ["Caitlin Gill", "Bridgette Guerzon Mills"], "places": ["Adkins Arboretum", "Baltimore", "Ridgely", "Tuckahoe State Park", "Eveland Road"], "organizations": ["Adkins Arboretum", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}

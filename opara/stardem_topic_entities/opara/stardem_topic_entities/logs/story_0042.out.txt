@@ -1,0 +1,1 @@
+{"people": ["Alice Engle", "Kay Butler"], "places": ["Easton", "MD"], "organizations": ["The Fiber Arts Center", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

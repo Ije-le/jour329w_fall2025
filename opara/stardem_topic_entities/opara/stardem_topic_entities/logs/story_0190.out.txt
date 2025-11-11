@@ -1,0 +1,1 @@
+{"people": ["Judy Weaver"], "places": ["Easton", "Talbot County", "Academy Art Museum", "100 West Dover Street"], "organizations": ["Working Artists Forum", "Talbot County Free Library", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

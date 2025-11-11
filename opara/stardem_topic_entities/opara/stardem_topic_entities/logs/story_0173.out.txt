@@ -1,0 +1,1 @@
+{"people": ["Wayne Wheeler", "Reagan Kent", "Jennifer Little", "Jen Wang"], "places": ["Easton", "St Michaels", "North Harrison Street", "Talbot County"], "organizations": ["Avalon Foundation", "Academy Art Museum", "Easton Farmers Market", "VFW", "St. Michaels Library", "Talbot County Free Library", "Psychedelic Bubble Store", "Star Democrat", "Chesapeake Publishing Group"]}

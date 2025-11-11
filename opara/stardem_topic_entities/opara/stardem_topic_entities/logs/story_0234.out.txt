@@ -1,0 +1,1 @@
+{"people": ["Lara Reisman", "Aly Cross", "Bryn Cross"], "places": ["Maryland", "Easton", "Calvert County", "St. Mary's County", "Prince Frederick", "Mrs. Moo's", "Bulrushes Cafe", "Asbury Solomons", "College of Southern Maryland"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "APGMedia", "Children's Theater of Southern Maryland", "Cabaret Carolers"]}

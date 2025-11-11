@@ -1,0 +1,1 @@
+{"people": ["Ananda Devi", "Fabienne Kanor", "Robert Con Davis-Undiano"], "places": ["Mauritius", "France", "Oklahoma", "Easton", "U.S.", "Sweden"], "organizations": ["World Literature Today", "University of Oklahoma", "Académie Française", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Swedish Academy", "French Ministry of Culture", "GRASSET"]}

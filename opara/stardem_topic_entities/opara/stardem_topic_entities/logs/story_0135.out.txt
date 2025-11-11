@@ -1,0 +1,1 @@
+{"people": ["Jeff Reed", "Grigg Mullen", "Cindy Mullen", "Christian Cabral", "Dickie Whaley"], "places": ["Easton", "Maryland", "Chesapeake Bay", "Lexington", "Virginia", "Chestertown", "Queen Anne's County", "Mundy Point"], "organizations": ["Bay Maritime Museum", "CBMM", "Star Democrat", "Chesapeake Publishing Group", "APGMedia", "Sultana Downrigging Festival"]}

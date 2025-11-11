@@ -1,0 +1,1 @@
+{"people": ["Harnell Chesterton", "Fat Daddy", "Sweet Mamma", "Earl", "Savannah", "Hyacinth", "Clete", "Officer Bainbridge", "Rob Sanchez"], "places": ["Oxford", "Easton", "Maryland", "Deep South"], "organizations": ["Tred Avon Players", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Oxford Community Center", "Star Democrat"]}

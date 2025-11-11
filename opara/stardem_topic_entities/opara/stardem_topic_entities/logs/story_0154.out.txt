@@ -1,0 +1,1 @@
+{"people": [], "places": ["Tilghman Island", "Easton, MD"], "organizations": ["Tilghman Watermen's Museum", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

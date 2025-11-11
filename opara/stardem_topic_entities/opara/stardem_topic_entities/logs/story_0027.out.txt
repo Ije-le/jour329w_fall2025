@@ -1,0 +1,1 @@
+{"people": ["Jesus Christ", "L.B. Bakere"], "places": ["Easton", "MD"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

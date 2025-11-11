@@ -1,0 +1,1 @@
+{"people": ["Becky Norris Kuhn", "Tara Waters", "Amanda Hastings", "Melina Raynes", "Liza Arnold", "Jillian Daniels"], "places": ["Port Tobacco", "Waldorf", "St. Mary's College of Maryland", "Lackey High School", "Charles County", "Easton", "Maryland"], "organizations": ["Port Tobacco Players", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

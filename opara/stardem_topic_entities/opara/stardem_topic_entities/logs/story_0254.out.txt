@@ -1,0 +1,1 @@
+{"people": ["David Sites"], "places": ["Chesapeake Bay", "Easton", "Thomas Point Lighthouse"], "organizations": ["Star Democrat", "Adams Publishing", "APGMedia", "Chesapeake Publishing Group"]}

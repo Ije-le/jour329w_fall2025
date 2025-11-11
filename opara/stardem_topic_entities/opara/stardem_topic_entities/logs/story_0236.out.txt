@@ -1,0 +1,1 @@
+{"people": ["Betty Huang", "Qiang Huang"], "places": ["Easton", "Tuscany"], "organizations": ["Studio B Art Gallery", "Star Democrat", "Chesapeake Publishing Group", "APGMedia", "Adams Publishing"]}

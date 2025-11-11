@@ -1,0 +1,1 @@
+{"people": ["Mike Olmert", "Laura Wormuth", "Kay Law"], "places": ["Easton", "Talbot County", "Washington Street"], "organizations": ["Talbot County Historical Society", "Talbot Historical Society", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}

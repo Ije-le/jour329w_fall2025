@@ -1,0 +1,1 @@
+{"people": ["Elvis Presley", "Marie Savage", "Mary Jenkins Langston"], "places": ["Easton", "Graceland", "Texas", "Memphis", "Mississippi", "Fort Hood", "Killeen", "Las Vegas", "Central Texas"], "organizations": ["Second Armored Division", "Star Democrat", "The Country Cook", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}

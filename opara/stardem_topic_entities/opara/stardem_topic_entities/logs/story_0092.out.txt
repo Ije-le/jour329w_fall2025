@@ -1,0 +1,1 @@
+{"people": ["Margaret Enloe-North", "Barry Koh"], "places": ["Talbot County", "Easton", "Mid-Shore"], "organizations": ["Chesapeake Music", "Firebird Coaching & Consulting", "Star Democrat", "Chesapeake Publishing Group", "APGMedia"]}

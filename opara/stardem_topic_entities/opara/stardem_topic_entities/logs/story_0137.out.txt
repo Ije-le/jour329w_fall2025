@@ -1,0 +1,1 @@
+{"people": ["Mabel Savage"], "places": ["Easton, MD"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Nes-tle Toll House"]}

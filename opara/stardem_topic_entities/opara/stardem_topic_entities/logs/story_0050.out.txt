@@ -1,0 +1,1 @@
+{"people": ["Joe Holt", "Billy Penn Burger", "Nick Bucci", "Steve Prentice", "Sharon Sable", "Keli Vale", "Ray Anthony"], "places": ["Rock Hall", "Easton", "Wilmington", "N Main Street"], "organizations": ["The Mainstay", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

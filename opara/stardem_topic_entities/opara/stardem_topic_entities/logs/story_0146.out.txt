@@ -1,0 +1,1 @@
+{"people": ["Tom Mccall", "Amber Korell", "Nicholas Tindall", "Jennifer Lenderking"], "places": ["Preston", "Easton", "Maryland", "Caroline County", "James T. Wright Memorial Park"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Maryland State Arts Council", "Caroline County Arts Council", "Mike's Liquors"]}

@@ -1,0 +1,1 @@
+{"people": ["Shirley Jackson", "Midge Ingersoll", "Herman Johnson", "Bill Jarman", "Lillian Jackson-Morris", "Mike Detmer", "Zeke Willey"], "places": ["Vienna", "Easton", "MD", "Handsell"], "organizations": ["Nanticoke Indian Tribe", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

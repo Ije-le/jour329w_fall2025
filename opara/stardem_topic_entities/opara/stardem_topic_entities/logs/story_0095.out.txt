@@ -1,0 +1,1 @@
+{"people": ["Melanie Allen", "Livia Ochmann", "Kat Campbell", "Aimee Cozza", "Joseph Taveras", "Mikhail Belanovich", "Sarajean C", "Terena Bell", "David S. Soriano"], "places": ["Easton", "MD"], "organizations": ["Wealth of Geeks", "CoinsPaid Media", "Wacom", "Sotheby's", "Adams Publishing/APGMedia", "Star Democrat", "Media Decision"]}

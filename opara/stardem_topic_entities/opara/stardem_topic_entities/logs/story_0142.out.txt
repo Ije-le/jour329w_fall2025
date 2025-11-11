@@ -1,0 +1,1 @@
+{"people": ["Ferdinand Magellan"], "places": ["St. Michaels", "Talbot County", "Seville", "Spice Islands", "Mediterranean Sea", "Atlantic European Coast", "Easton", "Spain", "Chesapeake Bay Maritime Museum"], "organizations": ["Fundación Nao Victoria", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Star Democrat"]}

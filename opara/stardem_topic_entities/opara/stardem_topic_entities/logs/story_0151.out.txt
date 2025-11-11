@@ -1,0 +1,1 @@
+{"people": ["Ted Merwin", "Marilyn Kushner"], "places": ["Eastern Shore", "Easton", "New York", "Pikesville", "Maryland"], "organizations": ["Temple B'nai Israel", "New York Historical Society", "The Essen Room", "Satell Center for Jewish Life", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}

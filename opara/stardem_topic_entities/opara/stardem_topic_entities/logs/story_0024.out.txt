@@ -1,0 +1,1 @@
+{"people": ["Gerry Early", "Jesus"], "places": ["Easton", "Maryland"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

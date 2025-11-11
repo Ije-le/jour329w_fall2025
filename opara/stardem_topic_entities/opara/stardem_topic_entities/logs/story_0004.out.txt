@@ -1,1 +1,1 @@
-{"people": ["Johnny Depp", "Scott Garfitt"], "places": ["London", "Easton, MD"], "organizations": ["Castle Fine Art", "Star Democrat", "Chesapeake Publishing Group", "Invision", "AP", "Adams Publishing", "APGMedia"]}
+{"people": ["Johnny Depp", "Scott Garfitt"], "places": ["London", "Easton, MD"], "organizations": ["Castle Fine Art", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Invision", "AP"]}

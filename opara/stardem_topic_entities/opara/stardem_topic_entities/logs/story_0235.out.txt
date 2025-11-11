@@ -1,0 +1,1 @@
+{"people": ["Martin Meissner"], "places": ["Dortmund", "Germany", "Easton", "MD"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

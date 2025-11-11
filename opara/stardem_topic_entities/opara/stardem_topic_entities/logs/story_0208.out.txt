@@ -1,0 +1,1 @@
+{"people": ["Dorothy Newland", "Jennifer Heyd Wharton", "Laura Era", "Peg Fitzgerald", "Julia Rogers", "Matthew Hillier"], "places": ["Easton", "South Harrison Street"], "organizations": ["Troika Gallery", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

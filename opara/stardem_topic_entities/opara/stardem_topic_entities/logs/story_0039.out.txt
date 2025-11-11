@@ -1,0 +1,1 @@
+{"people": ["Alexis Ward", "Ellen Grunden", "Lisa Felts", "Melinda Simpkins", "Emily Moody", "Carol Harrison", "Dana Haddaway", "Phil Sayre", "Terri Wroten", "Christopher Wroten"], "places": ["Easton", "Delmarva Peninsula", "Christ Church Easton"], "organizations": ["Easton Choral Arts Society", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

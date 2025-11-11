@@ -1,0 +1,1 @@
+{"people": ["Charles Swindoll", "Mary Hunt"], "places": ["Easton, MD"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "CREATORS.COM", "EverydayCheapskate.com"]}

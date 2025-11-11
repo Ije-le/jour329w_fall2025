@@ -1,0 +1,1 @@
+{"people": ["Marty Two Bulls Jr", "Mehves Lelic", "Carol Gordean", "Joe Minarick", "Mary Ann Schindler", "Carol Minarick"], "places": ["Easton", "America", "South Dakota"], "organizations": ["Academy Art Museum", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Star Democrat"]}

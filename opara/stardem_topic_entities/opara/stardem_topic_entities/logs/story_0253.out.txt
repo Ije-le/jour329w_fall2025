@@ -1,0 +1,1 @@
+{"people": ["Carolyn Jaffe", "Natalie Jones"], "places": ["Easton", "Talbot"], "organizations": ["Easton Town Council", "Star Democrat", "Chesapeake Publishing Group", "APGMedia", "First Night Talbot"]}

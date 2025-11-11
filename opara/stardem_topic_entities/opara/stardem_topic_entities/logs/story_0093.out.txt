@@ -1,0 +1,3 @@
+{"people": ["Don Buxton", "Ralph Bloom", "J. Lawrie Bloom", "Marcie Rosen", "Merideth Buxton", "Monty Alexander", "Barry Koh", "Amelia Blades Steward", "Ellen General"], 
+"places": ["Royal Oak", "Talbot County", "Easton", "Maryland", "Dover", "Mid-Shore", "Chesapeake Bay", "Ebenezer Theater", "Avalon"], 
+"organizations": ["Chesapeake Music", "Talbot Chamber Orchestra", "Dover Symphony", "Mid-Atlantic Symphony Orchestra", "Washington College", "Talbot Arts Board", "Maryland State Arts Council", "Talbot County Historical Society", "Julliard", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Star Democrat"]}

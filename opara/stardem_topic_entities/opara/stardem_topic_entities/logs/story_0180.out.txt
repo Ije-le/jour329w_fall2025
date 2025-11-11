@@ -1,0 +1,1 @@
+{"people": ["Natalie Jones", "Nancy Larson", "Pete Lesher", "Amy Steward", "Dave Stepp", "Chuck Callahan", "Lynn Mielke", "Keasha Haythe"], "places": ["Talbot County", "Easton", "MD"], "organizations": ["Talbot Arts", "Talbot County Council", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

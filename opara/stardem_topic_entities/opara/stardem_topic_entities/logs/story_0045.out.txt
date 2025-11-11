@@ -1,0 +1,1 @@
+{"people": ["Zoë Phillips", "Mitch Anderson", "Douglas Mitchell", "Harriet Tubman", "Ben Ross", "Mike Detmer"], "places": ["Cambridge", "Dorchester", "Easton", "Hoopers Island", "Seattle", "Greenway Drive", "Dorchester County"], "organizations": ["Dorchester County Historical Society", "Dorchester Star", "Star Democrat", "Chesapeake Publishing Group", "APGMedia"]}

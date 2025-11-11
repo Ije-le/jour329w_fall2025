@@ -1,0 +1,1 @@
+{"people": ["Linda Starling", "Theresa Knight McFadden"], "places": ["Cambridge", "Main Street Gallery", "Poplar St", "Easton", "MD"], "organizations": ["Main Street Gallery", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Arts and Entertainment District"]}

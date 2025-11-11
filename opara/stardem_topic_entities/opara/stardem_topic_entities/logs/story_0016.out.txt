@@ -1,0 +1,1 @@
+{"people": ["Lynda Balslev"], "places": ["California", "Easton", "MD"], "organizations": ["Taste-Foodblog.com", "Andrews McMeel Syndication", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}

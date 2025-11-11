@@ -1,0 +1,1 @@
+{"people": ["Connie Connolly", "Jessica Duerstine", "Joshua Duerstine"], "places": ["Ridgely", "Easton", "MD", "214 N. Central Ave"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

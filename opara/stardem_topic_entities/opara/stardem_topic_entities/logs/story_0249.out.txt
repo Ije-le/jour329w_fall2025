@@ -1,0 +1,1 @@
+{"people": ["Yonna Green"], "places": ["St. Michaels"], "organizations": ["St. Michaels Elementary School", "Beyond the Steps", "Star Democrat", "Chesapeake Publishing Group", "APGMedia"]}

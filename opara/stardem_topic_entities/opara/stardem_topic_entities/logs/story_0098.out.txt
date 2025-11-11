@@ -1,0 +1,1 @@
+{"people": ["Ralph Adams", "Paul Adams"], "places": ["Bridgeville", "Delaware", "Easton", "MD"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "T S Smith and Sons"]}

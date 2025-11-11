@@ -1,0 +1,1 @@
+{"people": ["Scott London", "Mark Deutschendorf"], "places": ["Nevada", "Black Rock Desert", "Reno", "Easton", "Southern California", "Black Rock"], "organizations": ["National Weather Service", "Burning Man", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Associated Press"]}

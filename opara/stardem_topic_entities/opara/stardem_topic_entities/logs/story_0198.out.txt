@@ -1,0 +1,1 @@
+{"people": ["Kristin Rutkowski"], "places": ["St Michaels", "Easton", "Chesapeake Bay"], "organizations": ["St Michaels Library", "Her Helm", "Friends of the Library", "Star Democrat", "Chesapeake Publishing Group", "APGMedia"]}

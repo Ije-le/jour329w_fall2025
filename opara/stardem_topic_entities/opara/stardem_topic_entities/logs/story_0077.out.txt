@@ -1,0 +1,1 @@
+{"people": ["Michael Wyke"], "places": ["Easton", "MD", "Florida", "Houston", "NRG Stadium"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Florida A & M University", "Marching 100"]}

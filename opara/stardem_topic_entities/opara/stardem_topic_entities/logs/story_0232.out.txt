@@ -1,0 +1,1 @@
+{"people": ["Michael Reid", "Santa"], "places": ["Solomons", "Easton", "Maryland", "Dowell Road", "Annmarie Gardens", "Annmarie Sculpture Garden & Arts Center", "Kay Daugherty Gallery", "Toyland", "Wonderland"], "organizations": ["Annmarie Sculpture Garden & Arts Center", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Southern Maryland News"]}

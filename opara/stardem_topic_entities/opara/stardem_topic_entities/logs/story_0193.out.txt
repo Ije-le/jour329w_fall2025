@@ -1,0 +1,1 @@
+{"people": ["Betty Huang", "Hiu Lai Chong", "Bernard Dellario", "Ken DeWaard", "Qiang Huang", "Charles Newman", "Daniel Robbins", "Master Jove Wang", "Rick Casali"], "places": ["Easton", "Maryland", "Goldsborough Street"], "organizations": ["Studio B Art Gallery", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Facebook", "Instagram"]}

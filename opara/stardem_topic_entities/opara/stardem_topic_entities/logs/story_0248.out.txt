@@ -1,0 +1,1 @@
+{"people": ["Casey Rauch", "Cecile Storm", "Marco Antonio", "Mary Ann Nissin"], "places": ["Easton", "Avalon Theater"], "organizations": ["Perfect Storm Productions", "Sweetfoot Studios", "WHCP Mid-Shore Community Radio", "Lyon Rum", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

@@ -1,0 +1,1 @@
+{"people": ["Jay Fleming", "Nanny Trippe"], "places": ["Eastern Shore", "Easton", "Maryland", "Harrison Street", "Trippe Gallery"], "organizations": ["Star Democrat", "Chesapeake Publishing Group", "APGMedia", "Trippe Gallery"]}

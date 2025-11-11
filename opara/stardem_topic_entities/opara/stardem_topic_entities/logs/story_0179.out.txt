@@ -1,0 +1,1 @@
+{"people": ["Gemma Smith", "Claire Kingsley", "Lucy Score", "Nora Roberts", "Kathryn Nolan", "Christy Pastore", "Zoe York", "Kate Caterbary"], "places": ["Prince Frederick", "Easton", "MD"], "organizations": ["Amazon", "Kindle Unlimited", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia", "Katie Buck Photography"]}

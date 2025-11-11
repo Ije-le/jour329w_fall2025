@@ -1,0 +1,1 @@
+{"people": ["Stuart Parnes"], "places": ["Oxford", "Talbot County", "Chesapeake Bay", "Easton", "Morris Street"], "organizations": ["Oxford Museum", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

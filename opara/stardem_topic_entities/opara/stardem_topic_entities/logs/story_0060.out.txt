@@ -1,0 +1,1 @@
+{"people": ["Judy Holland"], "places": ["Cambridge", "Easton", "Dorchester Center for the Arts"], "organizations": ["Choptank Writers", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}

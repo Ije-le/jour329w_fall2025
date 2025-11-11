@@ -1,0 +1,1 @@
+{"people": ["Dorothy Newland", "Jennifer Heyd Wharton", "Laura Era", "Stewart White"], "places": ["Easton", "Paris", "South Harrison Street", "Historic Downtown Easton"], "organizations": ["Troika Gallery", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}
