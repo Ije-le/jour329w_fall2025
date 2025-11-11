@@ -1,41 +1,9 @@
-Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Chatting with groq/meta-llama/llama-4-maverick-17b-128e-instruct
 Type 'exit' or 'quit' to exit
 Type '!multi' to enter multiple lines, then '!end' to finish
 Type '!edit' to open your default editor and modify the prompt
 Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
-> > Sure, please share the news story you'd like me to extract entities from.
-> > Understood. Please provide the headline and article text (or summary) so I can extract the entities.
-> {"people":[],"places":["Ukraine","Russia","Kyiv","Moscow"],"organizations":["Ukrainian Air Force"]}
-> {"people":[],"places":["Ukraine","Russia","Kyiv","Moscow"],"organizations":["Ukrainian Air Force"]}
-> {"people":[],"places":["Ukraine","Russia","Kyiv","Moscow"],"organizations":["Ukrainian Air Force"]}
-> {"people":[],"places":["Ukraine","Russia","Kyiv","Moscow"],"organizations":["Ukrainian Air Force"]}
-> > {"people":["Volodymyr Zelenskyy","Antony Blinken"],"places":["Kyiv","Ukraine","Moscow","Russia"],"organizations":["Ukrainian Air Force","State Department"]}
-> {"people":["Jane Doe"],"places":[],"organizations":[]}
-> {"people":["Jane Doe"],"places":[],"organizations":[]}
-> {"people":["Jane Doe"],"places":[],"organizations":[]}
-> > {"people":[],"places":[],"organizations":["Local hospital"]}
-> {"people":[],"places":["Annapolis"],"organizations":["St. Mary's Hospital"]}
-> {"people":[],"places":["Annapolis"],"organizations":["St. Mary's Hospital"]}
-> > {"people":[],"places":["Annapolis"],"organizations":["St. Mary's Hospital"]}
-> {"people":[],"places":["Ridgely"],"organizations":[]}
-> {"people":[],"places":["Ridgely"],"organizations":[]}
-> > {"people":[],"places":["Ridgely","Easton"],"organizations":["Star Democrat"]}
-> > {"people":["Connie Connolly"],"places":["Ridgely"],"organizations":[]}
-> {"people":["Connie Connolly"],"places":["Ridgely"],"organizations":[]}
-> {"people":["Connie Connolly"],"places":["Ridgely"],"organizations":[]}
-> {"people":["Connie Connolly"],"places":["Ridgely"],"organizations":[]}
-> > {"people":["Connie Connolly"],"places":["Ridgely"],"organizations":[]}
-> > {"people":["Tom Lough","Christopher Coffiey","Catherine Wood","Chuck Guilunas","Joe Lewis","Dylan Emerson"],"places":["Ridgely","North East","Maryland"],"organizations":["St. Benedict - St. Elizabeth Catholic churches","Flatland Drive","Blades of Grass Bottom Band","Knights of Columbus St. Joan of Arc Council 12054"]}
-> {"people":["Tom Lough","Christopher Coffiey","Catherine Wood","Chuck Guilunas","Joe Lewis","Dylan Emerson"],"places":["Ridgely","North East","Maryland"],"organizations":["St. Benedict - St. Elizabeth Catholic churches","Flatland Drive","Blades of Grass Bottom Band","Knights of Columbus St. Joan of Arc Council 12054"]}
-> {"people":["Kari Perza","Kayleigh Perza"],"places":[],"organizations":[]}
-> {"people":["Kari Perza","Kayleigh Perza"],"places":[],"organizations":[]}
-> {"people":[],"places":["North East","Ridgely"],"organizations":["Blades of Grass Bottom Band","St. Benedict"]}
-> {"people":[],"places":["North East","Ridgely"],"organizations":["Blades of Grass Bottom Band","St. Benedict"]}
-> {"people":["Lucy Vien","Scott Vien"],"places":["Felton"],"organizations":[]}
-> {"people":["Lucy Vien","Scott Vien"],"places":["Felton"],"organizations":[]}
-> {"people":["Connie Connolly"],"places":[],"organizations":[]}
-> {"people":["Connie Connolly"],"places":[],"organizations":[]}
-> {"people":["Amy Nicholls"],"places":["Denton","Ridgely"],"organizations":["St. Benedict"]}
-> > {"people":[],"places":[],"organizations":["Star Democrat","Chesapeake Publishing Group","Adams Publishing","APGMedia"]}
-> > {"people":["Amy Nicholls"],"places":["Denton","Ridgely"],"organizations":["St. Benedict"]}
+> > It seems like you forgot to include the news story. Please go ahead and provide the text, and I'll be happy to extract the entities mentioned in it. I'll get started as soon as I receive the text!
+> > You didn't provide a headline or article text. Please proceed with extracting entities from the given text. Since there's no text, there's nothing to extract.
+> {"people": [], "places": [], "organizations": []}
 > 

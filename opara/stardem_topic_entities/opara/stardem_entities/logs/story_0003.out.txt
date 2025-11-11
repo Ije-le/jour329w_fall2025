@@ -3,5 +3,4 @@ Type 'exit' or 'quit' to exit
 Type '!multi' to enter multiple lines, then '!end' to finish
 Type '!edit' to open your default editor and modify the prompt
 Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
-> > It seems like you forgot to include the news story. Please go ahead and provide the text, and I'll be happy to extract the entities mentioned in it.
 > > 

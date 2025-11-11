@@ -1,0 +1,1 @@
+{"people": ["Jim Barton", "Mike Kader"], "places": ["Centreville", "Queen Anne's County", "Delmarva", "Queenstown", "Queen Anne", "Dulin Clark Road", "Easton"], "organizations": ["Queen Anne's Museum of Eastern Shore Life", "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia"]}

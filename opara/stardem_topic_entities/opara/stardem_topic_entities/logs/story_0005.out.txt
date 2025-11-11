@@ -1,0 +1,1 @@
+{"people": [], "places": ["Tilghman Island", "Knapps Narrows", "Maryland", "Easton", "Chesapeake Bay"], "organizations": ["Tilghman Watermen's Museum", "Chesapeake Bay Maritime Museum", "Star Democrat", "Two if by Sea", "2 Vintage Chics Boutique", "Fairbank Tackle", "Chesapeake Publishing Group", "Adams Publishing", "APGMedia"]}
