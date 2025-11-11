@@ -1,0 +1,35 @@
+Chatting with groq/moonshotai/kimi-k2-instruct-0905
+Type 'exit' or 'quit' to exit
+Type '!multi' to enter multiple lines, then '!end' to finish
+Type '!edit' to open your default editor and modify the prompt
+Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
+> > Sure, please provide the news story you'd like me to analyze for entities. Once I have the text, I’ll extract the entities mentioned.
+> > Understood. Please provide the headline and article text (or summary) so I can extract the entities.
+> {"people": ["Julian Assange", "Joe Biden", "Anthony Albanese"], "places": ["United States", "Australia", "United Kingdom"], "organizations": ["WikiLeaks", "US Justice Department"]}
+> {"people": ["Julian Assange", "Joe Biden", "Anthony Albanese"], "places": ["United States", "Australia", "United Kingdom"], "organizations": ["WikiLeaks", "US Justice Department"]}
+> {"people": ["Julian Assange", "Joe Biden", "Anthony Albanese"], "places": ["United States", "Australia", "United Kingdom"], "organizations": ["WikiLeaks", "US Justice Department"]}
+> {"people":["Julian Assange","Joe Biden","Anthony Albanese"],"places":["United States","Australia","United Kingdom"],"organizations":["WikiLeaks","US Justice Department"]}
+> > {"people":["Julian Assange","Joe Biden","Anthony Albanese"],"places":["United States","Australia","United Kingdom"],"organizations":["WikiLeaks","US Justice Department"]}
+> {"people":["Jane Doe"],"places":[],"organizations":[]}
+> {"people":["Jane Doe"],"places":[],"organizations":[]}
+> {"people":["Jane Doe"],"places":[],"organizations":["City Council"]}
+> > {"people":[],"places":[],"organizations":["Local hospital"]}
+> {"people":[],"places":["Annapolis"],"organizations":["St Mary's Hospital"]}
+> {"people":[],"places":["Annapolis"],"organizations":["St Mary's Hospital"]}
+> > {"people":[],"places":["Annapolis"],"organizations":["St Mary's Hospital"]}
+> {"people":[],"places":["Eastern Shore"],"organizations":["Museum of Eastern Shore Life","QA Fair"]}
+> {"people":[],"places":["Eastern Shore"],"organizations":["Museum of Eastern Shore Life","QA Fair"]}
+> > {"people":[],"places":["Easton","Eastern Shore"],"organizations":["Star Democrat","Museum of Eastern Shore Life","QA Fair"]}
+> > {"people":[],"places":["Easton","Eastern Shore"],"organizations":["Star Democrat","Museum of Eastern Shore Life","QA Fair"]}
+> {"people":[],"places":["Easton","Eastern Shore"],"organizations":["Star Democrat","Museum of Eastern Shore Life","QA Fair"]}
+> {"people":[],"places":["Easton","Eastern Shore"],"organizations":["Star Democrat","Museum of Eastern Shore Life","QA Fair"]}
+> {"people":[],"places":["Easton","Eastern Shore"],"organizations":["Star Democrat","Museum of Eastern Shore Life","QA Fair"]}
+> > {"people":[],"places":["Easton","Eastern Shore"],"organizations":["Star Democrat","Museum of Eastern Shore Life","QA Fair"]}
+> > {"people":["Jim Barton"],"places":["Centreville","Queen Anne","Delmarva","Queen Anne's County","Queenstown"],"organizations":["Queen Anne's Museum of Eastern Shore Life","Queen Anne's County Fair","4-H Park"]}
+> {"people":["Jim Barton"],"places":["Centreville","Queen Anne","Delmarva","Queen Anne's County","Queenstown"],"organizations":["Queen Anne's Museum of Eastern Shore Life","Queen Anne's County Fair","4-H Park"]}
+> {"people":["Jim Barton","Mike Kader"],"places":["Centreville","Queen Anne","Delmarva","Queen Anne's County","Queenstown"],"organizations":["Queen Anne's Museum of Eastern Shore Life","Queen Anne's County Fair","4-H Park"]}
+> {"people":["Jim Barton","Mike Kader"],"places":["Centreville","Queen Anne","Delmarva","Queen Anne's County","Queenstown"],"organizations":["Queen Anne's Museum of Eastern Shore Life","Queen Anne's County Fair","4-H Park"]}
+> {"people":[],"places":[],"organizations":["Queen Anne's Museum of Eastern Shore Life"]}
+> > {"people":[],"places":[],"organizations":["Star Democrat","Chesapeake Publishing Group","Adams Publishing","APGMedia"]}
+> > {"people":[],"places":[],"organizations":["Star Democrat","Chesapeake Publishing Group","Adams Publishing","APGMedia"]}
+> 
