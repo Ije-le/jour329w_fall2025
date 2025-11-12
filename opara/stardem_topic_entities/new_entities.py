@@ -4,10 +4,10 @@ Extract people/places/organizations from the Arts & Culture topic file using the
 `llm` Python API (as documented by https://llm.datasette.io/en/stable/usage.html).
 
 This script:
-- reads a topic JSON (default: opara/stardem_topic_entities/arts_culture_stories.json)
+- reads a topic JSON (default: `arts_culture_stories.json` in the same directory)
 - calls the specified model once per story (default: groq/meta-llama/llama-4-maverick-17b-128e-instruct)
 - expects the model to return EXACTLY one JSON object (keys: people, places, organizations)
-- writes the first N (default 10) simplified story objects to `stories_with_entities_v1.json`
+- writes simplified story objects to `stories_with_entities_v2.json` by default (processes all stories unless --limit is set)
 
 Do NOT use placeholder example names (Jane Doe / John Doe) in the prompt.
 """
@@ -105,10 +105,10 @@ def main():
     parser = argparse.ArgumentParser(description='Extract people/places/organizations from an Arts & Culture topic JSON')
     parser.add_argument('--model', default='groq/meta-llama/llama-4-maverick-17b-128e-instruct',
                         help='Model to use (default: groq/meta-llama/llama-4-maverick-17b-128e-instruct)')
-    parser.add_argument('--input', default='opara/stardem_topic_entities/arts_culture_stories.json',
-                        help='Input topic JSON file')
-    parser.add_argument('--output', default='opara/stardem_topic_entities/stories_with_entities_v1.json',
-                        help='Output simplified JSON file')
+    parser.add_argument('--input', default='arts_culture_stories.json',
+                        help='Input topic JSON file (default: arts_culture_stories.json in current dir)')
+    parser.add_argument('--output', default='stories_with_entities_v2.json',
+                        help='Output simplified JSON file (default: stories_with_entities_v2.json in current dir)')
     # Default --limit 0 means process all stories in the input file
     parser.add_argument('--limit', type=int, default=0, help='Process only the first N stories (default 0 = all)')
     args = parser.parse_args()

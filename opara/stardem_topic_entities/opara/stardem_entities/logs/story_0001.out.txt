@@ -3,7 +3,12 @@ Type 'exit' or 'quit' to exit
 Type '!multi' to enter multiple lines, then '!end' to finish
 Type '!edit' to open your default editor and modify the prompt
 Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
-> > It seems like you forgot to include the news story. Please go ahead and provide the text, and I'll be happy to extract the entities mentioned in it. I'll get started as soon as I receive the text!
-> > You didn't provide a headline or article text. Please proceed with extracting entities from the given text. Since there's no text, there's nothing to extract.
+> > It seems like you forgot to include the news story.
+
+Please go ahead and share the news story, and I'll be happy to extract the entities mentioned in it.
+> > There's no headline or article text provided. Please provide the text, and I'll extract the entities.
+> {}
 > {"people": [], "places": [], "organizations": []}
-> 
+> {"people": [], "places": [], "organizations": []}
+> {"people": [], "places": [], "organizations": []}
+> > 
