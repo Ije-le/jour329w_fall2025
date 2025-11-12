@@ -1,0 +1,36 @@
+Traceback (most recent call last):
+  File "/workspaces/jour329w_fall2025/.venv/bin/llm", line 10, in <module>
+    sys.exit(cli())
+             ^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 1462, in __call__
+    return self.main(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 1383, in main
+    rv = self.invoke(ctx)
+         ^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 1850, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 1246, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/click/core.py", line 814, in invoke
+    return callback(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/llm/cli.py", line 1234, in chat
+    for chunk in response:
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/llm/models.py", line 1638, in __iter__
+    yield from response_item
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/llm/models.py", line 1172, in __iter__
+    for chunk in self.model.execute(
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/llm_anthropic.py", line 582, in execute
+    with messages_client.stream(**kwargs) as stream:
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/anthropic/lib/streaming/_messages.py", line 154, in __enter__
+    raw_stream = self.__api_request()
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1324, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/anthropic/_base_client.py", line 1112, in request
+    raise self._make_status_error_from_response(err.response) from None
+anthropic.BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'messages: text content blocks must contain non-whitespace text'}, 'request_id': 'req_011CV3ENtD2TFKidcwiVcEPS'}

@@ -18,8 +18,9 @@ Important constraints enforced by this script and prompt:
 import argparse
 import json
 import time
+import subprocess
+import shutil
 from pathlib import Path
-import llm
 
 
 def _extract_last_json(s: str):
@@ -63,7 +64,7 @@ def _extract_last_json(s: str):
     return last_fragment
 
 
-def extract_entities_for_all_stories(model, stories: list, log_prefix: Path):
+def extract_entities_for_all_stories_via_cli(model: str, stories: list, log_prefix: Path, timeout: int = 300, retries: int = 3):
     """Call the model exactly once with the full list of stories and return parsed results.
 
     Expects the model to return a JSON array with one object per story. Each object must
@@ -99,8 +100,74 @@ def extract_entities_for_all_stories(model, stories: list, log_prefix: Path):
     prompt_lines.append("Return the JSON array now.")
     prompt = "\n".join(prompt_lines)
 
-    # Call the model exactly once
-    resp = model.prompt(prompt).text()
+    # Prepare CLI command to call the repo's llm plugin via the uv wrapper
+    candidates = [
+        ["uv", "run", "llm", "chat", "--model", model],
+        ["llm", "chat", "--model", model],
+    ]
+
+    resp = None
+    last_err = None
+    for cmd in candidates:
+        if shutil.which(cmd[0]) is None:
+            continue
+        attempt = 0
+        while attempt < retries:
+            attempt += 1
+            try:
+                proc = subprocess.run(cmd, input=prompt, capture_output=True, text=True, timeout=timeout)
+            except Exception as e:
+                last_err = str(e)
+                # small backoff
+                time.sleep(1 * attempt)
+                continue
+
+            out = (proc.stdout or '').strip()
+            err = (proc.stderr or '').strip()
+
+            # save raw stdout/stderr for diagnostics
+            try:
+                log_prefix.parent.mkdir(parents=True, exist_ok=True)
+                with open(log_prefix.with_suffix('.out.txt'), 'w') as f:
+                    f.write(out)
+                with open(log_prefix.with_suffix('.err.txt'), 'w') as f:
+                    f.write(err)
+            except Exception:
+                pass
+
+            if proc.returncode == 0 and out:
+                # strip triple-backtick fences if present
+                if out.startswith('```'):
+                    parts = out.split('\n')
+                    if parts[0].startswith('```'):
+                        out = '\n'.join(parts[1:])
+                        if out.rstrip().endswith('```'):
+                            out = out.rstrip()[:-3].rstrip()
+                resp = out
+                break
+
+            # detect transient provider messages and retry
+            low = (err or out or '').lower()
+            if ('over capacity' in low or '503' in low or 'rate limit' in low or '429' in low or 'try again' in low):
+                sleep_secs = min(60 * attempt, 300)
+                time.sleep(sleep_secs)
+                last_err = err or out
+                continue
+            # non-retryable failure for this cmd
+            last_err = err or out or f"returncode={proc.returncode}"
+            break
+
+        if resp is not None:
+            break
+
+    if resp is None:
+        err_log = log_prefix.with_suffix('.err.txt')
+        try:
+            with open(err_log, 'w') as f:
+                f.write(last_err or 'no response')
+        except Exception:
+            pass
+        raise ValueError(f"LLM CLI failed. See {err_log}")
 
     # Save raw response for diagnostics
     try:
@@ -155,15 +222,17 @@ def extract_entities_for_all_stories(model, stories: list, log_prefix: Path):
 
 
 def main():
+
     parser = argparse.ArgumentParser(description='Extract people/places/organizations from an Arts & Culture topic JSON')
-    parser.add_argument('--model', default='groq/meta-llama/llama-4-maverick-17b-128e-instruct',
-                        help='Model to use (default: groq/meta-llama/llama-4-maverick-17b-128e-instruct)')
+    parser.add_argument('--model', default='anthropic/claude-sonnet-4-5',
+                        help='Model to use (default: anthropic/claude-sonnet-4-5)')
     parser.add_argument('--input', default='arts_culture_stories.json',
                         help='Input topic JSON file (default: arts_culture_stories.json in current dir)')
-    parser.add_argument('--output', default='stories_with_entities_v2.json',
-                        help='Output simplified JSON file (default: stories_with_entities_v2.json in current dir)')
-    # Default --limit 0 means process all stories in the input file
-    parser.add_argument('--limit', type=int, default=0, help='Process only the first N stories (default 0 = all)')
+    parser.add_argument('--output', default='stories_with_entities_v1.json',
+                        help='Output simplified JSON file (default: stories_with_entities_v1.json in current dir)')
+    # Default --limit 15 means test with first 15 stories; set 0 to process all
+    parser.add_argument('--limit', type=int, default=15, help='Process only the first N stories (default 15 for testing, 0 = all)')
+    parser.add_argument('--timeout', type=int, default=300, help='Timeout seconds for the LLM CLI call (default 300)')
     args = parser.parse_args()
 
     input_path = Path(args.input)
@@ -181,15 +250,16 @@ def main():
         # process the full file
         stories = stories
 
-    # Create model using the llm Python API
-    model = llm.get_model(args.model)
+
+    # We'll call the llm CLI once to process the batch (model is an llm model string)
+    model = args.model
 
     logs_dir = Path('opara/stardem_topic_entities/logs')
     logs_dir.mkdir(parents=True, exist_ok=True)
     log_prefix = logs_dir / 'all_stories'
 
-    print(f"Calling model once to process {len(stories)} stories...")
-    results = extract_entities_for_all_stories(model, stories, log_prefix)
+    print(f"Calling llm CLI once to process {len(stories)} stories with model {model}...")
+    results = extract_entities_for_all_stories_via_cli(model, stories, log_prefix, timeout=args.timeout)
 
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)
