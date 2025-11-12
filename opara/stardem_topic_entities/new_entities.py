@@ -5,11 +5,14 @@ Extract people/places/organizations from the Arts & Culture topic file using the
 
 This script:
 - reads a topic JSON (default: `arts_culture_stories.json` in the same directory)
-- calls the specified model once per story (default: groq/meta-llama/llama-4-maverick-17b-128e-instruct)
-- expects the model to return EXACTLY one JSON object (keys: people, places, organizations)
-- writes simplified story objects to `stories_with_entities_v2.json` by default (processes all stories unless --limit is set)
+- calls the specified model exactly ONCE with the full set of stories (default: groq/meta-llama/llama-4-maverick-17b-128e-instruct)
+- expects the model to return EXACTLY one JSON array with one object per input story. Each object must have the keys:
+    `title`, `people`, `places`, `organizations` (each value an array of strings).
+- writes the resulting array to `stories_with_entities_v2.json` by default (processes all stories unless --limit is set)
 
-Do NOT use placeholder example names (Jane Doe / John Doe) in the prompt.
+Important constraints enforced by this script and prompt:
+- Return ONLY the JSON array and NOTHING ELSE (no explanation, no markdown).
+- Do NOT use placeholder example names like "Jane Doe" or "John Doe".
 """
 
 import argparse
@@ -20,46 +23,83 @@ import llm
 
 
 def _extract_last_json(s: str):
-    """Find the last balanced JSON object in a string and return it, or None."""
+    """Find the last balanced JSON object or array in a string and return it, or None.
+
+    This scans for balanced top-level '{...}' or '[...]' fragments and returns the last complete
+    balanced fragment found. That lets us recover a trailing JSON array returned by the model.
+    """
     if not s:
         return None
-    last_obj = None
+    last_fragment = None
     stack = 0
     start = None
+    in_string = False
+    escape = False
     for i, ch in enumerate(s):
-        if ch == '{':
+        if in_string:
+            if escape:
+                escape = False
+            elif ch == '\\':
+                escape = True
+            elif ch == '"':
+                in_string = False
+            continue
+
+        if ch == '"':
+            in_string = True
+            continue
+
+        if ch == '{' or ch == '[':
             if stack == 0:
                 start = i
             stack += 1
-        elif ch == '}':
+        elif ch == '}' or ch == ']':
             if stack > 0:
                 stack -= 1
                 if stack == 0 and start is not None:
-                    last_obj = s[start:i+1]
+                    last_fragment = s[start:i+1]
                     start = None
-    return last_obj
+
+    return last_fragment
 
 
-def extract_entities_for_story(model, title: str, text: str, log_prefix: Path):
+def extract_entities_for_all_stories(model, stories: list, log_prefix: Path):
+    """Call the model exactly once with the full list of stories and return parsed results.
+
+    Expects the model to return a JSON array with one object per story. Each object must
+    contain `title`, `people`, `places`, `organizations`.
+    """
+    # Build a concise but unambiguous prompt containing all stories
     prompt_lines = [
-        "Extract all people, places, and organizations mentioned in this Arts & Culture news story.",
+        "You will be given a list of Arts & Culture news stories. For each story, extract all PEOPLE, PLACES, and ORGANIZATIONS mentioned.",
         "VERY IMPORTANT:",
-        "- Return EXACTLY one JSON object and NOTHING ELSE (no preface, no explanation, no markdown).",
-        "- The JSON must contain exactly these three keys: \"people\", \"places\", \"organizations\".",
-        "- Each value must be an array of strings. If none, return an empty array [].",
+        "- Return EXACTLY one JSON ARRAY and NOTHING ELSE (no preface, no explanation, no markdown).",
+        "- The array must contain one object per story in the same order as provided.",
+        "- Each object must have exactly these keys: \"title\", \"people\", \"places\", \"organizations\".",
+        "- Each value for people/places/organizations must be an array of strings. If none, return an empty array [].",
         "- Normalize entity strings: trim whitespace, remove surrounding punctuation, do not include titles (Mr., Ms., Dr.) or role labels — return only the name/place/organization string.",
         "- Prefer full names when available. Do NOT return placeholders like \"Jane Doe\" or \"John Doe\".",
         "",
-        f"Title: {title}",
+        "Return only the JSON array. Example element format (for clarity only, do not include this example in output):",
+        "[{\"title\": \"Some title\", \"people\": [\"Name A\"], \"places\": [\"Place X\"], \"organizations\": [\"Org Y\"]}, ...]",
         "",
-        "Article Text:",
-        text,
+        "Now process the following stories:",
         "",
-        "Return only the JSON object with keys people, places, organizations.",
     ]
+
+    # Append each story with its title and text in a compact numbered list
+    for idx, s in enumerate(stories, start=1):
+        title = s.get('title', '')
+        text = s.get('content') or s.get('summary') or s.get('text') or ''
+        prompt_lines.append(f"{idx}. Title: {title}")
+        prompt_lines.append("Article Text:")
+        prompt_lines.append(text)
+        prompt_lines.append("")
+
+    prompt_lines.append("Return the JSON array now.")
     prompt = "\n".join(prompt_lines)
 
-    # Call the model once via the llm Python API
+    # Call the model exactly once
     resp = model.prompt(prompt).text()
 
     # Save raw response for diagnostics
@@ -70,12 +110,12 @@ def extract_entities_for_story(model, title: str, text: str, log_prefix: Path):
     except Exception:
         pass
 
-    # Try to parse the response as JSON
+    # Try to parse the response as JSON array
     data = None
     try:
         data = json.loads(resp)
     except Exception:
-        # If the model returned extra text, try to recover the last JSON object
+        # Try to recover last balanced JSON fragment (object or array)
         candidate = _extract_last_json(resp)
         if candidate:
             try:
@@ -91,14 +131,27 @@ def extract_entities_for_story(model, title: str, text: str, log_prefix: Path):
                 f.write(resp)
         except Exception:
             pass
-        raise ValueError(f"No valid JSON found in model response for title: {title}. See {err_log}")
+        raise ValueError(f"No valid JSON array found in model response. See {err_log}")
 
-    # Normalize returned structures to lists
-    people = data.get('people', []) if isinstance(data.get('people', []), list) else []
-    places = data.get('places', []) if isinstance(data.get('places', []), list) else []
-    organizations = data.get('organizations', []) if isinstance(data.get('organizations', []), list) else []
+    # Validate and normalize results: expect a list of objects
+    if not isinstance(data, list):
+        raise ValueError("Model returned JSON that is not an array. Expected an array with one object per story.")
 
-    return {'people': people, 'places': places, 'organizations': organizations}
+    results = []
+    for item in data:
+        if not isinstance(item, dict):
+            # skip invalid entries but keep alignment by adding an empty record
+            results.append({'title': '', 'people': [], 'places': [], 'organizations': []})
+            continue
+
+        title = item.get('title', '')
+        people = item.get('people', []) if isinstance(item.get('people', []), list) else []
+        places = item.get('places', []) if isinstance(item.get('places', []), list) else []
+        organizations = item.get('organizations', []) if isinstance(item.get('organizations', []), list) else []
+
+        results.append({'title': title, 'people': people, 'places': places, 'organizations': organizations})
+
+    return results
 
 
 def main():
@@ -131,38 +184,19 @@ def main():
     # Create model using the llm Python API
     model = llm.get_model(args.model)
 
-    simplified = []
     logs_dir = Path('opara/stardem_topic_entities/logs')
     logs_dir.mkdir(parents=True, exist_ok=True)
+    log_prefix = logs_dir / 'all_stories'
 
-    for i, story in enumerate(stories, start=1):
-        title = story.get('title', '')
-        text = story.get('content') or story.get('summary') or ''
-        print(f"Processing {i}/{len(stories)}: {title}")
-        log_prefix = logs_dir / f'story_{i:04d}'
-        try:
-            entities = extract_entities_for_story(model, title, text, log_prefix)
-        except Exception as e:
-            # Surface error and stop — per user request we don't hide errors
-            print(f"Error extracting entities for story {i}: {e}")
-            raise
-
-        simplified.append({
-            'title': title,
-            'people': entities['people'],
-            'places': entities['places'],
-            'organizations': entities['organizations'],
-        })
-
-        # polite short pause
-        time.sleep(0.8)
+    print(f"Calling model once to process {len(stories)} stories...")
+    results = extract_entities_for_all_stories(model, stories, log_prefix)
 
     out_path = Path(args.output)
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, 'w') as f:
-        json.dump(simplified, f, indent=2)
+        json.dump(results, f, indent=2)
 
-    print(f"Wrote {len(simplified)} simplified stories to {out_path}")
+    print(f"Wrote {len(results)} simplified stories to {out_path}")
 
 
 if __name__ == '__main__':

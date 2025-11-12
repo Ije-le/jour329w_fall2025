@@ -3,12 +3,20 @@ Type 'exit' or 'quit' to exit
 Type '!multi' to enter multiple lines, then '!end' to finish
 Type '!edit' to open your default editor and modify the prompt
 Type '!fragment <my_fragment> [<another_fragment> ...]' to insert one or more fragments
-> > It seems like you forgot to include the news story.
+> > It looks like you forgot to include the news story. Please go ahead and share it, and I'll be happy to help extract the entities mentioned. I'll consider a wide range of entities, including but not limited to:
 
-Please go ahead and share the news story, and I'll be happy to extract the entities mentioned in it.
-> > There's no headline or article text provided. Please provide the text, and I'll extract the entities.
-> {}
+* People
+* Organizations
+* Locations
+* Dates
+* Events
+* Companies
+
+Just paste the news story, and I'll get started!
+> > You haven't provided the headline and article text yet. Please go ahead with the extraction when you're ready.
+> I'm ready when you are.
+> 
 > {"people": [], "places": [], "organizations": []}
 > {"people": [], "places": [], "organizations": []}
-> {"people": [], "places": [], "organizations": []}
-> > 
+> > {"people": [], "places": [], "organizations": []}
+> 

@@ -34,3 +34,12 @@ Organizations: Bay Country Chorus, Kent Island Federation of Art
 DO NOT USE EXAMPLES LIKE "JANE DOE","JOHN DOE"
 Write the script to test with ten stories first. Set model to : groq/meta-llama/llama-4-maverick-17b-128e-instruct and call it using llm. You only need to do this once. Refer to this link to properly call in llm: https://llm.datasette.io/en/stable/usage.html Save the output to 
 stories_with_entities_v1.json 
+
+### Third
+Update the new_entities.py to meet these requirements:
+Extracts data from the arts_culture_stories.json file, extracts all names of people, places and organizations into arrays, allows the output json file have this structure: the json file have this structure:
+title: Musuem of Eastern Shore Life to be open during QA Fair
+people: Gabriela Montero, Jeniffer Pfeffer.
+places: Maritime museum, Easton, Dorchester
+Organizations: Bay Country Chorus, Kent Island Federation of Art, DOES NOT USE EXAMPLES LIKE "JANE DOE","JOHN DOE", DOES NOT TEST STORIES FIRST. LET IT RUN THE FULL FILE, sets model to : groq/meta-llama/llama-4-maverick-17b-128e-instruct and calls it using llm, only calls llm once, refers to this link to properly call in llm: https://llm.datasette.io/en/stable/usage.html and saves the output to 
+stories_with_entities_v2.json 

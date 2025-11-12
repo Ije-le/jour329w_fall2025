@@ -34,4 +34,4 @@ Traceback (most recent call last):
                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/workspaces/jour329w_fall2025/.venv/lib/python3.12/site-packages/groq/_base_client.py", line 1044, in request
     raise self._make_status_error_from_response(err.response) from None
-groq.InternalServerError: Error code: 503 - {'error': {'message': 'meta-llama/llama-4-maverick-17b-128e-instruct is currently over capacity. Please try again and back off exponentially. Visit https://groqstatus.com to see if there is an active incident.', 'type': 'internal_server_error'}}
+groq.RateLimitError: Error code: 429 - {'error': {'message': 'Rate limit reached for model `meta-llama/llama-4-maverick-17b-128e-instruct` in organization `org_01j97v25gpen6b0r150s7exhsm` service tier `on_demand` on tokens per day (TPD): Limit 500000, Used 499985, Requested 396. Please try again in 1m5.8368s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}
