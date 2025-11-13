@@ -170,8 +170,8 @@ def main():
                         help='Model to use (default: anthropic/claude-sonnet-4-5)')
     parser.add_argument('--input', default='arts_culture_stories.json',
                         help='Input topic JSON file (default: arts_culture_stories.json in current dir)')
-    parser.add_argument('--output', default='stories_with_entities_v1.json',
-                        help='Output simplified JSON file (default: stories_with_entities_v1.json in current dir)')
+    parser.add_argument('--output', default='stories_with_entities_v2.json',
+                        help='Output simplified JSON file (default: stories_with_entities_v2.json in current dir)')
     # No --limit means process all stories; set a positive number to limit for testing
     parser.add_argument('--limit', type=int, default=None, help='Process only the first N stories (default: process all stories)')
     parser.add_argument('--timeout', type=int, default=300, help='Timeout seconds for the LLM CLI call (default 300)')

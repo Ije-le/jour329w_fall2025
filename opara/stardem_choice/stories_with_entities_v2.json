@@ -34,7 +34,6 @@
       "llm_failed": false
     },
     "people": [
-      "Connie Connolly",
       "Tom Lough",
       "Christopher Coffiey",
       "Catherine Wood",
@@ -49,9 +48,7 @@
     ],
     "places": [
       "Ridgely",
-      "Easton",
       "North East",
-      "Maryland",
       "Felton",
       "Denton"
     ],
@@ -97,16 +94,16 @@
       "llm_failed": false
     },
     "people": [
-      "Jim Barton",
-      "Mike Kader"
+      "Jim Barton"
     ],
     "places": [
-      "Centreville",
-      "Delmarva",
       "Queen Anne's County",
-      "Queen Anne",
+      "Centreville",
       "Queenstown",
+      "Delmarva",
+      "Queen Anne",
       "Dulin Clark Road",
+      "state Route 18",
       "4-H Park"
     ],
     "organizations": [
@@ -148,7 +145,11 @@
       "llm_failed": false
     },
     "people": [],
-    "places": [],
+    "places": [
+      "Hong Kong",
+      "Jakarta",
+      "Indonesia"
+    ],
     "organizations": []
   },
   {
@@ -186,11 +187,12 @@
       "Scott Garfitt"
     ],
     "places": [
-      "London",
-      "Castle Fine Art"
+      "London"
     ],
     "organizations": [
-      "Invision/AP"
+      "Castle Fine Art",
+      "Invision",
+      "AP"
     ]
   },
   {
@@ -229,16 +231,14 @@
     },
     "people": [],
     "places": [
+      "Tilghman",
       "Tilghman Island",
       "Knapps Narrows",
-      "Maryland",
-      "Chesapeake Bay",
-      "Easton",
+      "Chesapeake Bay Maritime Museum",
       "Lee House"
     ],
     "organizations": [
       "Tilghman Watermen's Museum",
-      "Chesapeake Bay Maritime Museum",
       "Two if by Sea restaurant",
       "2 Vintage Chics Boutique",
       "Fairbank Tackle"
