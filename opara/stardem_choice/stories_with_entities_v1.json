@@ -34,7 +34,6 @@
       "llm_failed": false
     },
     "people": [
-      "Connie Connolly",
       "Tom Lough",
       "Christopher Coffiey",
       "Catherine Wood",
@@ -49,17 +48,17 @@
     ],
     "places": [
       "Ridgely",
-      "Easton",
       "North East",
       "Maryland",
       "Felton",
-      "Denton"
+      "Denton",
+      "St. Benedict",
+      "St. Elizabeth"
     ],
     "organizations": [
-      "St. Benedict - St. Elizabeth Catholic churches",
+      "Knights of Columbus St. Joan of Arc Council 12054",
       "Flatland Drive",
-      "Blades of Grass Bottom Band",
-      "Knights of Columbus St. Joan of Arc Council 12054"
+      "Blades of Grass Bottom Band"
     ]
   },
   {
@@ -102,12 +101,13 @@
     ],
     "places": [
       "Centreville",
-      "Delmarva",
       "Queen Anne's County",
+      "Delmarva",
       "Queen Anne",
       "Queenstown",
+      "4-H Park",
       "Dulin Clark Road",
-      "4-H Park"
+      "State Route 18"
     ],
     "organizations": [
       "Queen Anne's Museum of Eastern Shore Life"
@@ -147,9 +147,15 @@
       "model": "gpt-oss:120b",
       "llm_failed": false
     },
-    "people": [],
-    "places": [],
-    "organizations": []
+    "people": [
+      "SKIPPED"
+    ],
+    "places": [
+      "SKIPPED"
+    ],
+    "organizations": [
+      "SKIPPED"
+    ]
   },
   {
     "title": "JOHNNY DEPP SELF-PORTRAIT",
@@ -182,15 +188,13 @@
       "llm_failed": false
     },
     "people": [
-      "Johnny Depp",
-      "Scott Garfitt"
+      "SKIPPED"
     ],
     "places": [
-      "London",
-      "Castle Fine Art"
+      "SKIPPED"
     ],
     "organizations": [
-      "Invision/AP"
+      "SKIPPED"
     ]
   },
   {
@@ -232,16 +236,301 @@
       "Tilghman Island",
       "Knapps Narrows",
       "Maryland",
-      "Chesapeake Bay",
-      "Easton",
-      "Lee House"
+      "Chesapeake Bay Maritime Museum"
     ],
     "organizations": [
       "Tilghman Watermen's Museum",
-      "Chesapeake Bay Maritime Museum",
-      "Two if by Sea restaurant",
+      "Two if by Sea",
       "2 Vintage Chics Boutique",
       "Fairbank Tackle"
     ]
+  },
+  {
+    "title": "Tree dedicated to memory of Handsell mentor",
+    "date": "2023-08-10",
+    "author": "",
+    "content": "Tree dedicated to memory of Handsell mentor\n\n August 10, 2023 | Star Democrat, The (Easton, MD)\n\n Page: 9 | Section: News \n \n 517\n Words \n\n Read News Document\n\n VIENNA - It's been a busy summer at Handsell Historic Site on Indiantown Road in Dorchester County. The Nanticoke Historic Preservation Alliance that owns and manages the National Register of Historic Places site planned a summer full of demos, talks and workshops which will continue through Aug. 26.Following their mission of three cultures, these events have included history of floorcloths, Native pine needle baskets, the Evolution of African music in America, and colonial woodworking and a talk on Ephemera.In addition, the Teaching Artists Institute, a group from Baltimore camped out at the Handsell site for the third year and experience living history interpretations of enslavement and the underground railroad.Although the nonprofit, all-volunteer group is still heartbroken over the death of Shirley S. Jackson, their mentor and adviser since 2007, they are celebrating her birthday on Friday, Aug. 25, by dedicating a tree and memorial stone in her memory at 11 a.m.The public is invited to this dedication, so they encourage all those who knew and loved Shirley to attend.The Memorial to the Enslaved was a dream of Jackson's and her tree, as it grows, will someday shade the granite boulder that is a tribute to her ancestors, who were enslaved in the Vienna area.The group is moving on to the planning of the 13th annual Nanticoke River Jamboree, their biggest event, and the largest living history event on the Mid-Shore. On Saturday, Oct. 14, living history interpreters from Virginia to South Jersey will demonstrate and interpret early life skills from three cultures with a theme of \"Women in History.\" As things grow for the NHPA, plans are in the works to build the Three Cultures Center, a barn-style accessory building that will serve the practical needs of the site with visitor-friendly amenities such as bathrooms, exhibit space and storage which the historic brick house cannot provide. More will be announced soon on the progress of this huge and exciting project for Dorchester County.On Nov. 12, the group is partnering with the Dorchester County Public Library and the Maryland Humanities Council for a One Maryland, One Book group discussion on the book \"There, There\" by Tommy Orange. Free copies of the book will be available at the Oct. 14 Jamboree and at the public library for those who wish to read it and participate in the November event.Save the date for this event.Representatives from the Pocomoke Indian Nation will be present to enhance the discussion, as the NHPA honors the Indigenous people in November for Native American History Month.Finally, a fundraiser, \"Winter Soiree\" is planned at one of Cambridge's historic homes, so everyone should continue to check the restorehandsell.org website for all that is happening with this group and the Handsell site. If you haven't been, they are open 11 a.m. through 3 p.m. on each Saturday through Aug. 26. \n \n Caption: COURTESY OF BILL CECIL\n \nShirley Jackson sits in reflection at the Memorial to the Enslaved. Jackson died recently and will be honored with a tree planted in her memory.\n \nCOURTESY OF MARGARE T W. INGERSOLL\n \nAn instructor from the Teaching Artist Institute group talks with visitors in the Handsell Kitchen \n\n \u00a9 Copyright \u00a9 2023 Star Democrat, Chesapeake Publishing Group (Adams Publishing/APGMedia). All rights reserved.",
+    "docref": "news/1936381EDD4F5778",
+    "article_id": "search-hits__hit--8907",
+    "content_source": "full_document",
+    "year": 2023,
+    "month": 8,
+    "day": 10,
+    "llm_classification": {
+      "topic": "Arts & Culture",
+      "score": 0.86,
+      "candidates": [
+        {
+          "topic": "Arts & Culture",
+          "score": 0.86
+        },
+        {
+          "topic": "Education",
+          "score": 0.58
+        },
+        {
+          "topic": "Local Government",
+          "score": 0.32
+        }
+      ],
+      "explanation": "The article describes cultural events, historic preservation, workshops, and a memorial dedication at a historic site, which aligns most closely with Arts & Culture. Educational aspects are present but secondary."
+    },
+    "llm_classification_meta": {
+      "model": "gpt-oss:120b",
+      "llm_failed": false
+    },
+    "people": [
+      "Shirley S. Jackson",
+      "Tommy Orange"
+    ],
+    "places": [
+      "Vienna",
+      "Indiantown Road",
+      "Dorchester County",
+      "Baltimore",
+      "Nanticoke River",
+      "Cambridge",
+      "Virginia",
+      "South Jersey",
+      "Maryland",
+      "Mid-Shore",
+      "Handsell Historic Site"
+    ],
+    "organizations": [
+      "Nanticoke Historic Preservation Alliance",
+      "Teaching Artists Institute",
+      "Dorchester County Public Library",
+      "Maryland Humanities Council",
+      "Pocomoke Indian Nation"
+    ]
+  },
+  {
+    "title": "Return engagements - Gabriela Montero bringing second season of global concerts to Ebenezer Theater",
+    "date": "2023-08-10",
+    "author": "",
+    "content": "Return engagements - Gabriela Montero bringing second season of global concerts to Ebenezer Theater\n\n August 10, 2023 | Star Democrat, The (Easton, MD)\n\n Page: 2A | Section: News \n \n 671\n Words \n\n Read News Document\n\n Renowned pianist and composer Gabriela Montero is bringing a second season of acclaimed, global concert artists for a second season of \"Gabriela Montero at Prager\" - a concert series featuring a wide range of international musicians held the Ebenezer Theater in Easton.The Venezuelan-born Montero made her piano concerto debut at age eight.She's also a graduate ad fellow of the Royal Academy of Music in London.She hosted a first season of concerts in 2022 at the Ebenezer (which is part of the Prager Family Center for the Arts) in downtown Easton.According to announcement from Bluepoint Hospitality Group and the arts center:\u00b7 Season II opens with a gala performance on August 19th, 2023. Gabriela Montero at Prager will feature one of today's leading opera stars, American soprano Nadine Sierra, acclaimed for her mesmerizing portrayals at the Metropolitan Opera.\u00b7 Sierra's concert leads to a September recital, Chopin's Salon, celebrating the 19th Century's relationship between music and painting. Gabriela Montero is joined by Time Magazine cover artist Allen Hirsch.\u00b7 October brings an evening commemorating the 150th Anniversary of iconic Russian composer Rachmaninoff, performed by leading interpreter Sergei Babayan - acclaimed Armenian pianist and Deutsche Grammophon artist.\u00b7 November showcases Norwegian violinist and Hardanger Fiddle virtuoso Eldbj\u00f8rg Hemsing, who will travel from Oslo to share the music of her homeland. Hemsing's Nordic Fire evening starts with a talk by Theodore Brun, British author of The Wanderer Chronicles - a work of epic Scandinavian fiction.\u00b7 December rings in the holidays with An American Christmas gala concert featuring 2022 Grammy Winner Morris Robinson, the All-American college footballer turned opera star.\u00b7 Season II continues in April 2024 at the Ebenezer Theater with an Italian mystery guest - a star of the piano world whose identity cannot yet be disclosed for exclusivity reasons.\u00b7 The spotlight on top talent extends in May with Mozart by the Met, an evening with a Metropolitan Opera Horn & String Sextet. The performance unmasks Costa Rican French horn Hugo Valverde, the youngest musician ever appointed to the legendary MET Orchestra.\u00b7 In June 2024, Season II's final concert is with the famed, Anthony Kearns - founding member of the Irish Tenors - who returns to the series for The Last Rose of Summer, an evening of Irish song.Nadine Sierra's show on Saturday, Aug. 19, features the Metropolitan Opera soprano bring her vocals to the Eastern Shore in a show with Montero entitled \"Made for Opera.\" Tickets are $150 and the show starts at 7:30 p.m.For concert details and tickets, please visit Montero-Prager.com or www.pragerarts.com/event-details/nadine-sierra-made-for-operaCOMMUNITY ENGAGEMENT & EDUCATIONThroughout the second series of Montero's concert series, \"up to 20 seats at each performance are provided at no cost to underserved community members through the Access to Excellence ticket program,\" the announcement said.The Ebenezer Theater and Prager arts group will also host a \"Next Generation\" showcase in November featuring On the education front, the Ebenezer Theater hosts a Next Generation showcase in November 2023 featuring emerging global talents from the Gabriela Montero Piano Lab, a mentorship initiative of OAcademy Music Conservatory by The Orchestra of the Americas Group.Gabriela Montero at Prager continues to add global color and international excellence to the cultural landscape of Easton, MD, as the most acclaimed artists of our time gather to bring intimate music-making to the Ebenezer Theater and provide the community with unique experiences.The Ebenezer Theater was originally constructed in 1856 and housed the Ebenezer Methodist Episcopal Church. It was acquired by local businessman and Bluepoint Hospitality principal Paul Prager who has purchased, redeveloped and repurposed a number of Easton properties.For more: bluepointhospitality.com. \n \n Caption: METROPOLITAN OPERA\n \nNadine Sierra performs with the Metropolitan Opera in New York. The soprano singer will be in Easton on Saturday, August 19, to kickoff a second season of Gabriela Montero's classical and global concerts at the Ebenezer Theater in Easton.\n \nEBENEZER THEATER/PRAGER FAMILY CENTER FOR THE ARTS\n \nGabriela Montero is returning for Season II of \"Gabriela Montero at Prager.\" An all-star lineup of acclaimed, global concert artists will be performing at the historic Ebenezer Theater in downtown Easton beginning Aug. 19. \n\n \u00a9 Copyright \u00a9 2023 Star Democrat, Chesapeake Publishing Group (Adams Publishing/APGMedia). All rights reserved.",
+    "docref": "news/1936381EF8014BA8",
+    "article_id": "search-hits__hit--8903",
+    "content_source": "full_document",
+    "year": 2023,
+    "month": 8,
+    "day": 10,
+    "llm_classification": {
+      "topic": "Arts & Culture",
+      "score": 0.92,
+      "candidates": [
+        {
+          "topic": "Arts & Culture",
+          "score": 0.92
+        },
+        {
+          "topic": "Entertainment",
+          "score": 0.68
+        }
+      ],
+      "explanation": "The article describes a classical concert series and cultural programming at a local theater, which aligns most closely with the Arts & Culture category rather than general Entertainment."
+    },
+    "llm_classification_meta": {
+      "model": "gpt-oss:120b",
+      "llm_failed": false
+    },
+    "people": [
+      "Gabriela Montero",
+      "Nadine Sierra",
+      "Allen Hirsch",
+      "Sergei Babayan",
+      "Eldbj\u00f8rg Hemsing",
+      "Theodore Brun",
+      "Morris Robinson",
+      "Hugo Valverde",
+      "Anthony Kearns",
+      "Paul Prager"
+    ],
+    "places": [
+      "Ebenezer Theater",
+      "Easton",
+      "London",
+      "Venezuelan",
+      "Metropolitan Opera",
+      "New York",
+      "Oslo",
+      "Eastern Shore",
+      "Maryland",
+      "Prager Family Center for the Arts",
+      "Downtown Easton"
+    ],
+    "organizations": [
+      "Royal Academy of Music",
+      "Bluepoint Hospitality Group",
+      "Deutsche Grammophon",
+      "OAcademy Music Conservatory",
+      "The Orchestra of the Americas Group",
+      "Prager Family Center for the Arts",
+      "Irish Tenors",
+      "The Wanderer Chronicles"
+    ]
+  },
+  {
+    "title": "MID-SHORE CALENDAR",
+    "date": "2023-08-10",
+    "author": "",
+    "content": "MID-SHORE CALENDAR\n\n August 10, 2023 | Star Democrat, The (Easton, MD)\n\n Page: 14 | Section: Calendar \n \n 888\n Words \n\n Read News Document\n\n THURSDAY, AUG. 10 YOGA CLASS, Trinity Cathedral, Miller Hall, 314 North Street & Goldsborough, Easton. Yoga with Suzie Hurley, 10 a.m. Intermediate, 11:45 a.m. Beginners.Info: 240-423-3706 or www.suziehurley.com.ST. MARK's THRIFT SHOP, 425 East Dover St., Easton. Open 10 a.m. to 2 p.m. Thursday, Friday and Saturday. Info: 410-819-0971 or www.stmarkseaston.org/thrift-shop.STEADY & STRONG, Oxford Community Center, 200 Oxford Road. 10 a.m.A 45-minute class for adults who seek enhanced core and muscle strength and better balance. Led by Janet Pfeffer. $10 per class, $80 for 10 classes. Pre-registration required. Info: 410-226-5904, oxfordcc@verizon.net or www.oxfordcc.org.SENIOR WALK, 10:30 a.m., Martinak State Park. Meet at the park office or a guided walk on a paved trail. Walks are approximately 1.5 miles in length or about 3,000 steps and plenty of benches are available for resting and enjoying nature.THRIFT STORE & BOUTIQUE, Society of St.Vincent de Paul, 29533 Canvasback Drive, Easton. 1 to 4 p.m. Housewares, boutique, gently used clothing and furniture.Info: 410-770-4505 or www.svdpeastonmd.org.FAMILY ASSISTANCE, Society of St. Vincent de Paul, 29533 Canvasback Drive, Easton. 1 to 3 p.m.Info: 410-770-4505 or www.svdpeastonmd.org.Cambridge Farmers Market, 3 to 6 p.m., Long Wharf Park.TACO BAR, 5 to 7 p.m., American Legion Post 296, 6200 Main St., Queenstown.Info: 410-827-8182.LITE FARE, 5 to 8 p.m., VFW Post 5118, Easton.Cost: $10. Community invited.Baywater Animal Rescue Ribbon Cutting, 5:30 p.m., 4930 Bucktown Road, Cambridge.Opening of the Bacon Family Adoption Center.FRIDAY, AUG. 11 Federalsburg Museum, 100 Covey-Williams Alley, behind the Federalsburg Town Hall, open 10 a.m. to 2 p.m. Free admission; donations gratefully accepted.ST. MARK's THRIFT SHOP, 425 East Dover St., Easton. Open 10 a.m. to 2 p.m. Thursday, Friday and Saturday. Info: 410-819-0971 or www.stmarkseaston.org/thrift-shop.Exhibit, \"From Colonial Past to Present, Oxford in Business,\" 10 a.m. to 4 p.m.Friday through Monday, last chance, exhibit closes Aug. 11, Oxford Museum, 101 S. Morris St., Oxford. Info: www.oxfordmuseummd.org.Joust, 5 p.m., at the Queen Anne's County Fair, 105 Dulin Clark Road, Centreville, sponsored by Eastern Shore Jousting Association.Jousting is Maryland's Official State Sport. Open to the public to watch. Gate admission benefits the Fair. Bring your own chairs. Info: contact Karen A. Callahan at 410-310-8934.Friday Night Dinner, 5 to 8 p.m., VFW Post 5118, Easton. Cost: $15. Open to the public.HALF RACK RIB DINNER, 5 to 7 p.m., American Legion Post 296, 6200 Main St., Queenstown. Info: 410-827-8182.SATURDAY, AUG. 12 Peach Festival, 9 a.m. to 2 p.m., Preston Fire Hall, 3680 Choptank Road. Local peaches, soft crab sandwiches, scrapple sandwiches, burgers, ice cream, peach milkshakes, peach cobblers and bake table. Crafters and vendors and children's activity table. This inside event is sponsored by Preston Bethesda United Methodist Church. Info: office@prestonBethesdaUmc.org or 410-673-7538.Upper Shore Genealogical Society Research Center, open 9 a.m. to 2 p.m., located at 12156 Greensboro Road, Greensboro. Also open by special request for out of town researchers; email usgsmd@yahoo.com.YOGA CLASS, Oxford Community Center, 200 Oxford Road. 9:30 A.m.Yoga with Suzie Hurley.Info: 410-226-5904 or www.oxfordcc.org.Book Signing, noon to 2 p.m., Donna Andrews signs \"Birder She Wrote\" at Mystery Loves Company, 202 S. Morris St., Oxford. Info: 410-226-0010.Happy Hour Summer Concert, 5 to 7 p.m., featuring Rising Tide at Oxford Community Center. Tickets $10. Purchase online at www.oxfordcc.org under Events.Memories and Musings: St Paul's Church Restoration and Rejuvenation, 5 to 6:30 p.m., Oxford Museum.RSVP to theoxfordmuseum@gmail.com.SUNDAY, AUG. 13 PANCAKE BREAKFAST, 8 to 11 a.m., Oxford Volunteer Fire Department.WATERMEN's APPRECIATION DAY, 10 a.m. to 5 p.m., Chesapeake Bay Maritime Museum, St. Michaels. Boat docking contest, steamed crabs, live music, family activities and more. Silent auction to benefit the Talbot Watermen Association. Tickets are $19 for adults 18 to 64, $16 for seniors (65+), college students (with ID) and retired military members; $10 for active military members, and $8 for children 6 to 17. Children 5 and under admitted free. Members receive discounts.Queen Anne's County Joust, 4 p.m., at the Tuckahoe Equestrian Center, 619 Crouse Mill Road, Queen Anne, sponsored by the Eastern Shore Jousting Association.Open to the public to watch. Bring your own chairs.Info: contact Diane Sherwood at 410-310-7945.MONDAY, AUG. 14 YOGA CLASS, Oxford Community Center, 200 Oxford Road. 1 p.m. Yoga with Suzie Hurley. Info: 410-226-5904 or www.oxfordcc.org.TUESDAY, AUG. 15 HEALING THROUGH YOGA, 8:45 to 9:45 a.m., at Talbot Hospice, 586 Cynwood Dr., Easton. No Fee. A weekly yoga class to help find strength in the grieving process.For anyone grieving the death of a loved one. Taught by Leslie Orndoff, RYT. No prior yoga experience necessary.Registration required: bereavement@talbothospice.org or 410-822-6681, ext.116.STEADY & STRONG, Oxford Community Center, 200 Oxford Road. 10 a.m.A 45-minute class for adults who seek enhanced core and muscle strength and better balance. Led by Janet Pfeffer. $10 per class, $80 for 10 classes. Pre-registration required. Info: 410-226-5904, oxfordcc@verizon.net or www.oxfordcc.org.SENIOR WALK, 10:30 a.m., Martinak State Park. Meet at the park office or a guided walk on a paved trail. Walks are approximately 1.5 miles in length or about 3,000 steps and plenty of benches are available for resting and enjoying nature.YARN AND NEEDLE GROUP, 12:30 to 3 p.m., Brookletts Place, Talbot County Senior Center, Easton. Every Tuesday.Some help may be available for knitting and crocheting.Open to anyone 60 years of age or older at no cost. Must follow center's COVID protocols.Info: 410-822-2869.FOOD PANTRY, Society of St. Vincent de Paul, 29533 Canvasback Drive, Easton. 1 to 4 p.m. Info: 410-770-4505 or www.svdpeastonmd.org. \n\n \u00a9 Copyright \u00a9 2023 Star Democrat, Chesapeake Publishing Group (Adams Publishing/APGMedia). All rights reserved.",
+    "docref": "news/1936381EE6D41BF8",
+    "article_id": "search-hits__hit--8902",
+    "content_source": "full_document",
+    "year": 2023,
+    "month": 8,
+    "day": 10,
+    "llm_classification": {
+      "topic": "Arts & Culture",
+      "score": 0.78,
+      "candidates": [
+        {
+          "topic": "Arts & Culture",
+          "score": 0.78
+        },
+        {
+          "topic": "Entertainment",
+          "score": 0.62
+        },
+        {
+          "topic": "Health",
+          "score": 0.45
+        }
+      ],
+      "explanation": "The article is a community calendar listing cultural events such as concerts, book signings, festivals, museum exhibits, and jousting, which align best with the Arts & Culture category."
+    },
+    "llm_classification_meta": {
+      "model": "gpt-oss:120b",
+      "llm_failed": false
+    },
+    "people": [
+      "Suzie Hurley",
+      "Janet Pfeffer",
+      "Leslie Orndoff",
+      "Donna Andrews",
+      "Karen A. Callahan",
+      "Diane Sherwood"
+    ],
+    "places": [
+      "Trinity Cathedral",
+      "Miller Hall",
+      "Easton",
+      "St. Mark's Thrift Shop",
+      "Oxford Community Center",
+      "Martinak State Park",
+      "Society of St. Vincent de Paul",
+      "Long Wharf Park",
+      "American Legion Post 296",
+      "Queenstown",
+      "VFW Post 5118",
+      "Cambridge Farmers Market",
+      "Federalsburg Museum",
+      "Oxford Museum",
+      "Queen Anne's County Fair",
+      "Centreville",
+      "Preston Fire Hall",
+      "Choptank Road",
+      "Upper Shore Genealogical Society Research Center",
+      "Greensboro",
+      "Mystery Loves Company",
+      "Chesapeake Bay Maritime Museum",
+      "St. Michaels",
+      "Tuckahoe Equestrian Center",
+      "Talbot Hospice",
+      "Brookletts Place",
+      "Talbot County Senior Center"
+    ],
+    "organizations": [
+      "Eastern Shore Jousting Association",
+      "Talbot Watermen Association",
+      "Preston Bethesda United Methodist Church",
+      "Oxford Volunteer Fire Department"
+    ]
+  },
+  {
+    "title": "Museum's charity boat auction scheduled for Sept. 2",
+    "date": "2023-08-10",
+    "author": "",
+    "content": "Museum's charity boat auction scheduled for Sept. 2\n\n August 10, 2023 | Star Democrat, The (Easton, MD)\n\n Page: 2 | Section: News \n \n 546\n Words \n\n Read News Document\n\n ST. MICHAELS - The Chesapeake Bay Maritime Museum will host its annual Charity Boat Auction on Saturday, Sept. 2, inviting guests to its waterfront campus to bid on donated vessels of all shapes and sizes in support of its mission.Starting at 11 a.m., dozens of boats and watercraft, ranging in size and performance from cabin cruisers to sailing dinghies and everything in between, will be auctioned to the highest bidders with no minimums or reserves. The gates open at 8 a.m. for this rain or shine event.\"We look forward to this weekend every year,\" said the museum's Charity Boat Donation Program director Wes Williams. \"We have a wide variety of boats ready to be sold via absolute auction, and we're excited to be able to set up our buyers with great deals on these vessels.\" The Charity Boat Auction is the flagship event of the Chesapeake Bay Maritime Museum's Charity Boat Donation Program, which accepts and sells gently used boats year round.This program makes offering tax-deductible donations simple and straightforward and streamlines the sales process with competitive pricing on quality vessels. Every sale directly supports the museum's mission of preserving the history, environment and culture of the Chesapeake Bay region and making this resource available to all.In addition to the Charity Boat Auction, the festivities include a flea market-style tag sale, beginning at 8 a.m. that features a variety of used boating gear, including ground tackle, electrical equipment, hardware, rope, chain, oars, life jackets, motors and more. Food and beverages, including barbecue and beer, will be available for purchase starting at 10:30 a.m.Prospective buyers have several different ways to check out the inventory, starting with a preview exclusively for museum members on the evening of Thursday, Aug. 31.The auction boats will be listed online and available for public view at the museum from 10 a.m. to 6 p.m. on Friday, Sept. 1. Regular admission rates will apply until 3 p.m. that day, and gates will open for free from 3 p.m. to 6 p.m.On auction day, guests can check out the vessels during the three hours before the bidding begins at 11 a.m.Chesapeake Bay Maritime Museum members and children ages 5 and under receive free admission into the Charity Boat Auction. Otherwise, general admission is $5 per person until 11 a.m., with a $5 paddle fee for registered bidders.After 11 a.m., regular two-day admission rates apply.For safety reasons, non-service dogs are prohibited during museum festivals and special events, including the Charity Boat Auction.For the official rules, auction details, and inventory updates, visit cbmm.org/Charity-BoatAuction, or contact the museum's Charity Boat Donation team at boatdonation@cbmm.org or 410-745-4992. \n \n Caption: TESY OF GEORGE SASS/CHESAPEAKE BAY MAR ITIME MUSEUM\n \nThe Chesapeake Bay Maritime Museum will host its annual Charity Boat Auction on Sept. 2, inviting guests to its waterfront campus to bid on donated vessels of all shapes and sizes in support of its mission. Gates open at 8 a.m., and the auction begins at 11 a.m.\n \nTESY OF GEORGE SASS/CHESAPEAKE BAY MAR ITIME MUSEUM\n \nThe Chesapeake Bay Maritime Museum will host its annual Charity Boat Auction on Sept. 2, inviting guests to its waterfront campus to bid on donated vessels of all shapes and sizes in support of its mission. Gates open at 8 a.m., and the auction begins at 11 a.m. \n\n \u00a9 Copyright \u00a9 2023 Star Democrat, Chesapeake Publishing Group (Adams Publishing/APGMedia). All rights reserved.",
+    "docref": "news/1936381ED04AF5A0",
+    "article_id": "search-hits__hit--8900",
+    "content_source": "full_document",
+    "year": 2023,
+    "month": 8,
+    "day": 10,
+    "llm_classification": {
+      "topic": "Arts & Culture",
+      "score": 0.86,
+      "candidates": [
+        {
+          "topic": "Arts & Culture",
+          "score": 0.86
+        },
+        {
+          "topic": "Business/Economy",
+          "score": 0.57
+        },
+        {
+          "topic": "Entertainment",
+          "score": 0.42
+        }
+      ],
+      "explanation": "The article describes a museum-hosted charity boat auction, focusing on cultural heritage and community event, which aligns best with the Arts & Culture category."
+    },
+    "llm_classification_meta": {
+      "model": "gpt-oss:120b",
+      "llm_failed": false
+    },
+    "people": [
+      "Wes Williams",
+      "George Sass"
+    ],
+    "places": [
+      "St. Michaels",
+      "Chesapeake Bay"
+    ],
+    "organizations": [
+      "Chesapeake Bay Maritime Museum"
+    ]
+  },
+  {
+    "title": "Soprano serenade",
+    "date": "2023-08-10",
+    "author": "",
+    "content": "Soprano serenade\n\n August 10, 2023 | Star Democrat, The (Easton, MD)\n\n Page: 1A | Section: News \n \n 16\n Words \n\n Read News Document\n\n Nadine Sierra kicks off Gabriela Montero's second season of classical concerts at the Ebenezer Theater \n\n \u00a9 Copyright \u00a9 2023 Star Democrat, Chesapeake Publishing Group (Adams Publishing/APGMedia). All rights reserved.",
+    "docref": "news/1936381EF57804D0",
+    "article_id": "search-hits__hit--8893",
+    "content_source": "full_document",
+    "year": 2023,
+    "month": 8,
+    "day": 10,
+    "llm_classification": {
+      "topic": "Arts & Culture",
+      "score": 0.93,
+      "candidates": [
+        {
+          "topic": "Arts & Culture",
+          "score": 0.93
+        },
+        {
+          "topic": "Entertainment",
+          "score": 0.78
+        }
+      ],
+      "explanation": "The article describes a classical concert featuring a soprano, which falls squarely under arts and cultural events rather than general entertainment."
+    },
+    "llm_classification_meta": {
+      "model": "gpt-oss:120b",
+      "llm_failed": false
+    },
+    "people": [
+      "Nadine Sierra",
+      "Gabriela Montero"
+    ],
+    "places": [
+      "Ebenezer Theater"
+    ],
+    "organizations": []
   }
 ]

@@ -75,17 +75,19 @@ def extract_entities_for_one_story(model: str, story: dict, timeout: int = 300, 
     PROMPT_TEMPLATE = """Extract all PEOPLE, PLACES, and ORGANIZATIONS mentioned in the following news story.
 
 VERY IMPORTANT:
+- FIRST, determine if this story's primary geographic focus is Maryland's Eastern Shore.
+- If the story is primarily about events, people, or activities OUTSIDE the Eastern Shore (e.g., international news, national news, "Art Around the World" features not focused on Eastern Shore), return: {{"title": "{title}", "people": ["SKIPPED"], "places": ["SKIPPED"], "organizations": ["SKIPPED"]}}
+- Only process stories that are primarily about Maryland's Eastern Shore communities, people, and organizations.
+- Examples of stories to SKIP: international art features, national entertainment news, global cultural events unless they directly involve Eastern Shore residents or organizations.
+- Ignore the "Star Democrat, The (Easton, MD)" publication credit - this does not mean the story is about the Eastern Shore.
+
+If the story IS about the Eastern Shore:
 - Return EXACTLY one JSON OBJECT and NOTHING ELSE (no preface, no explanation, no markdown).
 - The object must have exactly these keys: "title", "people", "places", "organizations".
 - Each value for people/places/organizations must be an array of strings. If none, return an empty array [].
-- DO NOT PROCESS METADATA FOR ARTICLES WITH FOREIGN FOCUS
 - Normalize entity strings: trim whitespace, remove surrounding punctuation, do not include titles (Mr., Ms., Dr.) or role labels — return only the name/place/organization string.
 - Prefer full names when available. Do NOT return placeholders like "Jane Doe" or "John Doe".
-- Exclude "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Invision/AP" from organizations
-- If an article's main geographic focus or location is not on Maryland's Eastern Shore, SKIP processing that article. REMEMBER, DO NOT PROCESS METADATA FOR ARTICLES WITH FOCUS OUTSIDE MARYLAND'S EASTERN SHORE. Examples of articles to ignore are those whose focus are in: "Hong Kong", "London", "Indonesia"
-- For geographic focus, ignore "Star Democrat, The (Easton, MD)" which always appears at the top of the story.
-- REMEMBER: Examples of articles to ignore are those ehose focus are in: "Hong Kong", "London", "Indonesia", "Castle Fine Art"
-
+- Exclude "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Invision/AP" from organizations.
 
 Title: {title}
 Article Text:
@@ -170,8 +172,8 @@ def main():
                         help='Model to use (default: anthropic/claude-sonnet-4-5)')
     parser.add_argument('--input', default='arts_culture_stories.json',
                         help='Input topic JSON file (default: arts_culture_stories.json in current dir)')
-    parser.add_argument('--output', default='stories_with_entities_v2.json',
-                        help='Output simplified JSON file (default: stories_with_entities_v2.json in current dir)')
+    parser.add_argument('--output', default='stories_with_entities_v1.json',
+                        help='Output simplified JSON file (default: stories_with_entities_v1.json in current dir)')
     # No --limit means process all stories; set a positive number to limit for testing
     parser.add_argument('--limit', type=int, default=None, help='Process only the first N stories (default: process all stories)')
     parser.add_argument('--timeout', type=int, default=300, help='Timeout seconds for the LLM CLI call (default 300)')
@@ -195,6 +197,7 @@ def main():
     print(f"Processing {len(stories)} stories one at a time with model {model}...")
     
     results = []
+    skipped_count = 0
     for idx, story in enumerate(stories, start=1):
         print(f"Processing story {idx}/{len(stories)}: {story.get('title', 'Untitled')[:60]}...")
         try:
@@ -204,6 +207,14 @@ def main():
             result['people'] = entities['people']
             result['places'] = entities['places']
             result['organizations'] = entities['organizations']
+            
+            # Track if story was skipped due to geographic focus
+            if (entities['people'] == ['SKIPPED'] and 
+                entities['places'] == ['SKIPPED'] and 
+                entities['organizations'] == ['SKIPPED']):
+                print(f"  Skipped: Not focused on Eastern Shore")
+                skipped_count += 1
+            
             results.append(result)
         except Exception as e:
             print(f"  Error processing story {idx}: {e}")
@@ -220,6 +231,7 @@ def main():
         json.dump(results, f, indent=2)
 
     print(f"Wrote {len(results)} stories with entity metadata to {out_path}")
+    print(f"Skipped {skipped_count} stories not focused on Eastern Shore")
 
 
 if __name__ == '__main__':

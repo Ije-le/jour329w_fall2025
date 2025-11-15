@@ -34,6 +34,7 @@
       "llm_failed": false
     },
     "people": [
+      "Connie Connolly",
       "Tom Lough",
       "Christopher Coffiey",
       "Catherine Wood",
@@ -49,8 +50,10 @@
     "places": [
       "Ridgely",
       "North East",
+      "Maryland",
       "Felton",
-      "Denton"
+      "Denton",
+      "Easton"
     ],
     "organizations": [
       "St. Benedict - St. Elizabeth Catholic churches",
@@ -94,20 +97,20 @@
       "llm_failed": false
     },
     "people": [
-      "Jim Barton"
+      "Jim Barton",
+      "Mike Kader"
     ],
     "places": [
-      "Queen Anne's County",
       "Centreville",
-      "Queenstown",
+      "Queen Anne's County",
       "Delmarva",
       "Queen Anne",
-      "Dulin Clark Road",
-      "state Route 18",
-      "4-H Park"
+      "Queenstown",
+      "Dulin Clark Road"
     ],
     "organizations": [
-      "Queen Anne's Museum of Eastern Shore Life"
+      "Queen Anne's Museum of Eastern Shore Life",
+      "4-H Park"
     ]
   },
   {
@@ -145,11 +148,7 @@
       "llm_failed": false
     },
     "people": [],
-    "places": [
-      "Hong Kong",
-      "Jakarta",
-      "Indonesia"
-    ],
+    "places": [],
     "organizations": []
   },
   {
@@ -190,9 +189,7 @@
       "London"
     ],
     "organizations": [
-      "Castle Fine Art",
-      "Invision",
-      "AP"
+      "Castle Fine Art"
     ]
   },
   {
@@ -231,14 +228,17 @@
     },
     "people": [],
     "places": [
-      "Tilghman",
       "Tilghman Island",
       "Knapps Narrows",
-      "Chesapeake Bay Maritime Museum",
+      "Maryland",
+      "Chesapeake Bay",
+      "Easton",
+      "Tilghman Island Road",
       "Lee House"
     ],
     "organizations": [
       "Tilghman Watermen's Museum",
+      "Chesapeake Bay Maritime Museum",
       "Two if by Sea restaurant",
       "2 Vintage Chics Boutique",
       "Fairbank Tackle"
