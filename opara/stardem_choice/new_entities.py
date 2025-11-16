@@ -19,6 +19,7 @@ import argparse
 import json
 import time
 import subprocess
+import random
 from pathlib import Path
 
 
@@ -74,20 +75,24 @@ def extract_entities_for_one_story(model: str, story: dict, timeout: int = 300, 
     # Prompt template - edit this to customize the extraction instructions
     PROMPT_TEMPLATE = """Extract all PEOPLE, PLACES, and ORGANIZATIONS mentioned in the following news story.
 
-VERY IMPORTANT:
+CRITICAL INSTRUCTION - READ FIRST:
 - FIRST, determine if this story's primary geographic focus is Maryland's Eastern Shore.
-- If the story is primarily about events, people, or activities OUTSIDE the Eastern Shore (e.g., international news, national news, "Art Around the World" features not focused on Eastern Shore), return: {{"title": "{title}", "people": ["SKIPPED"], "places": ["SKIPPED"], "organizations": ["SKIPPED"]}}
-- Only process stories that are primarily about Maryland's Eastern Shore communities, people, and organizations.
-- Examples of stories to SKIP: international art features, national entertainment news, global cultural events unless they directly involve Eastern Shore residents or organizations.
-- Ignore the "Star Democrat, The (Easton, MD)" publication credit - this does not mean the story is about the Eastern Shore.
+- If the story is NOT about Maryland's Eastern Shore, you MUST return EXACTLY this format:
+  {{"title": "{title}", "people": ["SKIPPED"], "places": ["SKIPPED"], "organizations": ["SKIPPED"]}}
+- DO NOT extract any entities from stories that are not about the Eastern Shore.
+- Stories to SKIP include: international news, national entertainment, global arts/culture features, celebrity news, world events.
+- Examples: "Art Around the World", stories about Hong Kong, London, Indonesia, national music/film releases, international exhibitions.
+- The publication header "Star Democrat, The (Easton, MD)" does NOT indicate the story is local - ignore this header.
 
-If the story IS about the Eastern Shore:
+ONLY if the story IS clearly about Maryland's Eastern Shore (Talbot County, Caroline County, Dorchester County, Kent County, Queen Anne's County, etc.):
 - Return EXACTLY one JSON OBJECT and NOTHING ELSE (no preface, no explanation, no markdown).
 - The object must have exactly these keys: "title", "people", "places", "organizations".
 - Each value for people/places/organizations must be an array of strings. If none, return an empty array [].
 - Normalize entity strings: trim whitespace, remove surrounding punctuation, do not include titles (Mr., Ms., Dr.) or role labels — return only the name/place/organization string.
 - Prefer full names when available. Do NOT return placeholders like "Jane Doe" or "John Doe".
 - Exclude "Star Democrat", "Chesapeake Publishing Group", "Adams Publishing/APGMedia", "Invision/AP" from organizations.
+
+REMEMBER: For non-Eastern Shore stories, ONLY return {{"title": "{title}", "people": ["SKIPPED"], "places": ["SKIPPED"], "organizations": ["SKIPPED"]}}
 
 Title: {title}
 Article Text:
@@ -187,10 +192,15 @@ def main():
     with open(input_path) as f:
         stories = json.load(f)
 
-    # If --limit is provided and > 0, process that many stories; otherwise process all
+    # If --limit is provided and > 0, process that many stories; otherwise randomly select 300
     if args.limit is not None and args.limit > 0:
         stories = stories[:args.limit]
-    # else: process all stories (no slicing needed)
+    else:
+        # Randomly select 300 stories from the full set
+        if len(stories) > 300:
+            random.seed(42)  # Set seed for reproducibility
+            stories = random.sample(stories, 300)
+            print(f"Randomly selected 300 stories from the total available")
 
     model = args.model
 
