@@ -8,7 +8,7 @@ import glob
 import re
 import random
 
-def screen_eastern_shore_relevance(story_title, story_content):
+def screen_eastern_shore_relevance(story_title, story_content, model):
     """Use LLM to screen whether a story is geographically focused on Maryland's Eastern Shore."""
     
     prompt = f"""
@@ -42,7 +42,7 @@ Respond with valid JSON only, no other text:
     
     try:
         result = subprocess.run([
-            'llm', '-m', 'groq/openai/gpt-oss-20b', prompt
+            'llm', '-m', model, prompt
         ], capture_output=True, text=True, timeout=30)
         
         if result.returncode == 0:
@@ -255,7 +255,7 @@ def main():
             continue
         
         # Screen for Eastern Shore geographic focus
-        screening = screen_eastern_shore_relevance(story.get('title', ''), story_content)
+        screening = screen_eastern_shore_relevance(story.get('title', ''), story_content, args.model)
         
         if not screening.get('is_eastern_shore_focused', False):
             print(f"  ⊘ Excluded: {screening.get('reasoning', 'Not Eastern Shore focused')}")
