@@ -1,29 +1,24 @@
 #!/usr/bin/env python3
 """
-Extract people/places/organizations from a topic file using the project's
+Extract people/places/organizations from the Arts & Culture topic file using the project's
 `llm` Python API (as documented by https://llm.datasette.io/en/stable/usage.html).
 
 This script:
-- reads a topic JSON (default: `public_safety_stories.json` in the same directory)
-- processes stories one at a time with the specified model
-- randomly selects 300 stories from the input file (unless --limit is specified)
-- expects the model to return a JSON object per story with keys:
+- reads a topic JSON (default: `arts_culture_stories.json` in the same directory)
+- calls the specified model exactly ONCE with the full set of stories (default: groq/meta-llama/llama-4-maverick-17b-128e-instruct)
+- expects the model to return EXACTLY one JSON array with one object per input story. Each object must have the keys:
     `title`, `people`, `places`, `organizations` (each value an array of strings).
-- writes results to `stories_with_entities_v3.json` by default
-- saves progress after each story (can resume if interrupted)
-- returns ["SKIPPED"] for stories not focused on Maryland's Eastern Shore
+- writes the resulting array to `stories_with_entities_v2.json` by default (processes all stories unless --limit is set)
 
 Important constraints enforced by this script and prompt:
-- Return ONLY JSON objects (no explanation, no markdown)
-- Do NOT use placeholder example names like "Jane Doe" or "John Doe"
-- Skip stories with no geographic focus on Eastern Shore
+- Return ONLY the JSON array and NOTHING ELSE (no explanation, no markdown).
+- Do NOT use placeholder example names like "Jane Doe" or "John Doe".
 """
 
 import argparse
 import json
 import time
 import subprocess
-import random
 from pathlib import Path
 
 
@@ -175,10 +170,10 @@ def main():
     parser = argparse.ArgumentParser(description='Extract people/places/organizations from an Arts & Culture topic JSON')
     parser.add_argument('--model', default='anthropic/claude-sonnet-4-5',
                         help='Model to use (default: anthropic/claude-sonnet-4-5)')
-    parser.add_argument('--input', default='public_safety_stories.json',
-                        help='Input topic JSON file (default: public_safety_stories.json in current dir)')
-    parser.add_argument('--output', default='stories_with_entities_v3.json',
-                        help='Output simplified JSON file (default: stories_with_entities_v3.json in current dir)')
+    parser.add_argument('--input', default='arts_culture_stories.json',
+                        help='Input topic JSON file (default: arts_culture_stories.json in current dir)')
+    parser.add_argument('--output', default='stories_with_entities_v1.json',
+                        help='Output simplified JSON file (default: stories_with_entities_v1.json in current dir)')
     # No --limit means process all stories; set a positive number to limit for testing
     parser.add_argument('--limit', type=int, default=None, help='Process only the first N stories (default: process all stories)')
     parser.add_argument('--timeout', type=int, default=300, help='Timeout seconds for the LLM CLI call (default 300)')
@@ -191,52 +186,20 @@ def main():
 
     with open(input_path) as f:
         stories = json.load(f)
-    
-    out_path = Path(args.output)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    
-    # Check if output file exists and load already processed stories
-    already_processed = []
-    processed_docrefs = set()
-    if out_path.exists():
-        try:
-            with open(out_path) as f:
-                already_processed = json.load(f)
-                processed_docrefs = {s.get('docref') for s in already_processed if s.get('docref')}
-                print(f"Found {len(already_processed)} already processed stories. Resuming...")
-        except Exception as e:
-            print(f"Warning: Could not load existing output file: {e}")
-            already_processed = []
 
-    # If --limit is provided and > 0, process that many stories; otherwise randomly select 300
+    # If --limit is provided and > 0, process that many stories; otherwise process all
     if args.limit is not None and args.limit > 0:
         stories = stories[:args.limit]
-    else:
-        # Randomly select 300 stories from the full set
-        if len(stories) > 300:
-            random.seed(42)  # Set seed for reproducibility
-            stories = random.sample(stories, 300)
-            print(f"Randomly selected 300 stories from the total available")
-    
-    # Filter out already processed stories
-    stories_to_process = [s for s in stories if s.get('docref') not in processed_docrefs]
-    
-    if len(stories_to_process) == 0:
-        print("All stories have already been processed!")
-        return
-    
-    print(f"Processing {len(stories_to_process)} remaining stories (out of {len(stories)} total) with model {args.model}...")
+    # else: process all stories (no slicing needed)
 
     model = args.model
+
+    print(f"Processing {len(stories)} stories one at a time with model {model}...")
     
-    results = already_processed  # Start with already processed stories
-    skipped_count = sum(1 for s in already_processed 
-                       if s.get('people') == ['SKIPPED'] and 
-                          s.get('places') == ['SKIPPED'] and 
-                          s.get('organizations') == ['SKIPPED'])
-    
-    for idx, story in enumerate(stories_to_process, start=1):
-        print(f"Processing story {len(already_processed) + idx}/{len(stories)}: {story.get('title', 'Untitled')[:60]}...")
+    results = []
+    skipped_count = 0
+    for idx, story in enumerate(stories, start=1):
+        print(f"Processing story {idx}/{len(stories)}: {story.get('title', 'Untitled')[:60]}...")
         try:
             entities = extract_entities_for_one_story(model, story, timeout=args.timeout)
             # Add entities to the original story
@@ -253,25 +216,21 @@ def main():
                 skipped_count += 1
             
             results.append(result)
-            
-            # Save after each story (incremental save)
-            with open(out_path, 'w') as f:
-                json.dump(results, f, indent=2)
-                
         except Exception as e:
-            print(f"  Error processing story {len(already_processed) + idx}: {e}")
+            print(f"  Error processing story {idx}: {e}")
             # Add story with empty entities on error
             result = dict(story)
             result['people'] = []
             result['places'] = []
             result['organizations'] = []
             results.append(result)
-            
-            # Save even on error
-            with open(out_path, 'w') as f:
-                json.dump(results, f, indent=2)
 
-    print(f"\nCompleted! Wrote {len(results)} stories with entity metadata to {out_path}")
+    out_path = Path(args.output)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, 'w') as f:
+        json.dump(results, f, indent=2)
+
+    print(f"Wrote {len(results)} stories with entity metadata to {out_path}")
     print(f"Skipped {skipped_count} stories not focused on Eastern Shore")
 
 

@@ -54,7 +54,7 @@ Adding examples did help. At first, I gave copilot examples of stories to avoid.
 Instructions should be very specific, but more importantly, I think they are more effective if tailored to address initial unfavorable results. 
 
 #### Final Recommendations
-I would use v1 if I were to create a beatbook. I recommend the uv run python add_entities.py --model groq/openai/gpt-oss-120b --input topic_stories.json with this prompt:
+I would use v1 if I were to create a beatbook. I recommend the uv run python add_entities.py --model groq/openai/gpt-oss-120b --inputx topic_stories.json with this prompt:
 
 If I had to work on this afresh, I would prompt the LLM to avoid including authors names to the list.
 
@@ -93,4 +93,9 @@ Resume from where it left off
 Have a partial file even if it never completes
 
 -You did not update the new_entities.py script to reflect that we are now taking input from public_safety_stories.json. Kindly do that now. On line 7 it has this:  reads a topic JSON (default: `arts_culture_stories.json` in the same directory) calls the specified model exactly ONCE with the full set of stories (default: groq/meta-l
+
+
+
+
+
 
