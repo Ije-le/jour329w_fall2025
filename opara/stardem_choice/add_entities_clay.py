@@ -150,7 +150,7 @@ def main():
     parser.add_argument('--model', required=True, help='LLM model to use (e.g., groq/openai/gpt-oss-120b)')
     parser.add_argument('--input', default='public_safety_stories.json', help='Input JSON file with stories (default: public_safety_stories.json)')
     parser.add_argument('--output', default='stories_and_entities_v2.json', help='Output JSON file (default: stories_and_entities_v2.json)')
-    parser.add_argument('--sample-size', type=int, default=200, help='Number of stories to randomly sample (default: 200)')
+    parser.add_argument('--sample-size', type=int, default=300, help='Number of stories to randomly sample (default: 300)')
     parser.add_argument('--limit', type=int, help='Limit the number of stories to process (useful for testing)')
     
     # Show help if no arguments provided
