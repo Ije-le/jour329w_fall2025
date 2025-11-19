@@ -28,7 +28,7 @@ def extract_summary_with_quotes(content):
     
     if quotes:
         summary_parts.append("\n\nKey quotes:")
-        for i, quote in enumerate(quotes[:7], 1):  # Keep first 7 quotes
+        for i, quote in enumerate(quotes[:5], 1):  # Keep first 5 quotes
             summary_parts.append(f'"{quote}"')
     
     summary = ' '.join(summary_parts)
