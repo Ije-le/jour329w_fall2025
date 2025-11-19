@@ -1,0 +1,32 @@
+Create a comprehensive narrative guide for a reporter covering the Public Safety beat on Maryland's Eastern Shore. This beat book should serve as an essential resource for a reporter new to this beat or transferring from another assignment.
+
+CONTEXT:
+You will be provided with a collection of public safety stories from the Star-Democrat newspaper covering Maryland's Eastern Shore counties (Talbot, Caroline, Dorchester, Kent, Queen Anne's, Somerset, Wicomico, and Worcester). These stories include crime, law enforcement, fire and emergency services, courts, and public safety issues.
+
+STRUCTURE AND ORGANIZATION:
+Organize the beat book by major themes rather than alphabetically. Identify the most important themes that emerge from the stories (e.g., Emergency Services & Fire Departments, Law Enforcement & Policing, Courts & Justice System, Community Safety Issues, etc.). Within each theme, introduce:
+
+1. KEY PEOPLE: Who are the important officials, leaders, and recurring sources? Include their roles, which agencies they represent, and what areas they cover. Use specific examples from the stories to show their involvement and expertise.
+
+2. MAJOR INSTITUTIONS: What are the critical agencies and organizations? Describe law enforcement departments, fire companies, courts, emergency services, and other relevant institutions. Explain their jurisdictions, responsibilities, and how they interact with each other.
+
+3. RECURRING ISSUES: What patterns emerge in coverage? What are the ongoing challenges, controversies, or topics that reporters should understand? Use specific stories to illustrate these patterns.
+
+4. GEOGRAPHIC CONSIDERATIONS: Highlight how public safety varies across different Eastern Shore communities. Note which towns, counties, or areas have unique challenges or characteristics.
+
+TONE AND STYLE:
+Write in a business casual tone that balances being informative with being readable. This is not a dry reference document - it should be engaging and narrative-driven, helping a reporter understand the human side of the beat. Use specific examples and anecdotes from the stories to bring the information to life. Avoid bullet points where possible; instead, weave information into coherent paragraphs that tell the story of this beat.
+
+MUST-INCLUDE ELEMENTS:
+- Specific names and titles of key people (law enforcement officials, fire chiefs, court officials, etc.)
+- Agency names and jurisdictions (police departments, fire companies, courts)
+- Connections between people, institutions, and issues
+- Geographic patterns (which communities are covered most, unique local characteristics)
+- Seasonal or recurring events/issues
+- Useful context that a new reporter would need to understand the beat
+- Stories ideas or unresolved issues a reporter can pursue
+
+AUDIENCE:
+This guide is for a professional journalist who may be new to the public safety beat or new to the Eastern Shore. Assume they understand journalism but need to quickly get up to speed on the local landscape, key players, and important context.
+
+Using the provided stories, create a narrative beat book that will help this reporter hit the ground running and develop sources, understand institutional structures, and identify story opportunities.
