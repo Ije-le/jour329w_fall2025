@@ -43,6 +43,9 @@ def extract_summary_with_quotes(content):
 with open('source_stories_subset.json') as f:
     stories = json.load(f)
 
+# Keep only first 50 stories
+stories = stories[:50]
+
 # Strip unwanted fields and summarize content
 cleaned_stories = []
 for story in stories:
