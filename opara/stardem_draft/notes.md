@@ -12,6 +12,6 @@ The final sections of the beatbook rounds up these ideas and provides ways that 
 However, I find that some things are recurrent throughout the document, for example, the burn ban extension, the protest permit debate, these issues came up at least two times in the beatbook. I understand that this is the result of breaking down the beat into topics, so certain issues can overlap, but that can make going it a little redundant.
 I also think that a quick summary of the beat at the top could have been a good idea.
 One of the beat books I generated for the CNS stories had some information on how sources preferred to be contacted and that could have been useful here as well.
-Regardless of these issues which I consider minor, I think this is a very detailed and useful guide. 
+Regardless of these issues which I consider minor, I think this is a very detailed and useful guide.
 
 
