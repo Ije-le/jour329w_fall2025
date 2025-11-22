@@ -39,10 +39,9 @@ Near the end of the document (but before any final reflections or story ideas), 
 - An organized list of all key sources mentioned in the guide
 - Their current titles and affiliated organizations
 - Which stories they appeared in or what issues they're associated with
-- Contact information if available in the stories, or notes on how they can be reached
 - Group sources by institution/agency type (e.g., Law Enforcement, Fire/EMS, Courts, County Government, etc.)
 
-This directory should be comprehensive but concise - a quick reference for the reporter to identify and contact sources.
+This directory should be comprehensive but concise - a quick reference for the reporter to identify sources. Do NOT include contact information.
 
 AUDIENCE:
 This guide is for a professional journalist who may be new to the public safety beat or new to the Eastern Shore. Assume they understand journalism but need to quickly get up to speed on the local landscape, key players, and important context.
