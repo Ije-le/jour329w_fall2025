@@ -34,8 +34,25 @@ MUST-INCLUDE ELEMENTS:
 - Useful context that a new reporter would need to understand the beat
 - Story ideas or unresolved issues a reporter can pursue
 
+INTERCONNECTED ISSUES REQUIREMENT:
+Before the closing sections, identify storylines that appear in multiple thematic sections (e.g., a story that touches Law Enforcement, Courts, and Youth; or Fire/EMS and Infrastructure). Create a dedicated "Interconnected Issues" section that:
+
+For each recurring storyline:
+- Summarize it in 3-5 bullets, with no more than 2 sentences per bullet
+- Focus on how the story spans multiple agencies and institutional areas
+- Explicitly note which thematic areas it touches (e.g., "Law Enforcement → Courts → Youth" or "Fire/EMS → Infrastructure → Government")
+- Provide enough context so a reporter understands the full scope across different institutional areas
+
+Within the main thematic sections, when you encounter these recurring storylines:
+- Replace full repeated paragraphs with a short one-sentence reference
+- Point readers to the "Interconnected Issues" section for the complete picture
+- Example: "The K-9 program rebuilding intersects with budgeting and legal challenges (see Interconnected Issues section)."
+- Keep only section-specific details in the main sections; move the cross-cutting narrative to the dedicated section
+
+This approach prevents repetition while highlighting stories that require coordination across multiple institutional areas within the public safety beat.
+
 CLOSING REQUIREMENT:
-Near the end of the document (but before any final reflections or story ideas), include a "Source Directory" section that provides:
+After the "Interconnected Issues" section, include a "Source Directory" section that provides:
 - An organized list of all key sources mentioned in the guide
 - Their current titles and affiliated organizations
 - Which stories they appeared in or what issues they're associated with
