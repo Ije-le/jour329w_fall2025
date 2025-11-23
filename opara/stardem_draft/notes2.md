@@ -4,7 +4,7 @@ In refining my first draft, I generated a prompt using copilot that included a b
 The most significant problem with the beatbook was the repeatition of issues throughout the document,
 First I tried to address this by having copilot update the prompt to briefly summarize those same issues every time that thehy came up after the first mention.
 This was not as effective as I had hoped in the first two tries. The summaries did not give enough information in sections under which they were summarized.
-So I created a new section above the source directory.
+So I created a new section above the source directory and saved as prototype_v4.
 I had the model label the new section 'Interconnected Issues' and list out all the repetitive issues in the beatbook.
 I also asked the model to indicate the overlapping sections usder each issue, for better understanding.
 Doing this helped, but I noticed that since there were different interconnected issues, a reporter might be unsure which of them to look at per time. for instance:
