@@ -1,239 +1,290 @@
-# Eastern Shore Public‑Safety Beat Book  
+**Public‑Safety Beat Book – Maryland’s Eastern Shore**  
 *Star‑Democrat (Nov 2023 – Oct 2025)*  
 
----  
+---
 
 ## Executive Summary  
 
-The Eastern Shore’s public‑safety beat is a mosaic of tiny historic towns, sprawling rural townships, and a network of volunteer fire companies that lean on a handful of sheriffs, police chiefs and state agencies.  Across the stories that have filled the pages of the **Star‑Democrat**, three patterns keep resurfacing: the tug‑of‑war between community‑driven safety initiatives and limited budgets, the way a single incident—often a fire, a traffic crash, or a protest—draws together fire‑fighters, police, courts and elected officials, and the persistent under‑current of youth‑ and juvenile‑justice challenges that echo from the courtroom to the front porch of a volunteer firehouse.  
+The Eastern Shore’s public‑safety beat is a mosaic of tiny historic towns, sprawling rural townships, volunteer fire companies, and a handful of sheriffs and police chiefs who wear many hats.  Across the past two years the most compelling pattern has been the way **resource constraints**—whether it’s the seasonal burn‑ban, the loss of state‑funded K‑9 dogs, or the overcrowded juvenile‑detention wing—force agencies to lean on one another, on community volunteers, and on local government to keep the region safe.  At the same time, **civic activism** has surged: from the “No Kings” ICE‑protest in Cambridge to the heated debate over a formal protest‑permit ordinance in Easton, residents are demanding transparency and participation in how safety is managed.  
 
-Geographically the beat stretches from the Chesapeake‑bay towns of Oxford, Cambridge and Easton to the agricultural heart of Caroline and Dorchester, the waterfront of the Choptank River, and the quiet crossroads of Worcester and Kent.  Each county has its own institutional fingerprint: Talbot leans heavily on volunteer fire companies and a proactive emergency‑services bureau; Dorchester’s sheriff’s office is the de‑facto police force for many unincorporated areas; Caroline’s small towns have turned to county‑wide sheriff‑police memoranda to keep a uniformed presence alive.  The story‑lines weave through these jurisdictions, producing a beat that feels both intimate and inter‑connected.  
+Geographically the beat stretches from the Chesapeake‑bay towns of **Oxford, Cambridge and Easton** (Talbot County) to the agricultural heartland of **Caroline, Dorchester, Kent, Queen Anne’s, Somerset, Wicomico and Worcester**.  Each county has its own rhythm—Oxford’s narrow, historic streets generate traffic‑engineering debates; Greene‑sboro’s water‑system sabotage highlights the vulnerability of critical infrastructure; and the fire‑house on Tilghman Island celebrates a centennial while scrambling for the next generation of volunteers.  
 
-The key institutional relationships—fire chiefs with county emergency‑services directors, sheriffs with town councils, prosecutors with judges, and non‑profits with law‑enforcement—create a dynamic that rewards reporters who can follow a thread across agencies.  For example, the 2024 “Helene” storm prompted a joint response from the Talbot Emergency Management Division, the Oxford Volunteer Fire Company, the Maryland State Fire Marshal, and the county council’s budget committee, producing a story that covered everything from damage assessments to a $300 k private‑sector grant for a new first‑responder campus.  That same storm later resurfaced in a “burn‑ban” debate, linking fire‑prevention policy to agricultural economics.  
+Key institutional relationships pivot around three hubs: the **County Sheriff’s Offices** (the de‑facto law‑enforcement backbone for unincorporated areas), the **Volunteer Fire Companies** that answer every 911 call, and the **County and Town Governments** that allocate the dwindling dollars that keep both running.  The beat is dynamic because every storm, every summer burn‑ban, every court docket, and every protest can ripple across all three, creating a constant need for reporters to trace a single incident through multiple agencies and community perspectives.  
 
-Whether you are covering a crane fire at a Delmarva Power sub‑station, a youth‑detention‑capacity protest, or the town‑wide debate over a “complete streets” traffic‑safety plan, the beat rewards a narrative approach that ties human experience to institutional action.  Below is a thematic guide—organized by the major story families that have emerged—complete with the people you’ll hear most often, the institutions that shape decisions, the recurring issues that keep the news cycle turning, and the geographic quirks that make each county distinct.  When a storyline overlaps several themes, you will see a brief reference (e.g., *see Interconnected Issues section*), and the full cross‑agency picture is provided later in that dedicated section.  
+A few vivid examples illustrate this interplay: the 2024 “Helene” storm that sent Oxford volunteers to Tennessee with donated gear; the crane fire at a Delmarva Power sub‑station that required fire, police, and utility officials to speak with a single voice; and the 2025 “No Kings” protest that moved from a local ICE raid to a regional discussion about civil‑rights and public‑order policy.  These stories show that on the Eastern Shore, **public safety is never isolated—it is always a conversation among people, institutions, and the places they serve**.  
 
----  
+---
 
 ## 1. Emergency Services & Fire Departments  
 
-The pulse of the Eastern Shore’s emergency‑response world beats in the volunteer firehouses that dot every small town, the county emergency‑services bureau that coordinates 911 calls, and the state agencies that certify investigations.  When a blaze erupts on a historic dock in Oxford or a crane topples over a power sub‑station in Dorchester, the first name you’ll hear quoted is the fire chief who commanded the scene, followed quickly by the county emergency‑services director who can explain mutual‑aid protocols.  
+### Key People  
 
-**Key People** – Chief Graham Norbury of the Oxford Volunteer Fire Company and Chief Tim Kearns of the same department have become the public faces of fire‑prevention after the 2024 “Helene” storm; Chief Brian LeCates directs Talbot County Emergency Services and often fields the county‑wide media brief after every major incident; Chief Geneva Schaffle runs Talbot’s Emergency‑Management Division and issues the annual “Preparedness Proclamation”; and President Jeff Gottleib of Tilghman Island Volunteer Fire Department provides the human‑interest anecdotes that bring a fire‑house story to life.  
+Chief **Graham Norbury** of the Oxford Volunteer Fire Company and Chief **Tim Kearns** have become the public faces of fire‑service response, especially after the 2024 “Helene” storm when they coordinated a donation of gear to Tennessee.  County Emergency Services Director **Brian LeCates** runs Talbot’s 911 dispatch center and is the go‑to source for everything from a drowned toddler in Greensboro to the crane fire at the Delmarva Power sub‑station (see Interconnected Issue #4).  Chief **Geneva Schaffle**, who heads Talbot’s Emergency‑Management Division, issues the yearly “Preparedness Proclamation” and leads the SKYWARN volunteer‑training program each spring.  The K‑9 rebuilding effort is championed by **Chief Lenox Trams** of Greensboro (see Interconnected Issue #2).  
 
-**Institutions** – The backbone of the theme is the network of **Volunteer Fire Companies** (Oxford, Tilghman Island, St. Michael’s, Easton, Cambridge, etc.), each funded by a mix of local fund‑raisers, Maryland State Fire Marshal grants, and occasional private donations such as the $300 k Preston Automotive grant for an Easton first‑responder training campus.  Overseeing them is the **Talbot County Department of Emergency Services**, which runs the 911 dispatch center, the county‑wide **Burn‑Ban Ordinance**, and the mutual‑aid agreement that brings neighboring departments together during storms.  The **Maryland State Fire Marshal** provides investigative authority for structure fires, while the **Delmarva Power** utility becomes a partner whenever its infrastructure is involved in an emergency.  
+Volunteer‑fire presidents such as **Jeff Gottleib** (Tilghman Island VFD) and **President Mark Hatcher** (St. Michael’s VFD) are the voices that appear in fund‑raising drives and community‑safety fairs.  The state‑level perspective is supplied by the **Maryland State Fire Marshal** (currently **Chief Laura Miller**) who certifies investigations of large‑scale incidents.  For community‑first‑aid initiatives, **Wayne Dyott**, director of the Talbot Paramedic Foundation, provides statistics on the growing AED network.  
 
-**Recurring Issues** – The beat repeatedly circles around three intertwined challenges: (1) **Burn‑ban enforcement** during summer droughts, which pits fire‑prevention data against farmers’ need to clear fields; (2) **Volunteer‑fire recruitment**, highlighted each spring by junior‑firefighter competitions and the 2025 centennial celebration on Tilghman Island; and (3) **Infrastructure‑related emergencies**, from the 2024 crane fire at a Delmarva Power sub‑station to the July 2024 water‑system sabotage in Greensboro, each demanding coordinated response across fire, police, and utility agencies.  All three issues are examined in the **Interconnected Issues** section (see below).  
+### Major Institutions  
 
-**Geographic Considerations** – Oxford’s narrow historic streets create a permanent conversation about traffic‑safety and fire‑access; Greensboro’s water‑system sabotage revealed vulnerabilities unique to a town that relies on a single treatment plant; Cambridge’s waterfront location drives a steady stream of boat‑related drownings and requires the fire department to maintain specialized rescue equipment; and the rural spread of Talbot County means response times vary dramatically from one volunteer company to the next, a factor that shapes the county’s budgeting decisions.  
+* **Volunteer Fire Companies** – Tilghman Island (centennial in 2025), Oxford, St. Michael’s, and the new EMS/Paramedic station in Cordova.  Funding comes from local fund‑raisers, Maryland State Fire Marshal grants, and occasional private gifts (e.g., the $300 k Preston Automotive grant for a first‑responder training campus in Easton).  
+* **Talbot County Department of Emergency Services** – Central 911 dispatch, the mutual‑aid coordinator, and the administrator of the 30‑day summer burn‑ban (see Interconnected Issue #1).  
+* **Maryland State Police Aviation Unit** – Provides air‑support for seaplane crashes (Bay Bridge Airport, 2024) and assists in large‑area searches after floods.  
+* **Delmarva Power** – Its sub‑station crane fire in September 2024 triggered a coordinated response that highlighted the need for clear utility‑emergency protocols (see Interconnected Issue #4).  
 
----  
+### Recurring Issues  
+
+* **Burn‑ban enforcement and drought** – Each summer Talbot County’s Emergency Services issues a 30‑day burn‑ban, creating tension between fire‑chief data on wild‑fire risk and farmers’ concerns about productivity (see Interconnected Issue #1).  
+* **K‑9 program rebuilding** – After Maryland’s 2023 cannabis‑legalization funding freeze, the state’s K‑9 units vanished; Sheriff **Joe Gamble** and Easton Lt. Mike Larrimore are lobbying the Maryland Police K‑9 Foundation for replacement dogs (see Interconnected Issue #2).  
+* **Volunteer‑fire recruitment** – The Tilghman Island centennial celebration in July 2025 featured a “junior‑firefighter competition” to attract new members; similar drives appear each spring.  
+* **Infrastructure‑related emergencies** – The crane fire at a Delmarva Power sub‑station, the Bay Bridge Airport seaplane crash, and the 2025 water‑system sabotage in Greensboro all illustrate how construction, utilities and transportation intersect with fire‑department response (see Interconnected Issue #4).  
+
+### Geographic Considerations  
+
+* **Oxford** – Narrow historic streets make traffic‑flow a constant safety conversation; the fire department works closely with the town council on “Complete Streets” workshops.  
+* **Greensboro** – The 2024 water‑system sabotage (chlorine‑regulator tampering) turned a routine fire‑call into a criminal investigation, pulling in the town manager, police chief, and county sheriff.  
+* **Cambridge** – Waterfront location drives frequent boat‑related drownings and “Safe‑Boating Week” initiatives, while the fire department also handles occasional waterfront fires.  
+* **Talbot County** – A largely rural jurisdiction where volunteer fire companies are the norm; the county’s emergency‑services budget is a barometer for storm‑response capacity.  
+
+---
 
 ## 2. Law Enforcement & Community Policing  
 
-Policing on the Eastern Shore is a patchwork of small town police departments, county sheriffs who fill the gaps, and the Maryland State Police that provides highway patrol and aviation support.  The most compelling narratives arise when a local protest, a K‑9 program, or a cross‑jurisdictional investigation pulls together police chiefs, sheriffs, and city officials into a single newsroom story.  
+### Key People  
 
-**Key People** – Chief Justin Todd (Cambridge Police) and Chief Shane Hinson (Cambridge Community Policing) have been the public faces of “Shop With a Cop” and the town‑hall meetings that followed the 2025 “No Kings” protests.  Chief Alan Lowrey (Easton Police) is the chief who has repeatedly advocated for a formal protest‑permit system, while Sheriff James Phillips (Dorchester) and Sheriff Joe Gamble (Talbot) are the sheriffs who have publicly demanded the resignation of the State Secretary of Juvenile Services over overcrowded detention facilities.  In Ridgely, Sheriff Donald Baker negotiated the 2025 renewal of the cost‑sharing MOU that keeps the town’s police presence alive after the department’s 2023 dissolution.  
+Chief **Justin Todd** (Cambridge PD) and Captain **Shane Hinson** (Cambridge Community Policing) are the faces of “Shop with a Cop” and the town‑hall meetings that discuss protest‑permit procedures.  Chief **Alan Lowrey** (Easton PD) leads the debate over a formal protest‑permit ordinance after the “No Kings” protests (see Interconnected Issue #3).  Sheriffs **James Phillips** (Dorchester) and **Joe Gamble** (Talbot) are the two sheriffs most often quoted on ICE‑related arrests, juvenile‑detention capacity, and the demand for the resignation of **Secretary Vincent Schiraldi** (see Interconnected Issue #5).  Sheriff **Donnie Baker** (Caroline) negotiated the Ridgely Police‑Department MOU, a cost‑sharing agreement that keeps the town’s police presence alive after the department’s dissolution.  
 
-**Institutions** – The **Town Police Departments** (Cambridge, Easton, Federalsburg, Ridgely) each have distinct budgets and community‑policing programs.  The **County Sheriff’s Offices** (Dorchester, Talbot, Caroline, Kent, Queen Anne’s) provide law‑enforcement for unincorporated areas and supplement town forces through memoranda of understanding, as in Ridgely.  The **Maryland State Police** supplies the aviation unit that assisted after the 2024 Bay Bridge Airport seaplane crash and the forensic labs for homicide investigations.  The **Immigration and Customs Enforcement (ICE)** presence surged after the 2024 policy shift, becoming a flashpoint for the “No Kings” protests.  
+### Major Institutions  
 
-**Recurring Issues** – The beat repeatedly touches on (1) **Protest‑permit policy**, sparked by the “No Kings” demonstrations and the ensuing Easton town‑council debate over a three‑day advance permit requirement (see Interconnected Issues); (2) **Sheriff‑Police MOUs**, exemplified by Ridgely’s 2025 renewal of a $493 k yearly agreement with Caroline County, a story that illustrates the financial gymnastics of small‑town policing; (3) **ICE‑related tension**, where ICE raids, community‑outreach videos, and local pastor Daniel Espinal’s detention in September 2025 reveal the national‑policy undercurrents playing out on the Shore; and (4) **K‑9 program rebuilding**, a multi‑year effort led by Sheriff Gamble and Easton Lieutenant Mike Larrimore after state funding dried up (see Interconnected Issues).  
+* **Town Police Departments** – Cambridge, Easton, Federalsburg, Ridgely (now under a sheriff‑county MOU).  Their size dictates the scope of community‑policing programs and the frequency of “citizen police academy” sessions.  
+* **County Sheriff’s Offices** – Dorchester, Talbot, Caroline, Kent, Queen Anne’s.  They provide law‑enforcement to unincorporated areas and supplemental support to towns that have disbanded their police forces (e.g., Ridgely).  
+* **Maryland State Police (MSP)** – Highway patrol, aviation support, and forensic assistance for homicides and large‑scale crashes (the 2024 Bay Bridge Airport crash).  
+* **Immigration and Customs Enforcement (ICE)** – Its presence surged after the 2024 policy shift, prompting the “No Kings” protests and a wave of community‑outreach videos.  
 
-**Geographic Focus** – Cambridge is the epicenter of protest‑related coverage and the site of the 2024 kidnapping‑murder trial.  Easton serves as the political hub where the “Complete Streets” workshops and protest‑permit ordinance are debated.  Ridgely’s reliance on a sheriff‑county MOU provides a micro‑study of rural policing sustainability.  Greensboro’s water‑system sabotage illustrates how a small town can become a laboratory for inter‑agency collaboration.  
+### Recurring Issues  
 
----  
+* **Protest‑permit policy** – The “No Kings” protests (June 2025) sparked a town‑council debate in Easton and Cambridge about whether a formal permit is required for any large gathering (see Interconnected Issue #3).  
+* **Sheriff‑Police MOUs** – Ridgely’s 2025 renewal of its MOU with Caroline County (cost $493 k / yr) is a live case study of how small towns maintain public safety without a stand‑alone police budget.  The negotiation documents and community reaction provide an explanatory piece (see Interconnected Issue #6).  
+* **ICE‑related tension** – The July 2024 video of an ICE officer in Cambridge, the August 2025 “No Kings” protest, and the September 2025 detention of Pastor Daniel Espinal (later released) illustrate a broader national‑policy story playing out locally (see Interconnected Issue #5).  
+* **K‑9 program restoration** – Talbot Sheriff Gamble and Easton Lt. Larrimore are lobbying for new K‑9 units after funding dried up in 2023; quarterly updates on training pipelines, grant applications, and community‑outreach (K‑9 demonstrations at schools) give a recurring human‑interest angle (see Interconnected Issue #2).  
+
+### Geographic Focus  
+
+* **Cambridge** – Downtown is a hot‑spot for protests, “Shop with a Cop” events, and a recent homicide‑investigation that led to the 2025 trial of **Kenneth Bradley**.  
+* **Easton** – Seat of Talbot County; where “Complete Streets” workshops are held, the protest‑permit ordinance is debated, and the AED network is expanding.  
+* **Ridgely** – Small town that dissolved its police department in 2023 and now relies on a sheriff‑county MOU; community feelings about the change are mixed, providing fertile ground for a feature on rural policing.  
+* **Greensboro** – Site of the water‑system sabotage that required coordination between the town police, Caroline County Sheriff’s Office, and the Maryland Department of the Environment.  
+
+---
 
 ## 3. Courts, Prosecution & the Justice System  
 
-Courtroom drama on the Eastern Shore is never far from the headlines.  Homicides, kidnapping cases, child‑exploitation prosecutions and the ongoing debate over juvenile‑detention capacity have kept the state’s attorneys, circuit judges and the Department of Juvenile Services in the public eye.  
+### Key People  
 
-**Key People** – State’s Attorney Amanda Leonard (Dorchester) led the prosecution in the high‑profile Cambridge kidnapping‑murder case; State’s Attorney Lance Richardson (Queen Anne’s) is the frequent voice on juvenile‑detention capacity and “tough‑on‑crime” legislation; State’s Attorney Joseph Coale (Talbot) handled the 2025 arson case involving SunnySide Energy trucks; Judge William Jones (Dorchester Circuit) presided over the sentencing of two life‑without‑parole terms in the 2024 murder trial; and Judge Philip Cronan (Talbot Circuit) negotiated the plea deal that sent Kenneth Bradley to a 35‑year sentence.  
+State’s Attorney **Amanda Leonard** (Dorchester) led the prosecution in the 2024 Cambridge kidnapping‑murder case (Bradley/Britt).  State’s Attorney **Lance Richardson** (Queen Anne’s) is often quoted on juvenile‑detention capacity and the “tough‑on‑crime” reforms pushed by the Department of Juvenile Services (see Interconnected Issue #5).  State’s Attorney **Joseph Coale** (Talbot) handled the high‑profile arson case on SunnySide Energy trucks (2025) and the child‑porn investigation involving **Darian Braun**.  Judge **William Jones** (Dorchester Circuit) presided over the sentencing of **Tramelle Williams** (two life‑without‑parole terms) and the 2024 sentencing of a Bay Bridge Airport crash driver.  Judge **Philip Cronan** (Talbot Circuit) issued the plea deal for **Kenneth Bradley** (Cambridge kidnapping‑murder).  
 
-**Institutions** – The **Circuit Courts** of Dorchester, Talbot, Queen Anne’s, Caroline and Kent handle felony trials, while **District Courts** manage misdemeanors, traffic violations and juvenile matters.  The **Department of Juvenile Services (DJS)**, overseen by Secretary Vincent Schiraldi, is at the heart of a coalition of sheriffs demanding reform due to overcrowding (see Interconnected Issues).  Talbot’s **Police Accountability Board**, created in 2023, reviews use‑of‑force complaints and applies the “Year‑and‑a‑Day” rule for prosecutorial timing.  
+### Major Institutions  
 
-**Recurring Themes** – Three story families dominate court coverage: (1) **Homicide and kidnapping trials**, which have produced three major cases in the last two years (Williams, Bradley, and a 2024 Cambridge kidnapping); (2) **Child‑exploitation prosecutions**, highlighted by the 2024 indictment of Darian Braun for possession of child‑porn material and a 2025 multi‑county FBI‑led seizure of illegal sexual‑abuse images; and (3) **Juvenile‑detention capacity battles**, where sheriffs repeatedly testify before the General Assembly about the state facility operating at 98 % capacity, a pressure point that fuels the DJS reform push.  
+* **Circuit Courts** – Dorchester, Talbot, Queen Anne’s, Caroline, Kent.  They handle felony trials, while District Courts manage misdemeanors, traffic violations, and juvenile matters.  
+* **Department of Juvenile Services (DJS)** – Under Secretary **Vincent Schiraldi**; the subject of a coordinated demand for resignation from three sheriffs (Dorchester, Talbot, Caroline) in October 2024 (see Interconnected Issue #5).  
+* **Police Accountability Board (Talbot County)** – Created in 2023, reviews use‑of‑force complaints and the “Year‑and‑a‑Day” rule that forces prosecutors to bring charges within a year of an alleged incident.  
 
-**Geography** – Dorchester’s courthouse is the venue for most high‑profile homicide trials, while Talbot’s circuit court is the arena for the police‑accountability board’s hearings and the 2025 Ridgely MOU renewal.  Queen Anne’s often hears drug‑trafficking and child‑exploitation cases that cross the US 301 corridor, reflecting its strategic location on a major transportation route.  
+### Recurring Issues  
 
----  
+* **Homicide and kidnapping trials** – The Eastern Shore has seen three major murder cases in the past two years (Williams, Bradley, and the 2024 Cambridge kidnapping).  Each trial offers an opportunity to explore victim impact, community healing, and the role of plea bargains.  
+* **Child‑exploitation prosecutions** – The 2024 indictment of **Darian Braun** for possession of child‑porn material, and the 2025 seizure of illegal sexual‑abuse material in Queen Anne’s, highlight the growing partnership between local sheriffs, the FBI’s Internet Crimes Division, and state prosecutors.  
+* **Juvenile‑detention capacity battles** – Sheriffs in Dorchester, Talbot and Caroline have repeatedly testified before the General Assembly, warning that the state’s juvenile‑detention wing is at 98 % capacity (see Interconnected Issue #5).  
+
+### Geographic Patterns  
+
+* **Dorchester County** – Handles the Cambridge homicide and the 2024 Bay Bridge Airport crash; the courthouse is a frequent venue for high‑profile cases that attract regional media.  
+* **Talbot County** – Home to the Police Accountability Board, the juvenile‑services protest, and the 2025 Ridgely MOU hearing.  
+* **Queen Anne’s County** – Often the venue for drug‑trafficking and child‑exploitation cases that cross county lines, reflecting the county’s position on the transportation corridor (US 301).  
+
+---
 
 ## 4. Government, Policy & Budgeting  
 
-Budget battles and policy debates are the undercurrent that moves the beat.  From a town council’s vote on a historic‑preservation traffic stop to the county manager’s negotiation of a private‑sector grant, each fiscal decision ripples through fire, police and courtrooms.  
+### Key People  
 
-**Key People** – Mayor Cheryl Lewis (Oxford) champions the three‑way stop at Tilghman & Bank and leads the town’s traffic‑safety studies; Council President Chuck Callahan (Talbot) signed the 2023 “National Preparedness Month” proclamation and pushes Vision‑Zero grant applications; County Manager Clay Stamp (Talbot) negotiated the $300 k Preston Automotive grant for the first‑responder campus and the $493 k annual cost of Ridgely’s MOU; Town Engineer Rick Van Emburgh (Easton) heads the “Complete Streets” data‑gathering workshops that blend traffic‑engineering with fire‑response considerations; and State Secretary of Juvenile Services Vincent Schiraldi is the focal point of the sheriffs’ resignation demand.  
+Mayor **Cheryl Lewis** (Oxford) spearheads traffic‑safety studies and the three‑way stop at Tilghman & Bank.  Council President **Chuck Callahan** (Talbot) signed the 2023 “National Preparedness Month” proclamation and pushes for Vision‑Zero grant applications.  County Manager **Clay Stamp** (Talbot) negotiates the $300 k Preston Automotive grant and the $493 k annual cost of the Ridgely MOU (see Interconnected Issue #6).  Town Engineer **Rick Van Emburgh** (Easton) leads the “Complete Streets” data‑gathering workshops that blend traffic engineering with pedestrian safety.  State Secretary of Juvenile Services **Vincent Schiraldi** is the focal point of the sheriffs’ resignation demand in October 2024 (see Interconnected Issue #5).  
 
-**Institutions** – The **Talbot County Council** controls the emergency‑services budget, the Vision‑Zero grant pool and the burn‑ban ordinance funding.  The **Maryland Department of Transportation – State Highway Administration (MDOT‑SHA)** oversees Route 662’s temporary closure for the new Shore Regional Health hospital, the Brookletts Ave. traffic‑light timing adjustments, and the “Complete Streets” grant program.  The **Maryland Department of Emergency Management** issues the annual preparedness proclamation and runs joint drills with local fire departments.  
+### Major Institutions  
 
-**Recurring Policy Debates** – (1) **Traffic‑safety vs. historic preservation**: Oxford’s three‑way stop has generated a prolonged discussion between preservationists and engineers; (2) **Burn‑ban extensions**: each summer the council weighs the fire chief’s data against agricultural concerns; (3) **Juvenile‑services reform**: the sheriffs’ public demand for Schiraldi’s resignation over overcrowding continues to dominate General Assembly hearings; (4) **Protest permitting**: Easton’s proposed ordinance requiring a permit for gatherings over 50 people has sparked both safety‑planning praise and First‑Amendment criticism.  
+* **Talbot County Council** – Controls the county’s emergency‑services budget, Vision‑Zero grant allocation, and the burn‑ban ordinance funding.  
+* **MD Department of Transportation (MDOT) – State Highway Administration (SHA)** – Responsible for Route 662 closure for the new Shore Regional Health hospital, Brookletts Ave. traffic‑light timing adjustments, and the “Complete Streets” grant program.  
+* **Maryland Department of Emergency Management** – Issues the annual preparedness proclamations and coordinates storm‑response drills with local fire departments.  
 
-**Geographic Nuances** – In Oxford, any change to traffic flow immediately touches a historic streetscape, making every engineering proposal a community referendum.  Talbot County’s rural landscape means that a single county‑wide budget decision can affect response times for dozens of volunteer fire companies.  Caroline County’s small towns, such as Ridgely, rely on county‑wide sheriff‑police MOUs to keep a uniformed presence, creating a fiscal tension that surfaces each budget cycle.  
+### Recurring Policy Debates  
 
----  
+* **Traffic‑safety vs. historic preservation** – Oxford’s three‑way stop generated a clash between preservationists who want to keep the historic streetscape and traffic engineers pushing for Vision‑Zero‑style redesigns (see Interconnected Issue #1).  
+* **Burn‑ban extensions** – Each summer Talbot County Council debates whether to extend the 30‑day ban; the fire chief’s public‑safety data clash with farm owners’ economic concerns (see Interconnected Issue #1).  
+* **Juvenile‑services reform** – The sheriffs’ letter to Governor Moore demanding Secretary Schiraldi’s resignation is a flashpoint for a statewide conversation about mandatory minimums for juvenile offenders (see Interconnected Issue #5).  
+* **Protest permitting** – Easton’s town council is considering a new ordinance that would require any gathering of more than 50 people to obtain a permit three days in advance; the proposal has drawn both praise for safety planning and criticism for potentially chilling free speech (see Interconnected Issue #3).  
+
+### Geographic Nuances  
+
+* **Oxford** – The town’s narrow historic streets make any traffic‑engineering change a community‑wide conversation.  
+* **Talbot County** – Rural, with a dispersed network of volunteer fire companies; budget decisions have a direct impact on response times across a large geographic area.  
+* **Caroline County** – Home to the Ridgely MOU; its county commissioners must balance the cost of policing multiple small towns with limited tax revenue.  
+
+---
 
 ## 5. Human‑Trafficking, Victim Services & Community Advocacy  
 
-Human‑trafficking and victim‑advocacy stories have risen in prominence as local NGOs partner with law‑enforcement to identify and support survivors.  
+### Key Advocates  
 
-**Key Advocates** – Susan Ahlstrom serves as the Human‑Trafficking Navigator for **For All Seasons**, running the “Regional Navigator” program that trains police, health‑care workers and social‑service staff.  Robin Davenport is the Executive Director of **CASA of the Mid‑Shore**, providing court‑appointed advocacy for children in abuse and neglect cases.  Heather Grant, Director of **Talbot Thrive**, runs the AED and “Stop‑the‑Bleed” programs that often intersect with fire‑department outreach.  
+**Susan Ahlstrom**, Human‑Trafficking Navigator for **For All Seasons**, runs the “Regional Navigator” program that trains law‑enforcement officers and social‑service workers to spot trafficking indicators.  **Robin Davenport**, Executive Director of **CASA of the Mid‑Shore**, is the voice for children navigating the court system, especially in abuse or neglect cases.  **Heather Grant**, Director of **Talbot Thrive**, runs bike‑safety and “Stop‑the‑Bleed” campaigns, often collaborating with fire departments on community‑first‑aid training.  
 
-**Institutions** – **For All Seasons** provides crisis counseling, a 24‑hour hotline and the regional navigator program.  **CASA of the Mid‑Shore** places volunteer advocates in family‑court cases, and the **Talbot Paramedic Foundation** funds the AED network and community first‑aid training.  
+### Institutions  
 
-**Recurring Themes** – (1) **Under‑reporting** of trafficking, which Ahlstrom’s workshops repeatedly highlight; (2) **Child‑advocacy overload**, as CASA volunteers note a 30 % caseload increase after the 2024 surge in juvenile‑detention placements; (3) **Community‑first‑aid**, demonstrated by the growing AED network that has already saved lives in Easton and Cambridge.  
+* **For All Seasons** – Provides crisis counseling, a 24‑hour hotline, and the regional navigator program.  
+* **CASA of the Mid‑Shore** – Court‑appointed advocates for children, often quoted in juvenile‑detention capacity stories (see Interconnected Issue #5).  
+* **Talbot Paramedic Foundation** – Funds AED placements, “Stop‑the‑Bleed” kits, and community CPR training.  
 
-**Geography** – Trafficking hot‑spots concentrate around Cambridge and Easton due to the proximity of the Port of Cambridge and the rail line.  Rural townships in Talbot County experience longer travel times to reach services, a barrier that can be explored in a feature on transportation equity.  
+### Recurring Themes  
 
----  
+* **Under‑reporting** – Trafficking victims are hesitant to approach law enforcement; Ahlstrom’s workshops often highlight the need for culturally‑competent outreach.  
+* **Child‑advocacy overload** – CASA volunteers report a 30 % increase in caseloads after the 2024 surge in juvenile‑detention placements, dovetailing with the sheriffs’ calls for DJS reform (see Interconnected Issue #5).  
+* **Community‑first‑aid** – The Talbot Thrive AED network, now over 40 units strong, provides a story‑seed for a “life‑saved” human‑interest series.  
+
+### Geographic Considerations  
+
+* **Cambridge & Easton** – Higher concentration of trafficking hot‑spots due to proximity to the Port of Cambridge and the rail line that runs through Easton.  
+* **Talbot County’s rural townships** – Victims often travel long distances to reach services, making transportation a barrier that reporters can explore.  
+
+---
 
 ## 6. Infrastructure, Economic Support & Seasonal Issues  
 
-Infrastructure stories often begin with a utility outage or a road‑closure and quickly expand to include fire‑department response, police traffic enforcement and budgetary ramifications.  
+### Key Actors  
 
-**Key Stakeholders** – Preston Automotive Group donated $300 k for the Easton first‑responder training campus.  Delmarva Power’s crane fire at a sub‑station in September 2024 forced a coordinated emergency response (see Interconnected Issues).  MDOT‑SHA manages the Route 662 closure for the new Shore Regional Health hospital and the Brookletts Ave. traffic‑light timing adjustments that generated a resident petition in February 2025.  
+**Preston Automotive Group** donated $300 k to build a first‑responder training campus in Easton, a project that now hosts joint fire, EMS and police drills (see Interconnected Issue #4).  **Delmarva Power**’s public‑relations director **Mark Henson** explains the technical side of the September 2024 sub‑station crane fire that required a multi‑agency response (see Interconnected Issue #4).  **MDOT SHA** manages the Route 662 closure for the new Shore Regional Health hospital and the Brookletts Ave. traffic‑light timing adjustments that prompted a resident petition in February 2025.  
 
-**Seasonal Patterns** – Summer drought triggers the 30‑day burn‑ban, increases wildfire risk and coincides with a rise in water‑system sabotage attempts (see Interconnected Issues).  Fall hurricane season brings “Complete Streets” workshops and post‑storm infrastructure‑repair funding requests.  Winter ice‑season prompts Trooper Ian Rola’s deer‑season safety campaign, a story that can be linked to traffic‑collision data.  
+### Seasonal Patterns  
 
-**Recurring Issues** – (1) **Route 662 closure** and the resulting impact on agricultural freight; (2) **Bridge‑traffic warnings** on US 301 after each storm; (3) **AED placement** – the Talbot Paramedic Foundation’s goal of an AED on every corner produced 12 new units in 2024, each a potential human‑interest story; (4) **Infrastructure‑related emergencies**, such as the Delmarva Power crane fire and the Greensboro water‑system sabotage, which required coordination across fire, police, utilities and state environmental agencies (see Interconnected Issues).  
+* **Summer drought** – Triggers the 30‑day burn‑ban, increased wildfire risk, and a rise in water‑system sabotage attempts (see Interconnected Issue #1).  
+* **Fall hurricane season** – Brings “Complete Streets” workshops (August 2025) and post‑storm infrastructure‑repair funding requests.  
+* **Winter ice‑season** – Maryland State Police Trooper **Ian Rola** leads the deer‑season safety campaign each December, an annual story that can be tied to traffic‑safety data.  
 
-**Geography** – Easton is the hub of the new first‑responder campus and the “Complete Streets” initiative; Talbot County is the arena where Route 662, the burn‑ban, and the Preston Automotive grant intersect; Greensboro stands out for the water‑system sabotage and its upcoming fire‑house capital‑campaign.  
+### Ongoing Issues  
 
----  
+* **Route 662 closure** – The temporary detour has spurred complaints from farmers who claim the detour adds 15 minutes to grain‑truck routes; county road‑budget hearings are a source of quotes and data.  
+* **Bridge‑traffic warnings** – MDOT’s “Bridge‑Traffic Advisory” on US 301 is updated after each storm, and the alerts are often the first line of information for commuters.  
+* **AED placement** – The Talbot Paramedic Foundation’s push for “AEDs on every corner” has resulted in 12 new units in 2024; each placement can be tied to a life‑saved story.  
+
+### Geographic Focus  
+
+* **Easton** – Hub of the new first‑responder campus, the site of the “Complete Streets” data‑gathering sessions, and the town where the 2025 protest‑permit ordinance is being debated.  
+* **Talbot County** – The area where Route 662, the burn‑ban, and the Preston Automotive grant intersect.  
+* **Greensboro** – Location of the water‑system sabotage and the site of a new fire‑house capital‑campaign planned for 2026.  
+
+---
 
 ## 7. Youth, Juvenile Issues & Education  
 
-Youth‑related safety stories weave through schools, juvenile‑detention facilities and community‑policing programs.  
+### Key Voices  
 
-**Key Voices** – Sheriff James Phillips (Dorchester) and Sheriff Joe Gamble (Talbot) repeatedly comment on early‑intervention programs and detention‑capacity concerns.  Principal Lou Sheppard (Queen Anne’s County High School) discusses the active‑shooter drill held in March 2025 and the subsequent parental petition.  Deputy State’s Attorney Chelsea Endzel (Talbot) prosecutes many of the juvenile‑theft cases that land in circuit court.  
+Sheriff **James Phillips** (Dorchester) frequently comments on the need for “early‑intervention programs” after a rise in juvenile vehicle‑break‑ins.  Sheriff **Joe Gamble** (Talbot) is vocal about the overcrowding of the state juvenile‑detention wing and its impact on families (see Interconnected Issue #5).  **Principal Lou Sheppard** (Queen Anne’s County High School) discusses school‑resource officers and the “active‑shooter drill” that took place in March 2025.  Deputy State’s Attorney **Chelsea Endzel** (Talbot) is often the prosecuting attorney in juvenile‑theft cases that have been transferred from district to circuit court.  
 
-**Institutions** – **Queen Anne’s County Public Schools** runs a citizens‑police academy and coordinates with the sheriff’s office for school‑resource officers.  The **Talbot County Juvenile Services** facility is the state‑run detention center at the center of the sheriffs’ reform campaign.  
+### Institutions  
 
-**Recurring Themes** – (1) **Juvenile‑detention capacity**, a story that links sheriffs’ resignation demand, court‑sentencing trends and the DJS reform debate (see Interconnected Issues); (2) **School‑safety drills**, where the 2025 “active‑shooter” exercise sparked a community review of psychological impact; (3) **Vehicle‑break‑ins** involving teenagers, a pattern that has prompted a town‑council discussion on curfew ordinances in Cambridge.  
+* **Queen Anne’s County Public Schools** – Runs a citizens‑police academy and coordinates with the sheriff’s office for school‑resource officers.  
+* **Talbot County Juvenile Services** – The state‑run facility that sits at the center of the “tough‑on‑crime” controversy (see Interconnected Issue #5).  
 
-**Geographic Angles** – Cambridge saw a spike in after‑school vandalism leading to a proposed curfew ordinance that was later withdrawn after community push‑back.  Easton’s “Citizens Police Academy” attracts 30‑plus high‑school seniors each spring, offering a pipeline for future officers and a story‑seed about recruitment challenges.  
+### Recurring Themes  
 
----  
+* **Juvenile‑detention capacity** – The sheriff coalition’s demand for Secretary Schiraldi’s resignation is anchored in the fact that the Talbot detention wing is operating at 98 % capacity (see Interconnected Issue #5).  
+* **School‑safety drills** – The 2025 “active‑shooter” drill in Queen Anne’s schools generated a petition from parents demanding a review of the drill’s psychological impact.  
+* **Vehicle‑break‑ins** – A string of teenage‑involved break‑ins in Talbot and Dorchester led to a new “curfew ordinance” proposal in September 2024, later withdrawn after community push‑back.  
 
-## Interconnected Issues  
+### Geographic Angles  
 
-Below are the storylines that cut across two or more thematic sections.  Each entry is kept concise, with the thematic areas it touches noted in parentheses.  When these storylines appear in the sections above, you will see a short reference such as *(see Interconnected Issues section)* instead of a full paragraph.  
+* **Cambridge** – The city’s high‑school saw a spike in after‑school vandalism that led to a proposed curfew ordinance (see Interconnected Issue #1).  
+* **Easton** – The “Citizens Police Academy” draws 30‑plus high‑school seniors each spring, creating a pipeline for future officers and a story‑seed about recruitment challenges.  
 
-* **Burn‑Ban Enforcement & Drought** –  
-  • Each summer Talbot County extends a 30‑day burn‑ban to curb wildfire risk during drought.  
-  • Fire chiefs cite reduced acreage loss; farmers argue the ban harms crop‑preparation.  
-  • The ban’s enforcement requires coordination between the fire department, county emergency‑services, and the agricultural extension office.  
-  *(Emergency Services → Government → Agriculture)*  
+---
 
-* **K‑9 Program Rebuilding** –  
-  • Funding for police K‑9 units dried up after Maryland’s 2023 cannabis‑legalization budget freeze.  
-  • Sheriff Joe Gamble (Talbot) and Easton Lieutenant Mike Larrimore are lobbying the Maryland Police K‑9 Foundation for new dogs and training.  
-  • The effort involves the sheriff’s office, town police departments and the state’s grant‑allocation office.  
-  *(Law Enforcement → Government → Public‑Safety Funding)*  
+## 8. Interconnected Issues  
 
-* **Protest‑Permit Policy (“No Kings” protests)** –  
-  • The June 2025 “No Kings” protest in Cambridge sparked a town‑council debate over a formal permit requirement for gatherings over 50 people.  
-  • Police chiefs argue permits help allocate resources; civil‑rights groups cite First‑Amendment concerns.  
-  • ICE’s involvement in local raids added a federal‑law‑enforcement dimension.  
-  *(Law Enforcement → Government → Civil Rights → Immigration)*  
+### Interconnected Issue #1 – **Burn‑Ban, Traffic‑Safety & Youth Curfew**  
+* Summer drought prompts a 30‑day burn‑ban, enforced by Talbot Emergency Services (see Emergency Services).  
+* The ban fuels tension with farmers who argue it hurts productivity and with traffic‑safety officials who note increased use of fire‑pits near roadways (see Government).  
+* A teenage‑vandalism spike in Cambridge led the city council to propose a curfew ordinance, tying youth behavior to the burn‑ban debate (see Youth).  
 
-* **Ridgely Police‑Sheriff MOU** –  
-  • In 2025 Ridgely renewed a cost‑sharing memorandum of understanding with Caroline County Sheriff’s Office, costing $493 k annually.  
-  • The agreement keeps a uniformed presence after the town dissolved its police department in 2023.  
-  • The MOU is reviewed each budget cycle by the county council and the town’s finance committee.  
-  *(Law Enforcement → Government → Budgeting)*  
+### Interconnected Issue #2 – **K‑9 Program Restoration Across Agencies**  
+* State funding for police K‑9 units disappeared after 2023 cannabis‑legalization legislation (see Law Enforcement).  
+* Sheriff **Joe Gamble** (Talbot) and Easton Lt. Mike Larrimore are lobbying the Maryland Police K‑9 Foundation for new dogs (see Law Enforcement).  
+* The lack of K‑9 units strains the courts, which must now rely on alternative evidence collection methods in drug‑and‑search cases (see Courts).  
 
-* **Water‑System Sabotage (Greensboro)** –  
-  • In July 2024 a chlorine‑regulator tampering incident forced the town to shut down its water supply.  
-  • Investigation required the town police, Caroline County Sheriff’s Office, Maryland Department of the Environment and the fire department’s hazardous‑materials team.  
-  • The case highlighted gaps in infrastructure security and inter‑agency communication.  
-  *(Emergency Services → Law Enforcement → Environmental Agency)*  
+### Interconnected Issue #3 – **Protest‑Permit Ordinance & Public‑Order Management**  
+* “No Kings” ICE‑related protest in Cambridge (2025) sparked a town‑council debate in Easton over a formal protest‑permit ordinance (see Law Enforcement).  
+* The ordinance would require coordination between police, the sheriff’s office, and the town’s emergency‑management division to allocate resources (see Government).  
+* Community groups argue the permit requirement could chill free speech, turning the issue into a civil‑rights debate (see Community Safety).  
 
-* **Delmarva Power Crane Fire (Dorchester)** –  
-  • A crane toppled onto a power sub‑station in September 2024, igniting a large fire and causing a county‑wide outage.  
-  • Response involved fire‑department crews, the Maryland State Fire Marshal, the utility’s emergency‑response team, and the county emergency‑services director.  
-  • The incident spurred a review of utility‑emergency protocols and led to a $150 k state grant for equipment upgrades.  
-  *(Emergency Services → Utilities → Government)*  
+### Interconnected Issue #4 – **Infrastructure Emergencies Linking Fire, Police & Utilities**  
+* The September 2024 crane fire at a Delmarva Power sub‑station required joint response from fire, police, and utility officials (see Emergency Services).  
+* The incident exposed gaps in communication protocols between utility companies and first‑responders, prompting MDOT and the County Council to fund a new inter‑agency dispatch module (see Government).  
+* The fire also generated evidence that will be presented in a criminal case pending in the Dorchester Circuit Court (see Courts).  
 
-* **Winter Ice‑Season Traffic Safety** –  
-  • Trooper Ian Rola’s deer‑season safety campaign each December is paired with police crash‑data analysis to see if collisions decrease after messaging.  
-  • The campaign involves Maryland State Police, local police departments and the Maryland Department of Transportation’s traffic‑safety office.  
-  *(Law Enforcement → Government → Public‑Safety Education)*  
+### Interconnected Issue #5 – **Juvenile‑Detention Capacity Crisis**  
+* Sheriffs in Dorchester, Talbot and Caroline testified that the state juvenile‑detention wing is at 98 % capacity (see Law Enforcement).  
+* The crisis has driven the Department of Juvenile Services, led by Secretary **Vincent Schiraldi**, to propose stricter sentencing guidelines (see Government).  
+* Courts are overwhelmed with juvenile‑case backlogs, and CASA advocates report a surge in children needing court‑appointed representation (see Courts & Youth).  
 
-* **AED Placement & “Stop‑the‑Bleed” Programs** –  
-  • The Talbot Paramedic Foundation installed 12 new AEDs in 2024 and runs “Stop‑the‑Bleed” kits in fire stations and community centers.  
-  • Each placement has been linked to a life‑saved incident, creating human‑interest angles.  
-  • Funding comes from private donations, the Preston Automotive grant and county health‑budget allocations.  
-  *(Emergency Services → Government → Community Health)*  
+### Interconnected Issue #6 – **Ridgely Police‑Department MOU & Fiscal Sustainability**  
+* Ridgely dissolved its police department in 2023 and now relies on a $493 k/yr MOU with Caroline County Sheriff’s Office (see Law Enforcement).  
+* The MOU’s financial terms are scrutinized annually by the Talbot County Council and the town’s budget committee (see Government).  
+* Residents question whether the arrangement meets community‑safety expectations, a debate that will surface in the next municipal election (see Community Safety).  
 
-* **Juvenile‑Detention Capacity Crisis** –  
-  • Sheriffs from Dorchester, Talbot and Caroline testified before the General Assembly in 2024‑2025, warning the state detention wing was operating at 98 % capacity.  
-  • The crisis fuels a demand for Secretary Vincent Schiraldi’s resignation and pushes for legislative reform.  
-  • The issue appears in court sentencing hearings, sheriff‑office press releases and DJS policy meetings.  
-  *(Law Enforcement → Courts → Government)*  
+---
 
----  
+## 9. Source Directory  
 
-## Source Directory  
+### Law Enforcement  
 
-Below is a quick‑reference list of the people and organizations that appear throughout the guide.  Grouped by agency type, each entry notes the reporter’s most recent story context.  
-
-### Law‑Enforcement  
-
-* **Chief Justin Todd** – Cambridge Police Department; quoted on “Shop With a Cop” and the “No Kings” protests (2025).  
-* **Chief Shane Hinson** – Cambridge Community‑Policing Unit; discussed community‑policing metrics (2024).  
-* **Chief Alan Lowrey** – Easton Police Department; led the protest‑permit debate (2025).  
-* **Chief Tim Kearns** – Oxford Volunteer Fire Company (also a fire chief, appears in fire‑service stories).  
-* **Sheriff James Phillips** – Dorchester County Sheriff’s Office; testified on juvenile‑detention capacity (2024‑2025).  
-* **Sheriff Joe Gamble** – Talbot County Sheriff’s Office; leading the K‑9 program rebuild and DJS reform demand (2024‑2025).  
-* **Sheriff Donald Baker** – Caroline County Sheriff’s Office; negotiated the Ridgely MOU (2025).  
-* **Sheriff Brad Sears** – Caroline County Sheriff’s Office; involved in Ridgely MOU renewal (2025).  
-* **Captain Antoine Patton** – Cambridge Police; led the Greensboro water‑system sabotage investigation (2024).  
-* **Trooper Ian Rola** – Maryland State Police; head of deer‑season safety campaign (winter 2025).  
+* **Chief Justin Todd** – Cambridge Police Department (Shop with a Cop, protest‑permit discussions).  
+* **Chief Alan Lowrey** – Easton Police Department (protest‑permit ordinance, K‑9 program).  
+* **Chief Shane Hinson** – Cambridge Community Policing (citizen outreach, shop‑with‑a‑cop).  
+* **Sheriff James Phillips** – Dorchester County Sheriff’s Office (ICE protests, juvenile‑detention capacity).  
+* **Sheriff Joe Gamble** – Talbot County Sheriff’s Office (K‑9 program, juvenile‑detention advocacy).  
+* **Sheriff Donnie Baker** – Caroline County Sheriff’s Office (Ridgely MOU negotiation).  
+* **Lt. Mike Larrimore** – Easton Police (K‑9 program liaison).  
+* **Captain Lenox Trams** – Greensboro Police (K‑9 program rebuilding).  
 
 ### Fire & EMS  
 
-* **Chief Graham Norbury** – Oxford Volunteer Fire Company; chief spokesperson after the 2024 “Helene” storm (2024‑2025).  
-* **Chief Brian LeCates** – Talbot County Emergency Services Director; coordinated county‑wide 911 response (2024‑2025).  
-* **Chief Geneva Schaffle** – Talbot County Emergency‑Management Division; issues preparedness proclamations (2023‑2025).  
-* **President Jeff Gottleib** – Tilghman Island Volunteer Fire Department; quoted during the 2025 centennial celebration.  
-* **Chief Tim Kearns** – Also appears in fire‑service coverage of burn‑ban enforcement (2024‑2025).  
-* **Chief Eric Kellner** – Oxford Police (also serves on “Complete Streets” steering committee) – referenced in traffic‑safety stories (2024).  
+* **Chief Graham Norbury** – Oxford Volunteer Fire Company (Helene storm response, burn‑ban enforcement).  
+* **Chief Tim Kearns** – Oxford Fire (Helene storm, community‑first‑aid).  
+* **Director Brian LeCates** – Talbot County Department of Emergency Services (911 dispatch, burn‑ban).  
+* **Chief Geneva Schaffle** – Talbot Emergency‑Management Division (Preparedness Proclamation, SKYWARN).  
+* **President Jeff Gottleib** – Tilghman Island Volunteer Fire Department (centennial, junior‑firefighter program).  
+* **Chief Wayne Dyott** – Talbot Paramedic Foundation (AED network, Stop‑the‑Bleed).  
 
 ### Courts & Justice  
 
-* **State’s Attorney Amanda Leonard** – Dorchester; prosecutor in Cambridge kidnapping‑murder trial (2024).  
-* **State’s Attorney Lance Richardson** – Queen Anne’s; spoken on juvenile‑detention capacity (2024‑2025).  
-* **State’s Attorney Joseph Coale** – Talbot; lead on 2025 SunnySide Energy arson case (2025).  
-* **Judge William Jones** – Dorchester Circuit Court; sentenced two life‑without‑parole terms (2024).  
-* **Judge Philip Cronan** – Talbot Circuit Court; negotiated Bradley’s plea deal (2024).  
-* **Police Accountability Board (Talbot)** – created 2023; reviews use‑of‑force complaints (2024).  
+* **State’s Attorney Amanda Leonard** – Dorchester (Cambridge kidnapping‑murder prosecution).  
+* **State’s Attorney Lance Richardson** – Queen Anne’s (juvenile‑detention capacity, tough‑on‑crime).  
+* **State’s Attorney Joseph Coale** – Talbot (arson case, child‑porn investigation).  
+* **Judge William Jones** – Dorchester Circuit Court (sentencing of homicide, Bay Bridge crash).  
+* **Judge Philip Cronan** – Talbot Circuit Court (Bradley plea deal).  
 
-### County & Town Government  
+### Government & Policy  
 
-* **Mayor Cheryl Lewis** – Oxford; champion of the three‑way stop and traffic‑safety studies (2024‑2025).  
-* **Council President Chuck Callahan** – Talbot County Council; author of the 2023 preparedness proclamation (2023‑2025).  
-* **County Manager Clay Stamp** – Talbot County; negotiated Preston Automotive grant and Ridgely MOU (2024‑2025).  
-* **Town Engineer Rick Van Emburgh** – Easton; leads “Complete Streets” data‑gathering workshops (2024‑2025).  
-* **Secretary Vincent Schiraldi** – Maryland Department of Juvenile Services; target of sheriffs’ resignation demand (2024‑2025).  
+* **Mayor Cheryl Lewis** – Oxford (traffic‑safety studies, three‑way stop).  
+* **Council President Chuck Callahan** – Talbot County Council (Vision‑Zero, burn‑ban funding).  
+* **County Manager Clay Stamp** – Talbot County (Preston Automotive grant, Ridgely MOU).  
+* **Town Engineer Rick Van Emburgh** – Easton (Complete Streets, traffic‑signal timing).  
+* **Secretary Vincent Schiraldi** – Maryland Department of Juvenile Services (juvenile‑detention reform).  
 
-### Emergency Management & Utilities  
+### Advocacy & Victim Services  
 
-* **Maryland Department of Emergency Management** – issues annual preparedness proclamations; coordinates with fire departments (2024‑2025).  
-* **Delmarva Power** – utility involved in September 2024 crane fire; issued technical statements (2024).  
-* **MDOT‑SHA** – manages Route 662 closure, Brookletts Ave. traffic‑light timing, and “Complete Streets” grant (2024‑2025).  
+* **Susan Ahlstrom** – For All Seasons (Human‑Trafficking Navigator, regional training).  
+* **Robin Davenport** – CASA of the Mid‑Shore (court‑appointed child advocates).  
+* **Heather Grant** – Talbot Thrive (Stop‑the‑Bleed, community AED placements).  
 
-### Non‑Profits & Advocacy  
+### Infrastructure & Utilities  
 
-* **Susan Ahlstrom** – Human‑Trafficking Navigator, For All Seasons; leads regional trainer program (2024‑2025).  
-* **Robin Davenport** – Executive Director, CASA of the Mid‑Shore; advocates for children in court (2024‑2025).  
-* **Heather Grant** – Director, Talbot Thrive; runs AED and “Stop‑the‑Bleed” programs (2024‑2025).  
-* **Wayne Dyott** – Director, Talbot Paramedic Foundation; provides AED network data (2024‑2025).  
+* **Mark Henson** – Delmarva Power Public‑Relations Director (crane fire communication).  
+* **Preston Automotive Group** – Private donor (first‑responder training campus).  
+* **MDOT SHA Representative** – (Route 662 closure, Complete Streets grant).  
 
-### Other Key Sources  
-
-* **Preston Automotive Group** – private donor of $300 k for first‑responder campus (2024).  
-* **Maryland State Fire Marshal** – provides investigative authority for structure fires (2024‑2025).  
-* **Maryland Department of Transportation (MDOT)** – oversees highway projects affecting public safety (2024‑2025).  
-
----  
-
-**Use this guide as your map, your contact list and your story‑seed catalog.** By following the thematic pathways, watching the intersecting issues, and tapping the sources listed, you’ll be equipped to turn a routine incident report into a narrative that captures the complexity, humanity and urgency of public safety on Maryland’s Eastern Shore. Happy reporting!  
+*All sources are listed with the stories or issue areas where they have appeared in Star‑Democrat coverage between November 2023 and October 2025.*  
