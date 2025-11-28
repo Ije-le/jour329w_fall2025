@@ -25,6 +25,13 @@ The first beatbook, talbot_beatbook.md, began with a table, and as a reporter I 
 But what I liked was the geographical focus section. The information there was such that a new beat reporter understabds what happens where and why.
 The thematic section is also very informative, but I would have preferred if links were attached rather than just quotes. Links give the reporters the option to explore the entire story and get further information on the topics more than quotes can.
 Given our focus on geography, I'd say the most useful part of this document is the geographic analysis.[The distinctive issues part makees it clear the type of stories the area generates/the newsroom is interested in]
+Also providing interpretation for reporters in cases that might be complex to follow is great.
+Interconnected issues also not only provides information but gives guidance on how to weave interconnected stories.
+The source directory list is very good, because [names were not really listed above because of format?]
+How to use, might be expanded a little more.
+I love!
+Only that I fee format can be changed.
+
 
 
 
