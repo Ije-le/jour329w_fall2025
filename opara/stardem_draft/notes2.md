@@ -16,32 +16,32 @@ Numbering the interconnected issues helped with identification.
 Though this took care of the redundancy in the initial draft and produced what I think is a better copy, I suspect that going back and forth between sections to read interconnected issues when necessary might also pose another issue. But I think this is a much betetr alternative to reading the same thing over and over.
 
 
-
+## BEATBOOK DRAFT III           11/27/2025
 ## GEOGRAPHIC FOCUS
 The beatbook_generator.py or the new API key or both made the beatbook generation very seemless.
-I made Talbot as my geographical focus after giving copilot my previous beatbook draft and [asking copilot to list possible geographical areas we could focus on witih reasons.] Copilot suggested a long list of reasons to focus on Talbot county, but what I found interesting was that there was a strong concenttration of public safety stories on the location [more than anywhere else in the doc? verify]
+I made Talbot as my geographical focus after giving copilot my previous beatbook draft and asking it to list possible geographical areas we could focus on with reasons. Copilot suggested a long list of reasons to focus on Talbot county, but the reason I found interesting was that there is a stronger concentration of public safety stories on the location.
 
-The first beatbook, talbot_beatbook.md, began with a table, and as a reporter I do not think that I would like a table to be the first thing I come across in a beatbook. The entire document was mostly tabular, so I made a note to change the variation in my next draft.
-But what I liked was the geographical focus section. The information there was such that a new beat reporter understabds what happens where and why.
-The thematic section is also very informative, but I would have preferred if links were attached rather than just quotes. Links give the reporters the option to explore the entire story and get further information on the topics more than quotes can.
-Given our focus on geography, I'd say the most useful part of this document is the geographic analysis.[The distinctive issues part makees it clear the type of stories the area generates/the newsroom is interested in]
-Also providing interpretation for reporters in cases that might be complex to follow is great.
-Interconnected issues also not only provides information but gives guidance on how to weave interconnected stories.
-The source directory list is very good, because [names were not really listed above because of format?]
-How to use, might be expanded a little more.
-I love!
-Only that I fee format can be changed.
+The first beatbook, talbot_beatbook.md, was mostly structured in a tabular format.
+The Executive Summary provided infromation which could help a new reporter understand what happens where and why. Examples of the themes commonly covered under this beat were provided and broken down to show frequency and relevance to the beat, but it also showed areas where such issues commonly occur.
+But what I think was most helpful in understanding geography is the grographic analysis section. This section improved upon the executive summary to include distinctive issues relevant to the individual communities. It also frequesncy of multi-jurisdictional calls for these issues and areas.
+One other thing I found quite informative is the thematic section. It pulls out examples of stories already reported by the Star Democrat on specific themes and locations. Other information provided in this section include the story headline and a quote from each story. I think it would have helped more if the quotes were replaced with links to the actual stories. Links would give a new reporter the option to explore the entire story and get more understanding of the topics than quotes can provide.
+I also liked that most sections had key takeaways highlighted for reporters. The interconnected issues section also not only provides relevant information on how stories are related, but also gives guidance on how to explore them. I found the source directory to be a great addition, because there were not a lot of names throughout the book.
+I think this draft would be very useful as a guide, but it could work better if:
+-The "How to use" section could have been expanded a bit to include more tips;
+-The document could have had a section dedicated to unresolved stories that reporters can follow up on. A few such stories were cited in the document, but there could be more emphasis on that;
+-Links could have been included instead of quotes under thematic sections.
+
+So in updating the prompt for my second beat book, I put these points into consideration.
+While the format works fine, I opted for the narrative style for my second version, just because I personally would prefer a narrative beatbook. I like the source directory, so I asked Copilot to edit the beatbook_generator to retain that while changing the format.
 
 
 
 
 
-Things to change in next draft:
-More narrative
-Less tables
-Links in addtion/instead of quote in thematic sections
 
 
 
 
  $ uv run python beatbook_generator.py source_stories.json -m groq/openai/gpt-oss-120b -t "Talbot County Public Safety" -o talbot_beatbook.md
+
+uv run python beatbook_generator.py source_stories.json -m groq/openai/gpt-oss-120b -t "Talbot County Public Safety"
