@@ -34,9 +34,17 @@ I think this draft would be very useful as a guide, but it could work better if:
 So in updating the prompt for my second beat book, I put these points into consideration.
 While the format works fine, I opted for the narrative style for my second version, just because I personally would prefer a narrative beatbook. I like the source directory, so I asked Copilot to edit the beatbook_generator to retain that while changing the format.
 
+The introduction to the second beat book was very conversational and seemed more engaging compared to the table that confronted me in the first draft, but that might just be my bias kicking in. The Executive Summary broke down topics covered in order of frequency and provided some context, which not only shows newsroom interests, but possible trends in communities.
+This beat book was broadly broken down in two sections: thematic issues and geographic analysis. For each section [all the stories referenced were listed out with links? which i REALLY LIKED.]
 
 
+Although focused on the themes covered, the thematic section still produced content that revolved around geography. For example, while highlighting violent crimes and homicide as a recurring theme in Star Democrat's coverage, a part of the beat book reads: "Cambridge, just a 15‑minute drive east, has become a flashpoint for the county’s homicide docket," showing a new reporter how this issue is connected to a location. The geographical analysis was more robudt that the frist draft, containing more information on locations meantioned, and including classifications like "rural Talbot."
+It also included an unresolved stories section, which cited stories that had been published in these areas but initially did not come with links. After updating this version by generating another beat book that overwrote it, [links were included] 
 
+
+[Compare How to sections. Which has  more releavant info beyond tone?]
+
+What I could add should be added to third draft.
 
 
 

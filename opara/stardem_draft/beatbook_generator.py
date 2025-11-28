@@ -100,46 +100,51 @@ def synthesize_guide(batch_summaries, topic, model, max_summaries_per_level=5):
 Your beat book should include these sections in order:
 
 **1. HOW TO USE THIS BEAT BOOK**
-Write 3-4 paragraphs explaining:
-- What this beat book contains and its purpose for reporters
-- How the interconnected issues are numbered and cross-referenced throughout
-- How to navigate between thematic sections and geographic analysis
-- Best practices for using this as an onboarding tool or reference guide
+Write 4-5 paragraphs explaining:
+- What this beat book contains and its purpose for reporters covering Talbot County public safety
+- How the interconnected issues are numbered and cross-referenced throughout the document
+- How to navigate between thematic sections, geographic analysis, and the source directory
+- How to use the unresolved stories section for follow-up reporting
+- Best practices for using this as an onboarding tool, reference guide, and story planning resource
 
 **2. EXECUTIVE SUMMARY**
-Provide a narrative overview (3-4 paragraphs) of the most significant public safety patterns in Talbot County. Write this as a cohesive story, not bullet points. Include specific geographic details about which communities are most affected by different issues.
+Provide a narrative overview (4-5 paragraphs) of the most significant public safety patterns in Talbot County. Write this as a cohesive story that flows naturally, not bullet points. Include specific geographic details about which communities are most affected by different issues. Make this compelling and informative.
 
 **3. THEMATIC SECTIONS** (5-8 sections)
 Organize stories into themes like law enforcement, fire/EMS, violent crime, property crime, emergency infrastructure. For each section:
-- Write 3-4 narrative paragraphs that tell the story of this issue in Talbot County
-- Weave in specific examples from stories naturally within the narrative
-- Note geographic patterns and quote local officials/residents
-- Reference numbered interconnected issues where relevant (e.g., "see #2")
-- Include 8-12 representative stories at the end of each section with brief descriptions
+- Write 4-5 narrative paragraphs that tell the story of this issue in Talbot County
+- Weave in specific examples from stories naturally within the narrative flow
+- Note geographic patterns and integrate quotes from local officials/residents seamlessly
+- Reference numbered interconnected issues where relevant (e.g., "this reflects the pattern described in #2")
+- After the narrative, list 8-12 representative stories with headlines, dates, locations, and 1-2 sentence descriptions
 
 **4. GEOGRAPHIC ANALYSIS**
-Write narrative paragraphs for each major area (Easton, St. Michaels, Oxford, Trappe, rural areas) that tell the story of public safety in that community. Use a storytelling approach rather than lists.
+For each major area (Easton, St. Michaels, Oxford, Trappe, rural areas), write 3-4 narrative paragraphs that tell the story of public safety in that community. Use a storytelling approach that paints a picture of each place. Discuss types of incidents, unique challenges, emergency service responses, and community resources.
 
 **5. INTERCONNECTED ISSUES**
-Identify 4-6 major themes that connect multiple stories. Number each issue (#1, #2, etc.) and write a narrative paragraph explaining the pattern, how it manifests across different communities, and what it reveals about Talbot County.
+Identify 4-6 major themes that connect multiple stories across categories and locations. Number each issue (#1, #2, etc.) and write 2-3 narrative paragraphs explaining:
+- What the pattern is and why it matters
+- How it manifests in different communities within Talbot County
+- Which specific stories and incidents illustrate this pattern
+- What it reveals about public safety challenges and opportunities in the county
 
 **6. UNRESOLVED STORIES & FOLLOW-UP OPPORTUNITIES**
-Identify 5-8 stories or issues that:
-- Have pending investigations or court cases
-- Represent ongoing policy debates
-- Show emerging patterns that need more reporting
-- Have unanswered questions or unclear outcomes
-For each, write 2-3 sentences explaining what's unresolved and why it matters.
+Identify 6-10 stories or issues that reporters should continue tracking:
+- Pending investigations or court cases with unclear outcomes
+- Ongoing policy debates at town councils or county government
+- Emerging patterns that need deeper investigation
+- Stories with unanswered questions or community concerns
+For each, write 3-4 sentences explaining what's unresolved, why it matters to the community, and what questions reporters should pursue.
 
 **7. SOURCE DIRECTORY**
-List all stories cited, organized chronologically. For each include:
+List all stories cited throughout the beat book, organized chronologically. For each include:
 - Headline/title
 - Date published
 - Primary location in Talbot County
-- Brief 1-sentence description
+- Brief 1-2 sentence description of the story
 Do NOT include reporter contact information.
 
-Write in a narrative, engaging journalistic style. Use specific place names, weave in quotes naturally, tell stories rather than listing facts. Make this read like a comprehensive narrative guide, not a reference list.
+Write in a narrative, engaging journalistic style throughout. Use specific place names, weave in quotes naturally, tell stories rather than listing facts. Paint pictures with words. Make this read like a comprehensive narrative guide that brings Talbot County's public safety landscape to life, not a dry reference document.
 
 COVERAGE SUMMARIES:
 {combined}
