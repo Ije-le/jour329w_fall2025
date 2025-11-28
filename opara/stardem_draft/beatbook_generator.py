@@ -95,23 +95,16 @@ def synthesize_guide(batch_summaries, topic, model, max_summaries_per_level=5):
             for i, summary in enumerate(current_level)
         )
     
-    prompt = f"""You are creating an onboarding guide for a new reporter who will be covering {topic}.
+    prompt = f"""You are analyzing public safety stories from Talbot County, Maryland, published in the Star Democrat newspaper. Create a comprehensive geographic beat book that examines public safety patterns, trends, and interconnected issues across Talbot County communities including Easton (county seat), St. Michaels, Oxford, Trappe, and rural areas. The county is served by the Talbot County Sheriff's Office, local police departments, multiple volunteer fire departments, and the University of Maryland Shore Medical Center at Easton.
 
-Below are comprehensive summaries of previous news coverage. 
-Synthesize this into a coherent, narrative guide that includes:
+Your beat book should include: (1) An executive summary highlighting major public safety themes and geographic patterns; (2) 5-8 thematic sections (such as law enforcement, fire/EMS, violent crime, property crime, emergency infrastructure) with 8-12 representative stories each, noting location-specific patterns; (3) A geographic analysis comparing how different Talbot County communities experience public safety issues; (4) 4-6 numbered interconnected issues that appear across multiple stories and locations, referenced throughout the document; (5) A source directory listing all cited stories with headlines, dates, locations, and brief descriptions (no reporter contact information).
 
-1. **Overview**: What is this beat about? What are the central issues?
-2. **Key Players**: Who are the most important people to know? Include their roles and why they matter.
-3. **Organizations & Institutions**: What entities are central to this coverage?
-4. **Major Themes & Ongoing Stories**: What are the continuing storylines and debates?
-5. **Context & Background**: Essential history or context a new reporter needs.
-
-Write this as a narrative document, not a list. Make it readable and informative. This should be comprehensive - draw on ALL the information provided.
+Write in clear journalistic style using specific place names, highlighting multi-jurisdiction responses, including relevant quotes from local officials and residents, and noting patterns unique to Talbot County versus regional trends.
 
 COVERAGE SUMMARIES:
 {combined}
 
-REPORTER'S GUIDE:"""
+TALBOT COUNTY PUBLIC SAFETY BEAT BOOK:"""
     
     print("Synthesizing final guide...", file=sys.stderr)
     response = model.prompt(prompt)

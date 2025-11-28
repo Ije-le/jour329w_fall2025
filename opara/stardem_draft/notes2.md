@@ -14,3 +14,27 @@ The directive above gives some information, but one might not be sure which inte
 Numbering the interconnected issues helped with identification.
 
 Though this took care of the redundancy in the initial draft and produced what I think is a better copy, I suspect that going back and forth between sections to read interconnected issues when necessary might also pose another issue. But I think this is a much betetr alternative to reading the same thing over and over.
+
+
+
+## GEOGRAPHIC FOCUS
+The beatbook_generator.py or the new API key or both made the beatbook generation very seemless.
+I made Talbot as my geographical focus after giving copilot my previous beatbook draft and [asking copilot to list possible geographical areas we could focus on witih reasons.] Copilot suggested a long list of reasons to focus on Talbot county, but what I found interesting was that there was a strong concenttration of public safety stories on the location [more than anywhere else in the doc? verify]
+
+The first beatbook, talbot_beatbook.md, began with a table, and as a reporter I do not think that I would like a table to be the first thing I come across in a beatbook. The entire document was mostly tabular, so I made a note to change the variation in my next draft.
+But what I liked was the geographical focus section. The information there was such that a new beat reporter understabds what happens where and why.
+The thematic section is also very informative, but I would have preferred if links were attached rather than just quotes. Links give the reporters the option to explore the entire story and get further information on the topics more than quotes can.
+Given our focus on geography, I'd say the most useful part of this document is the geographic analysis.[The distinctive issues part makees it clear the type of stories the area generates/the newsroom is interested in]
+
+
+
+
+Things to change in next draft:
+More narrative
+Less tables
+Links in addtion/instead of quote in thematic sections
+
+
+
+
+ $ uv run python beatbook_generator.py source_stories.json -m groq/openai/gpt-oss-120b -t "Talbot County Public Safety" -o talbot_beatbook.md
