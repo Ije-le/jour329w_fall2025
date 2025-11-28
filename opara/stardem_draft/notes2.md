@@ -16,6 +16,9 @@ Numbering the interconnected issues helped with identification.
 Though this took care of the redundancy in the initial draft and produced what I think is a better copy, I suspect that going back and forth between sections to read interconnected issues when necessary might also pose another issue. But I think this is a much betetr alternative to reading the same thing over and over.
 
 
+
+
+
 ## BEATBOOK DRAFT III           11/27/2025
 ## GEOGRAPHIC FOCUS
 The beatbook_generator.py or the new API key or both made the beatbook generation very seemless.
@@ -34,17 +37,28 @@ I think this draft would be very useful as a guide, but it could work better if:
 So in updating the prompt for my second beat book, I put these points into consideration.
 While the format works fine, I opted for the narrative style for my second version, just because I personally would prefer a narrative beatbook. I like the source directory, so I asked Copilot to edit the beatbook_generator to retain that while changing the format.
 
-The introduction to the second beat book was very conversational and seemed more engaging compared to the table that confronted me in the first draft, but that might just be my bias kicking in. The Executive Summary broke down topics covered in order of frequency and provided some context, which not only shows newsroom interests, but possible trends in communities.
-This beat book was broadly broken down in two sections: thematic issues and geographic analysis. For each section [all the stories referenced were listed out with links? which i REALLY LIKED.]
+The introduction to the second beat book was very conversational and seemed more engaging compared to the tables that confronted me in the first draft, but that might just be my bias kicking in. The "How to Use" section came at the beginning, which I think works better for structure than the previous draft. The Executive Summary broke down topics covered and provided some context, showing newsroom interests and possible trends of events in communities.
+I particularly like this part of the intro:
+
+Using the unresolved‑stories section
+When you open a story that ties to an unresolved item, start with the brief in Section 6 to see what questions remain. Then pull the original article from the Source Directory, re‑read the quoted officials, and reach out to the contacts listed in the relevant thematic or geographic section. Most unresolved stories have at least two agencies still involved, so you’ll often have a “dual‑source” angle—perfect for an exclusive update.
+
+The only hitch is that the unresolveed stories section only had story headlines and not links, so it is not exactly possible for a reporter to pull the original article from the source directory. They have to go source for the links themsleves. Regardless, the guide shhows how to optimize the book in that regard, which I like.
+
+This beat book was broadly broken down in two sections: thematic issues and geographic analysis. 
+For each section and subsection, all the stories referenced were listed out with one-sentence descriptions of the story.The representative stories were captured in tables, which works even for a narrative document.
+Although focused on the themes covered, the thematic section still produced content that revolved around geography. For example, while highlighting violent crimes and homicide as a recurring theme in Star Democrat's coverage, a part of the beat book reads: "Property crimes in Talbot County often surface in the quieter corners of the county—rural farmsteads, small‑town storefronts, and the ever‑busy US‑50 corridor," showing a new reporter how this issue is connected tocertain locations. The geographical analysis was more robust than the frist draft, containing more information on locations meantioned, and including classifications like "Rural Areas & the Wilder Mid-Shore."
+Two things I did not like about this book is that the source directory had no names, only Date, Headline, Primary Location and Brief Description. This doesn't fulfill the role of a source directory. Also, there many instances where links to the stories could have been helpful, example: the representative stories and the unresolved stories sections.
+
+In generating a third draft, I specifically highlighted the relevance of links in my prompt, but the links returned where not real links. It was very similar to Beat Book 2, and since the links did not work, I double checked to be sure that the links in my source json file are correct. Turns out the json file had no links at all, which explained the problem, so I wrote another prompt asking it to take out the links. Here, I also decided to add my non-story information.
+The non-story information I felt could be useful in covering this beat is the census data, which can give information on the demographics of the county that may not ordinarily be deduced from the beatbook or be common knowledge to a new reporter, especially if they are also new in the county or state. I decided to include this information to this fianl draft, and asked Copilot to help me fetch the link for Talbot county from the census.gov website.
+The website displayed a message suggesting that it is undergoing maintenance:
+    QuickFacts is currently undergoing a maintenance cycle. Please check back later.
+I checked manually to be sure this was accurate and it was, but only for the Quick Facts section of the website. There were other ways to get the information without using quick facts, so I copied the link to Talbot county's population and other information, and gave it to Copilot to generate a summary with key statistics, and include this in the script so that it can be used where necessary in generatin the beatbook.
 
 
-Although focused on the themes covered, the thematic section still produced content that revolved around geography. For example, while highlighting violent crimes and homicide as a recurring theme in Star Democrat's coverage, a part of the beat book reads: "Cambridge, just a 15‑minute drive east, has become a flashpoint for the county’s homicide docket," showing a new reporter how this issue is connected to a location. The geographical analysis was more robudt that the frist draft, containing more information on locations meantioned, and including classifications like "rural Talbot."
-It also included an unresolved stories section, which cited stories that had been published in these areas but initially did not come with links. After updating this version by generating another beat book that overwrote it, [links were included] 
 
 
-[Compare How to sections. Which has  more releavant info beyond tone?]
-
-What I could add should be added to third draft.
 
 
 
