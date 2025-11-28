@@ -185,8 +185,8 @@ List all stories cited throughout the beat book, organized chronologically. For 
 - Headline/title (as a markdown link [Headline](url) ONLY if a valid "docref" URL exists in the source JSON data; otherwise list title without a link)
 - Date published
 - Primary location in Talbot County
+- Key contacts/people mentioned in the story (names and roles of officials, community members, agencies) - extract from the source data
 - Brief 1-2 sentence description of the story
-Do NOT include reporter contact information. 
 CRITICAL: Only use actual docref URLs from the source data. DO NOT create fake links like example.com or placeholder URLs. If no docref exists for a story, simply list the title as plain text.
 
 Write in a narrative, engaging journalistic style throughout. Use specific place names, weave in quotes naturally, tell stories rather than listing facts. Paint pictures with words. Make this read like a comprehensive narrative guide that brings Talbot County's public safety landscape to life, not a dry reference document.
