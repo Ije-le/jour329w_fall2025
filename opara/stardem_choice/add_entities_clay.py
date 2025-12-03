@@ -8,109 +8,55 @@ import glob
 import re
 import random
 
-def screen_eastern_shore_relevance(story_title, story_content, model):
-    """Use LLM to screen whether a story is geographically focused on Maryland's Eastern Shore."""
-    
-    prompt = f"""
-Evaluate whether this news story is GEOGRAPHICALLY FOCUSED on Maryland's Eastern Shore.
-
-CONTEXT: We need to filter stories to only include those centered on events, people, and places in Maryland's Eastern Shore region. The Eastern Shore includes: Caroline, Dorchester, Kent, Queen Anne's, Somerset, Talbot, Wicomico, and Worcester counties.
-
-CRITERIA FOR EASTERN SHORE STORIES:
-A story IS geographically focused on the Eastern Shore if:
-- The main events take place in Eastern Shore counties or towns (Easton, Cambridge, Salisbury, Ocean City, St. Michaels, Denton, Centreville, Chestertown, etc.)
-- The story focuses on Eastern Shore residents, officials, or organizations
-- The primary subject matter is rooted in the Eastern Shore community
-
-SHOULD BE EXCLUDED:
-- National news stories with no Eastern Shore connection
-- Stories primarily about other Maryland regions (Baltimore, Annapolis, Western Maryland) even if briefly mentioning the Eastern Shore
-- Wire service stories about other states or countries
-- Stories where the only Eastern Shore connection is publication in a local newspaper
-
-Story Title: {story_title}
-Story Content (first 1500 chars): {story_content[:1500]}
-
-INSTRUCTIONS: Respond with ONLY a JSON object in this exact format:
-{{
-  "is_eastern_shore_focused": true or false,
-  "reasoning": "Brief explanation (1-2 sentences)"
-}}
-
-Respond with valid JSON only, no other text:
-"""
-    
-    try:
-        result = subprocess.run([
-            'llm', '-m', model, prompt
-        ], capture_output=True, text=True, timeout=30)
-        
-        if result.returncode == 0:
-            response_text = result.stdout.strip()
-            if response_text.startswith('```'):
-                response_text = response_text.split('\n', 1)[1]
-                response_text = response_text.rsplit('\n', 1)[0]
-            
-            screening_result = json.loads(response_text)
-            return screening_result
-        else:
-            return {"is_eastern_shore_focused": False, "reasoning": "Screening model failed"}
-    except subprocess.TimeoutExpired:
-        return {"is_eastern_shore_focused": False, "reasoning": "Screening timed out"}
-    except json.JSONDecodeError as e:
-        return {"is_eastern_shore_focused": False, "reasoning": "JSON parse failed"}
-    except Exception as e:
-        return {"is_eastern_shore_focused": False, "reasoning": f"Error: {str(e)}"}
-
 def extract_entities(story_title, story_content, model):
     """Use LLM to extract named entities (people, places, organizations) from public safety news stories."""
     
     prompt = f"""
 Extract ALL named entities from this PUBLIC SAFETY news story and return them in JSON format.
 
-CONTEXT: This story is from the Public Safety beat covering law enforcement, fire departments, emergency services, courts, crime, accidents, and public safety-related news from Maryland's Eastern Shore. Extract ALL people, places, and organizations mentioned.
+CONTEXT: This story is from the Public Safety beat covering law enforcement, fire departments, emergency services, courts, crime, accidents, and public safety-related news. Extract ALL people, places, and organizations mentioned in the story.
 
 Extract the following entities:
 
-- people: Array of ALL people mentioned in the story. NO HONORIFICS (no Dr., Mr., Mrs., Ms.). Format as "FirstName LastName, Role, Agency/Organization" when role and agency are available:
-  * Law enforcement: "Robert Kane, Fire Chief, St. Michaels Volunteer Fire Department"
-  * Officers with rank: "Thomas Anderson, Sergeant, Maryland State Police"
-  * Court officials: "Patricia Miller, Judge, Talbot County Circuit Court"
-  * Suspects/defendants: "Michael Stevens, 35, suspect" or "Sarah Johnson, defendant"
-  * Victims: "David Williams, victim" (only if named in story)
-  * Public officials: "Carol Westfall, Mayor, Klamath Falls"
-  * Citizens/residents: "Amanda Rodriguez, 28, of Easton" or "Kevin Brown, resident"
-  Format: "FirstName LastName, Role, Organization" (NO Dr./Mr./Mrs./Ms./Rev. etc.)
+- people: Array of ALL people mentioned in the story. Include their name and title/role/description when available:
+  * Law enforcement officers: Include rank and agency (e.g., "Chief John Smith, Easton Police Department", "Sgt. Jane Doe, Maryland State Police")
+  * Fire and EMS personnel: Include rank and department (e.g., "Chief Robert Lee, St. Michaels Volunteer Fire Department")
+  * Court officials: Include role and jurisdiction (e.g., "Judge William Brown, Talbot County Circuit Court")
+  * Suspects/defendants: Include name and any details stated (e.g., "James Wilson, 35, of Easton")
+  * Victims: Include if named (e.g., "Michael Roberts, victim")
+  * Public officials: Include title and organization (e.g., "Mayor Carol Westfall, Klamath Falls")
+  * Any other person mentioned: Include name and any identifying information provided
+  Format: "First Last, Title/Role" or "First Last, age, description" as appropriate
 
 - places: Array of ALL geographic locations and specific places mentioned:
-  * Cities/Towns: Always include state - "Easton, Maryland", "St. Michaels, Maryland"
-  * Counties: "Talbot County, Maryland", "Caroline County, Maryland"
-  * States/Countries: "Maryland", "Oregon", "Nevada"
-  * Specific locations: "Route 50", "Chesapeake Bay Bridge", "Talbot County Courthouse"
-  * Facilities/Buildings: "Easton Police Department", "Sky Lakes Medical Center"
-  Include ALL places mentioned, even outside Eastern Shore
+  * Cities/Towns: Include state (e.g., "Easton, Maryland", "St. Michaels, Maryland")
+  * Counties: Use format "Talbot County, Maryland"
+  * States and countries: (e.g., "Oregon", "Nevada")
+  * Specific locations: Roads, buildings, facilities (e.g., "Route 50", "Easton Police Department", "Talbot County Courthouse")
+  * Any other location mentioned in the story
 
-- organizations: Array of ALL organizations, institutions, and agencies mentioned. DO NOT ABBREVIATE - use full official names:
-  * Law enforcement: "Easton Police Department", "Maryland State Police", "Federal Bureau of Investigation"
-  * Fire/EMS: "St. Michaels Volunteer Fire Department", "Talbot County Department of Emergency Services"
-  * Courts: "Talbot County Circuit Court", "United States District Court"
-  * Government: "Maryland State Fire Marshal", "United States Coast Guard"
-  * Other agencies: Full names, no abbreviations (e.g., "Federal Bureau of Investigation" NOT "FBI")
-  Use complete official names without abbreviations
+
+- organizations: Array of ALL organizations, institutions, and agencies mentioned:
+  * Law enforcement agencies: (e.g., "Easton Police Department", "Maryland State Police", "FBI")
+  * Fire departments: (e.g., "St. Michaels Volunteer Fire Department")
+  * Emergency services: (e.g., "Talbot County Emergency Medical Services")
+  * Courts and legal: (e.g., "Talbot County Circuit Court", "U.S. District Court")
+  * Government agencies: (e.g., "Maryland State Fire Marshal", "U.S. Coast Guard")
+  * Any other organization mentioned
+  Use full official names when possible
 
 IMPORTANT RULES:
-- Extract ALL entities mentioned, regardless of location
-- NO honorifics in people names (no Dr., Mr., Mrs., Ms., Rev., etc.)
-- NO abbreviations in organization names - spell out completely
-- Do NOT include news organizations, reporters, photographers, or story authors
-- Do NOT include the byline author
-- Be thorough - include every person, place, and organization
+- Extract ALL entities mentioned in the story, regardless of location
+- Do NOT include news organizations, reporters, or photographers (e.g., "Star-Democrat", "APGMedia")
+- Do NOT include the story's author/byline
+- Be thorough - include every person, place, and organization that appears in the story
+- Maintain consistent naming: use full names and official titles
 
 Example output:
 {{
-  "people": ["Chris Thomas, President, St. Michaels Volunteer Fire Department", "Robert Reynolds, Captain, Klamath Falls Police Department", "Carol Westfall, Mayor, Klamath Falls", "Negasi Zuberi, 29, suspect"],
+  "people": ["Chief Chris Thomas, St. Michaels Volunteer Fire Department", "Sgt. Robert Reynolds, Klamath Falls Police Department", "Mayor Carol Westfall, Klamath Falls", "Negasi Zuberi, 29, suspect"],
   "places": ["St. Michaels, Maryland", "Talbot County, Maryland", "Klamath Falls, Oregon", "Reno, Nevada", "Route 50"],
-  "organizations": ["St. Michaels Volunteer Fire Department", "Klamath Falls Police Department", "Federal Bureau of Investigation Portland Field Office", "Maryland State Police", "Nevada State Patrol"]
+  "organizations": ["St. Michaels Volunteer Fire Department", "Klamath Falls Police Department", "FBI Portland Field Office", "Maryland State Police"]
 }}
 
 Story Title: {story_title}
@@ -149,7 +95,7 @@ def main():
     parser = argparse.ArgumentParser(description='Add entity metadata (people, places, organizations) to public safety stories from Star-Democrat using LLM')
     parser.add_argument('--model', required=True, help='LLM model to use (e.g., groq/openai/gpt-oss-120b)')
     parser.add_argument('--input', default='public_safety_stories.json', help='Input JSON file with stories (default: public_safety_stories.json)')
-    parser.add_argument('--output', default='stories_and_entities_v2.json', help='Output JSON file (default: stories_and_entities_v2.json)')
+    parser.add_argument('--output', default='stories_and_entities_v1.json', help='Output JSON file (default: stories_and_entities_v1.json)')
     parser.add_argument('--sample-size', type=int, default=300, help='Number of stories to randomly sample (default: 300)')
     parser.add_argument('--limit', type=int, help='Limit the number of stories to process (useful for testing)')
     
@@ -236,7 +182,6 @@ def main():
 
     # Process each story
     errors = []
-    screened_out = []
     starting_count = len(enhanced_stories)
     
     for i, story in enumerate(stories):
@@ -254,28 +199,11 @@ def main():
             # Skip stories with no content
             continue
         
-        # Screen for Eastern Shore geographic focus
-        screening = screen_eastern_shore_relevance(story.get('title', ''), story_content, args.model)
-        
-        if not screening.get('is_eastern_shore_focused', False):
-            print(f"  ⊘ Excluded: {screening.get('reasoning', 'Not Eastern Shore focused')}")
-            screened_out.append({
-                'title': story.get('title', 'Untitled'),
-                'reasoning': screening.get('reasoning', 'Not Eastern Shore focused')
-            })
-            # DO NOT PROCESS - skip to next story
-            continue
-        
-        print(f"  ✓ Eastern Shore story: {screening.get('reasoning', '')}")
-        
         # Extract entities from the story
         entities = extract_entities(story.get('title', ''), story_content, args.model)
         
-        # Add entity fields to the story (includes original story data)
+        # Add entity fields to the story
         enhanced_story = story.copy()
-        
-        # Add screening info
-        enhanced_story['eastern_shore_screening'] = screening
         
         # If entity extraction was successful, add each field
         if 'error' not in entities:
@@ -313,22 +241,12 @@ def main():
     print(f"Total stories loaded: {len(all_stories)}")
     print(f"Filtered out (calendars, columns, etc.): {len(filtered_out)}")
     print(f"Randomly sampled: {sample_size} stories")
-    print(f"Excluded (not Eastern Shore focused): {len(screened_out)}")
     if starting_count > 0:
         print(f"Previously processed: {starting_count}")
         print(f"Newly processed in this run: {len(enhanced_stories) - starting_count}")
     print(f"Total successfully processed with entities: {len(enhanced_stories)}")
     print(f"\nOutput saved to: {output_filename}")
     print(f"(File is saved incrementally after each story)")
-    
-    # Show sample of excluded stories
-    if screened_out:
-        print(f"\n⊘ Sample of {min(10, len(screened_out))} excluded stories (not Eastern Shore focused):")
-        for item in screened_out[:10]:
-            print(f"  - {item['title'][:70]}")
-            print(f"    Reason: {item['reasoning']}")
-        if len(screened_out) > 10:
-            print(f"  ... and {len(screened_out) - 10} more excluded")
     
     # Print error summary if there were any
     if errors:

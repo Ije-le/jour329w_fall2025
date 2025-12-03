@@ -67,3 +67,4 @@ I think this would be a helpful guide for a new reporter on this beat.
 
 
 
+When you get back use the generator.py to generate the beatbook
