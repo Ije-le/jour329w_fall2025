@@ -1,1 +1,5 @@
-## BEAT BOOK NEARLY FINAL
+## BEAT BOOK NEARLY FINAL 12/3/2025
+I decided to improve upon talbot_beatbook_v4.md based on the comments from the last assignment. I used groq/openai/gpt-oss-120b for this task and generated verison 5 but I found that it was too short and had a similar tabular format as version 4, so I generated a new one that emphasized a narrative structure. I saved this to talbot_beatbook_v6.md
+I really like this version. The tone is much friendlier, and it held my interest for much longer.
+Version 6 is also a summarized version of talbot_beatbook_v4.md, but more robust than v5.  It provides less geographic information than v4, but the information provided is useful. Rather than break up the geographic analysis into five sections like in v4 (Easton, St Michael's Oxford, Trappe and Rural Talbot), v6 merged them all into three: Eston, St Michael's, Oxford & Trappe, and Rural Talbot. the new version had no interconnected issues, which is fine, and the source directory came in a simple format: just name and designation, as against the previous version that had other information such as headline, location, description. I would have prefered that a more detailed source directory in v6, but I guess the difference is that v6 labelled its list as the most mentioned sources.
+
