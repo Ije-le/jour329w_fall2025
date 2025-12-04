@@ -11,6 +11,10 @@ If you walk into a coffee shop on Main Street in Easton and ask the barista what
 
 Talbot County sits on 269 square miles of flat, historic shoreline, with a county seat of roughly 16,800 people and three smaller towns that feel more like villages than cities.  The population skews older—nearly a quarter are 65 or older—and most households own their homes.  Those demographics shape the stories you’ll hear: seniors worried about road safety on quiet country roads, volunteers who keep the fire stations running, and a growing tourism season that brings a seasonal surge of visitors and, occasionally, a flash‑point for crime.  In short, the public‑safety beat here is less about towering precincts and more about the people who stitch together a patchwork of sheriffs, municipal police, volunteer firefighters and regional agencies.
 
+> **For additional context on Talbot County demographics, population, and community characteristics, see:**  
+> https://data.census.gov/profile/Talbot_County,_Maryland?g=050XX00US24041#populations-and-people  
+
+
 ---
 
 ### 2. What You’ll Be Covering  
