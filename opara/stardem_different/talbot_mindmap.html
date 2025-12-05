@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talbot County Public Safety Beat - Interactive Mind Map</title>
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
+        
+        #header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        #header h1 {
+            color: #2d3748;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        #header p {
+            color: #718096;
+            font-size: 14px;
+        }
+        
+        #controls {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .control-btn {
+            background: #4299e1;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+        
+        .control-btn:hover {
+            background: #3182ce;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .control-btn.active {
+            background: #2d3748;
+        }
+        
+        #mynetwork {
+            width: 100%;
+            height: calc(100vh - 170px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        #info-panel {
+            position: fixed;
+            right: -400px;
+            top: 170px;
+            width: 380px;
+            height: calc(100vh - 190px);
+            background: white;
+            box-shadow: -2px 0 10px rgba(0,0,0,0.2);
+            transition: right 0.3s;
+            overflow-y: auto;
+            border-radius: 10px 0 0 10px;
+        }
+        
+        #info-panel.open {
+            right: 0;
+        }
+        
+        #info-content {
+            padding: 25px;
+        }
+        
+        #info-content h2 {
+            color: #2d3748;
+            margin-bottom: 15px;
+            font-size: 24px;
+            border-bottom: 3px solid #4299e1;
+            padding-bottom: 10px;
+        }
+        
+        #info-content h3 {
+            color: #4a5568;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        #info-content p, #info-content ul {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        #info-content ul {
+            padding-left: 20px;
+        }
+        
+        #info-content li {
+            margin-bottom: 8px;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e53e3e;
+            color: white;
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            line-height: 30px;
+            text-align: center;
+        }
+        
+        .close-btn:hover {
+            background: #c53030;
+        }
+        
+        .legend {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        
+        .legend h4 {
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 2px solid #2d3748;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>🚨 Talbot County Public Safety Beat</h1>
+        <p>Interactive Mind Map - Click nodes to explore connections and details</p>
+    </div>
+    
+    <div id="controls">
+        <button class="control-btn" onclick="focusOnNode('center')">Reset View</button>
+        <button class="control-btn" onclick="filterByCategory('coverage')">Coverage Areas</button>
+        <button class="control-btn" onclick="filterByCategory('people')">Key People</button>
+        <button class="control-btn" onclick="filterByCategory('organizations')">Organizations</button>
+        <button class="control-btn" onclick="filterByCategory('all')">Show All</button>
+    </div>
+    
+    <div id="mynetwork"></div>
+    
+    <div id="info-panel">
+        <button class="close-btn" onclick="closeInfoPanel()">×</button>
+        <div id="info-content">
+            <h2>Select a node</h2>
+            <p>Click on any node in the mind map to see detailed information about that topic, person, or organization.</p>
+        </div>
+    </div>
+    
+    <div class="legend">
+        <h4>Legend</h4>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #6366f1;"></div>
+            <span>Coverage Areas</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #10b981;"></div>
+            <span>Key People</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #f59e0b;"></div>
+            <span>Organizations</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color" style="background: #8b5cf6;"></div>
+            <span>Geographic Areas</span>
+        </div>
+    </div>
+
+    <script>
+        // Create nodes array
+        const nodes = new vis.DataSet([
+            // Center node
+            { id: 'center', label: 'Talbot County\nPublic Safety', group: 'center', value: 40, font: { size: 20, bold: true } },
+            
+            // Main coverage areas
+            { id: 'community-policing', label: 'Community\nPolicing', group: 'coverage', value: 30 },
+            { id: 'fire-ems', label: 'Fire & EMS', group: 'coverage', value: 30 },
+            { id: 'traffic-safety', label: 'Traffic Safety', group: 'coverage', value: 30 },
+            { id: 'violent-crime', label: 'Violent Crime', group: 'coverage', value: 30 },
+            { id: 'preparedness', label: 'Emergency\nPreparedness', group: 'coverage', value: 30 },
+            
+            // Sub-topics for Community Policing
+            { id: 'shop-cop', label: 'Shop-with-a-Cop', group: 'coverage', value: 15 },
+            { id: 'citizens-academy', label: 'Citizens Police\nAcademy', group: 'coverage', value: 15 },
+            { id: 'national-night', label: 'National\nNight Out', group: 'coverage', value: 15 },
+            
+            // Sub-topics for Fire & EMS
+            { id: 'volunteer-fire', label: 'Volunteer Fire\nDepartments', group: 'coverage', value: 15 },
+            { id: 'talbot-first', label: 'Talbot FiRST\nProgram', group: 'coverage', value: 15 },
+            { id: 'equipment-donations', label: 'Equipment\nDonations', group: 'coverage', value: 15 },
+            
+            // Sub-topics for Traffic Safety
+            { id: 'vision-zero', label: 'Vision Zero\nGrants', group: 'coverage', value: 15 },
+            { id: 'stop-signs', label: 'Stop Sign\nProjects', group: 'coverage', value: 15 },
+            { id: 'route-662', label: 'Route 662\nDetour', group: 'coverage', value: 15 },
+            
+            // Sub-topics for Violent Crime
+            { id: 'task-forces', label: 'Multi-County\nTask Forces', group: 'coverage', value: 15 },
+            { id: 'drug-crime', label: 'Drug\nInvestigations', group: 'coverage', value: 15 },
+            { id: 'homicide', label: 'Homicide\nCases', group: 'coverage', value: 15 },
+            
+            // Sub-topics for Preparedness
+            { id: 'storm-drills', label: 'Storm\nDrills', group: 'coverage', value: 15 },
+            { id: 'burn-ban', label: 'Burn Ban\nOrdinance', group: 'coverage', value: 15 },
+            { id: 'grant-funding', label: 'Grant\nFunding', group: 'coverage', value: 15 },
+            
+            // Geographic areas
+            { id: 'easton', label: 'Easton\n(County Seat)', group: 'geography', value: 25 },
+            { id: 'waterfront', label: 'Waterfront\nTowns', group: 'geography', value: 20 },
+            { id: 'rural', label: 'Rural\nAreas', group: 'geography', value: 20 },
+            
+            // Key people
+            { id: 'joe-gamble', label: 'Sheriff\nJoe Gamble', group: 'people', value: 25 },
+            { id: 'alan-lowrey', label: 'Chief\nAlan Lowrey', group: 'people', value: 20 },
+            { id: 'brian-lecates', label: 'Brian LeCates\n(EMS Director)', group: 'people', value: 20 },
+            { id: 'jesse-gottleib', label: 'Jesse Gottleib\n(Fire President)', group: 'people', value: 15 },
+            { id: 'chuck-callahan', label: 'Council President\nChuck Callahan', group: 'people', value: 15 },
+            
+            // Organizations
+            { id: 'sheriff-office', label: 'Talbot County\nSheriff\'s Office', group: 'organization', value: 25 },
+            { id: 'easton-pd', label: 'Easton\nPD', group: 'organization', value: 20 },
+            { id: 'emergency-services', label: 'Dept of\nEmergency Services', group: 'organization', value: 20 },
+            { id: 'volunteer-depts', label: 'Volunteer Fire\nDepartments', group: 'organization', value: 20 },
+            { id: 'md-state-police', label: 'Maryland\nState Police', group: 'organization', value: 15 },
+            { id: 'md-dot', label: 'MD DOT\n(Vision Zero)', group: 'organization', value: 15 },
+            { id: 'talbot-cares', label: 'Talbot CaRES\n(AED Network)', group: 'organization', value: 15 }
+        ]);
+
+        // Create edges array
+        const edges = new vis.DataSet([
+            // Main coverage connections to center
+            { from: 'center', to: 'community-policing', width: 3 },
+            { from: 'center', to: 'fire-ems', width: 3 },
+            { from: 'center', to: 'traffic-safety', width: 3 },
+            { from: 'center', to: 'violent-crime', width: 3 },
+            { from: 'center', to: 'preparedness', width: 3 },
+            
+            // Community Policing sub-connections
+            { from: 'community-policing', to: 'shop-cop' },
+            { from: 'community-policing', to: 'citizens-academy' },
+            { from: 'community-policing', to: 'national-night' },
+            
+            // Fire & EMS sub-connections
+            { from: 'fire-ems', to: 'volunteer-fire' },
+            { from: 'fire-ems', to: 'talbot-first' },
+            { from: 'fire-ems', to: 'equipment-donations' },
+            
+            // Traffic Safety sub-connections
+            { from: 'traffic-safety', to: 'vision-zero' },
+            { from: 'traffic-safety', to: 'stop-signs' },
+            { from: 'traffic-safety', to: 'route-662' },
+            
+            // Violent Crime sub-connections
+            { from: 'violent-crime', to: 'task-forces' },
+            { from: 'violent-crime', to: 'drug-crime' },
+            { from: 'violent-crime', to: 'homicide' },
+            
+            // Preparedness sub-connections
+            { from: 'preparedness', to: 'storm-drills' },
+            { from: 'preparedness', to: 'burn-ban' },
+            { from: 'preparedness', to: 'grant-funding' },
+            
+            // Geography connections
+            { from: 'center', to: 'easton', width: 2 },
+            { from: 'center', to: 'waterfront', width: 2 },
+            { from: 'center', to: 'rural', width: 2 },
+            
+            // People connections to organizations
+            { from: 'joe-gamble', to: 'sheriff-office', width: 2 },
+            { from: 'alan-lowrey', to: 'easton-pd', width: 2 },
+            { from: 'brian-lecates', to: 'emergency-services', width: 2 },
+            { from: 'jesse-gottleib', to: 'volunteer-depts', width: 2 },
+            
+            // Organization connections to coverage areas
+            { from: 'sheriff-office', to: 'violent-crime' },
+            { from: 'sheriff-office', to: 'community-policing' },
+            { from: 'easton-pd', to: 'community-policing' },
+            { from: 'easton-pd', to: 'traffic-safety' },
+            { from: 'emergency-services', to: 'fire-ems' },
+            { from: 'emergency-services', to: 'preparedness' },
+            { from: 'volunteer-depts', to: 'fire-ems' },
+            { from: 'md-state-police', to: 'violent-crime' },
+            { from: 'md-dot', to: 'traffic-safety' },
+            { from: 'talbot-cares', to: 'fire-ems' },
+            
+            // Cross-connections
+            { from: 'easton', to: 'easton-pd', dashes: true },
+            { from: 'easton', to: 'sheriff-office', dashes: true },
+            { from: 'waterfront', to: 'volunteer-depts', dashes: true },
+            { from: 'rural', to: 'sheriff-office', dashes: true },
+            { from: 'vision-zero', to: 'md-dot', dashes: true },
+            { from: 'grant-funding', to: 'chuck-callahan', dashes: true }
+        ]);
+
+        // Define node information
+        const nodeInfo = {
+            'center': {
+                title: 'Talbot County Public Safety Beat',
+                content: `
+                    <h3>Overview</h3>
+                    <p>Talbot County sits on 269 square miles of flat, historic shoreline, with a population of approximately 37,500. The county seat, Easton, has roughly 16,800 people.</p>
+                    
+                    <h3>Demographics</h3>
+                    <ul>
+                        <li>Nearly 25% of residents are 65 or older</li>
+                        <li>Most households own their homes</li>
+                        <li>Aging population shapes traffic safety concerns</li>
+                        <li>Tourism brings seasonal population surges</li>
+                    </ul>
+                    
+                    <h3>Beat Characteristics</h3>
+                    <p>The public safety beat combines human stories, policy battles, technical fixes, and regional cooperation. It's less about towering precincts and more about people who stitch together a patchwork of sheriffs, municipal police, volunteer firefighters, and regional agencies.</p>
+                `
+            },
+            'community-policing': {
+                title: 'Community Policing',
+                content: `
+                    <h3>The "Shop-with-a-Cop" Vibe</h3>
+                    <p>Over the past two years, the most repeated narrative has been the effort to make law enforcement a visible, friendly presence in the community.</p>
+                    
+                    <h3>Key Programs</h3>
+                    <ul>
+                        <li><strong>Citizens Police Academy:</strong> Sheriff Joe Gamble's 10-week program for high school seniors</li>
+                        <li><strong>Shop-with-a-Cop:</strong> Annual holiday event hosted by Chief Alan Lowrey's department with the Optimist Club</li>
+                        <li><strong>National Night Out:</strong> Chief Justin Todd's downtown Cambridge event with bike-racks, safety booths, and carnival</li>
+                    </ul>
+                    
+                    <h3>Story Value</h3>
+                    <p>These gatherings aren't just photo-ops; they generate human-interest angles that keep readers engaged and provide a ready list of officers and community leaders to interview.</p>
+                `
+            },
+            'fire-ems': {
+                title: 'Fire, EMS & Volunteer Services',
+                content: `
+                    <h3>The Volunteer Engine</h3>
+                    <p>Fire-service stories dominate headlines whenever a blaze threatens historic waterfront property or rural barns. The system relies heavily on volunteer departments and private philanthropy.</p>
+                    
+                    <h3>Major Incidents</h3>
+                    <ul>
+                        <li><strong>2024 Faith Chapel Fire:</strong> Lightning strike in Trappe sparked joint response from Trappe VFD, Talbot DES, and MD State Fire Marshal</li>
+                        <li><strong>Oxford Fire Engine:</strong> Brand-new engine shipped to St. Michael's after donation drive led by American Legion Post 77</li>
+                    </ul>
+                    
+                    <h3>Talbot FiRST Program</h3>
+                    <p>Peer-support program funded by Rural Maryland Council grant provides confidential mental health hotline for first responders. Contact: Rachael Cox, program coordinator.</p>
+                `
+            },
+            'traffic-safety': {
+                title: 'Traffic Safety & Vision Zero',
+                content: `
+                    <h3>Aging Drivers on Two-Lane Roads</h3>
+                    <p>With an aging population spending significant time on two-lane roads, traffic safety stories appear almost monthly.</p>
+                    
+                    <h3>Recent Projects</h3>
+                    <ul>
+                        <li><strong>Oxford Stop Sign (Summer 2024):</strong> Installed after series of rear-end collisions</li>
+                        <li><strong>Brookletts Avenue (Easton):</strong> MD DOT Vision Zero grant funded three-way stop at deer-season crash hotspot</li>
+                        <li><strong>Route 662 Detour (Oct 2024):</strong> Hospital wing construction forced temporary closure, sparking multi-agency debate</li>
+                    </ul>
+                    
+                    <h3>Story Opportunities</h3>
+                    <p>Mine speed studies, crash-team investigations, and community feedback hearings for patterns and human impact stories.</p>
+                `
+            },
+            'violent-crime': {
+                title: 'Violent Crime & Cross-County Investigations',
+                content: `
+                    <h3>The "Big Case" Coverage</h3>
+                    <p>When homicide or kidnapping surfaces, coverage jumps from everyday to headline-making, often involving multiple jurisdictions.</p>
+                    
+                    <h3>Notable Cases</h3>
+                    <ul>
+                        <li><strong>Feb 2024 Kidnapping:</strong> 27-year-old woman's disappearance in Cambridge prompted joint task force (Cambridge PD, Easton PD, MSP, Talbot Sheriff)</li>
+                        <li><strong>2025 Double Murder:</strong> Sheriff Gamble coordinated with MSP homicide unit for life-sentence conviction</li>
+                        <li><strong>April 2024 Drug Bust:</strong> "Shoot-to-kill" ring using fake 911 calls to mask fentanyl shipments</li>
+                    </ul>
+                    
+                    <h3>Regional Contacts</h3>
+                    <p>Investigations often involve sheriffs from neighboring counties: Donnie Baker (Caroline), Gary Hofmann (Queen Anne's).</p>
+                `
+            },
+            'preparedness': {
+                title: 'Emergency Preparedness & Policy',
+                content: `
+                    <h3>Low-Lying Peninsula Challenges</h3>
+                    <p>The Eastern Shore's geography makes storm preparedness a recurring seasonal story.</p>
+                    
+                    <h3>Recent Initiatives</h3>
+                    <ul>
+                        <li><strong>Sept 2024 Shelter Drill:</strong> Joint exercise with fire department, EMS, MEMA, and utility crews during National Preparedness Month</li>
+                        <li><strong>Burn Ban (Late 2024):</strong> County-wide ordinance during drought sparked town hall debate over private property enforcement</li>
+                        <li><strong>Sanctuary Jurisdiction (May 2025):</strong> Federal grant threatened unless counties pledge ICE cooperation—Sheriff Gamble and council navigate funding vs. trust balance</li>
+                    </ul>
+                    
+                    <h3>"Grant-or-Lose" Tension</h3>
+                    <p>Follow federal/state funding requirements and local policy responses for ongoing story angles.</p>
+                `
+            },
+            'joe-gamble': {
+                title: 'Sheriff Joe Gamble',
+                content: `
+                    <h3>Position</h3>
+                    <p>Sheriff, Talbot County Sheriff's Office</p>
+                    
+                    <h3>Primary Coverage Areas</h3>
+                    <ul>
+                        <li>County-wide investigations</li>
+                        <li>Grant negotiations</li>
+                        <li>Sanctuary jurisdiction debate</li>
+                        <li>Citizens Police Academy</li>
+                        <li>Multi-county task forces</li>
+                    </ul>
+                    
+                    <h3>When to Contact</h3>
+                    <p>Go-to source for anything involving county-wide investigations, pursuit coordination, grant management, or policy debates affecting law enforcement funding.</p>
+                `
+            },
+            'alan-lowrey': {
+                title: 'Chief Alan Lowrey',
+                content: `
+                    <h3>Position</h3>
+                    <p>Police Chief, Easton Police Department</p>
+                    
+                    <h3>Primary Coverage Areas</h3>
+                    <ul>
+                        <li>Municipal policing</li>
+                        <li>Traffic safety projects</li>
+                        <li>Shop-with-a-Cop program</li>
+                        <li>Protest permit policy</li>
+                        <li>Stop sign installations (e.g., Brookletts Avenue)</li>
+                    </ul>
+                    
+                    <h3>When to Contact</h3>
+                    <p>Source for municipal law enforcement, traffic enforcement, community outreach events, and city-level policy decisions.</p>
+                `
+            },
+            'brian-lecates': {
+                title: 'Brian LeCates',
+                content: `
+                    <h3>Position</h3>
+                    <p>Director, Talbot County Department of Emergency Services</p>
+                    
+                    <h3>Primary Coverage Areas</h3>
+                    <ul>
+                        <li>Multi-agency storm drill logistics</li>
+                        <li>County AED rollout (Talbot CaRES)</li>
+                        <li>Mask-fit-test grant for EMTs</li>
+                        <li>EMS coordination</li>
+                        <li>Emergency preparedness</li>
+                    </ul>
+                    
+                    <h3>When to Contact</h3>
+                    <p>Essential source for emergency management, EMS operations, disaster preparedness, and public health safety initiatives.</p>
+                `
+            },
+            'sheriff-office': {
+                title: 'Talbot County Sheriff\'s Office',
+                content: `
+                    <h3>Primary Roles</h3>
+                    <ul>
+                        <li>County-wide investigations</li>
+                        <li>Pursuit coordination</li>
+                        <li>Grant management</li>
+                        <li>Police Accountability Board</li>
+                        <li>Rural area first response</li>
+                    </ul>
+                    
+                    <h3>Key Contact</h3>
+                    <p>Sheriff Joe Gamble</p>
+                    
+                    <h3>Story Angles</h3>
+                    <p>In rural areas, sheriff's deputies are often first contact for everything from broken water mains to missing seniors, making this a true "all-hands" agency.</p>
+                `
+            },
+            'easton-pd': {
+                title: 'Easton Police Department',
+                content: `
+                    <h3>Primary Roles</h3>
+                    <ul>
+                        <li>Municipal policing</li>
+                        <li>Traffic enforcement</li>
+                        <li>Community events (Shop-with-a-Cop, protest permits)</li>
+                        <li>National Night Out coordination</li>
+                    </ul>
+                    
+                    <h3>Key Contact</h3>
+                    <p>Chief Alan Lowrey</p>
+                    
+                    <h3>Coverage Focus</h3>
+                    <p>Primary law enforcement agency for Easton, the county seat where most major public safety events and community policing initiatives originate.</p>
+                `
+            },
+            'emergency-services': {
+                title: 'Department of Emergency Services',
+                content: `
+                    <h3>Primary Roles</h3>
+                    <ul>
+                        <li>EMS coordination</li>
+                        <li>AED network (Talbot CaRES)</li>
+                        <li>Storm-preparedness drills</li>
+                        <li>Mask-fit-test program</li>
+                        <li>Multi-agency emergency coordination</li>
+                    </ul>
+                    
+                    <h3>Key Contact</h3>
+                    <p>Brian LeCates, Director</p>
+                    
+                    <h3>Story Angles</h3>
+                    <p>Hub for emergency medical services, disaster response, and public health safety initiatives across the county.</p>
+                `
+            },
+            'volunteer-depts': {
+                title: 'Volunteer Fire Departments',
+                content: `
+                    <h3>Key Departments</h3>
+                    <ul>
+                        <li>Tilghman Island VFD (President: Jesse Gottleib)</li>
+                        <li>Oxford Fire Company (Chief Engineer: Graham Norbury)</li>
+                        <li>St. Michael's VFD</li>
+                        <li>Trappe VFD</li>
+                    </ul>
+                    
+                    <h3>Funding Sources</h3>
+                    <ul>
+                        <li>American Legion Post 77 donations</li>
+                        <li>Bluepoint Hospitality</li>
+                        <li>Maryland Police K-9 Foundation grants</li>
+                        <li>Community fundraisers</li>
+                    </ul>
+                    
+                    <h3>Coverage Focus</h3>
+                    <p>Backbone of fire response in Talbot County. When waterfront or rural blazes erupt, response pulls in crews from multiple counties through mutual-aid agreements.</p>
+                `
+            },
+            'md-dot': {
+                title: 'Maryland Department of Transportation',
+                content: `
+                    <h3>Primary Roles</h3>
+                    <ul>
+                        <li>Road engineering studies</li>
+                        <li>Vision Zero grant administration</li>
+                        <li>Route 662 detour oversight</li>
+                        <li>Traffic safety improvements</li>
+                    </ul>
+                    
+                    <h3>Key Programs</h3>
+                    <p><strong>Vision Zero Grant:</strong> Funds traffic safety improvements like the Brookletts Avenue three-way stop in Easton.</p>
+                    
+                    <h3>Story Angles</h3>
+                    <p>Follow engineering studies, grant awards, and community feedback hearings for traffic safety stories with data-driven angles.</p>
+                `
+            },
+            'vision-zero': {
+                title: 'Vision Zero Grants',
+                content: `
+                    <h3>Program Overview</h3>
+                    <p>MD DOT-funded initiative to reduce traffic fatalities and serious injuries through engineering improvements.</p>
+                    
+                    <h3>Talbot County Projects</h3>
+                    <ul>
+                        <li>Three-way stop on Brookletts Avenue (Easton deer-crash hotspot)</li>
+                        <li>Oxford intersection stop sign</li>
+                        <li>Complete Streets study for pedestrian safety</li>
+                    </ul>
+                    
+                    <h3>Story Approach</h3>
+                    <p>Weave together aging driver demographics, state funding, and local engineering studies to show how data-driven fixes improve community safety.</p>
+                `
+            },
+            'route-662': {
+                title: 'Route 662 Detour Saga',
+                content: `
+                    <h3>Timeline</h3>
+                    <p>Began October 2024 when hospital wing construction forced temporary closure of main road connecting Easton to Eastern Shore's western edge.</p>
+                    
+                    <h3>Stakeholders</h3>
+                    <ul>
+                        <li>Talbot County Council</li>
+                        <li>MD SHA (State Highway Administration)</li>
+                        <li>University of Maryland Shore Regional Health</li>
+                        <li>Local farmers</li>
+                    </ul>
+                    
+                    <h3>Story Angle</h3>
+                    <p>Multi-agency debate weighing economic impact versus safety concerns. Follow community feedback hearings and resolution timeline.</p>
+                `
+            },
+            'shop-cop': {
+                title: 'Shop-with-a-Cop',
+                content: `
+                    <h3>Program Details</h3>
+                    <p>Annual holiday event hosted by Easton Police Department in partnership with the Optimist Club.</p>
+                    
+                    <h3>Key Contact</h3>
+                    <p>Chief Alan Lowrey, Easton Police Department</p>
+                    
+                    <h3>Story Value</h3>
+                    <p>Human-interest angle showing community policing in action. Generates photo opportunities and interviews with officers, families, and community leaders.</p>
+                `
+            },
+            'citizens-academy': {
+                title: 'Citizens Police Academy',
+                content: `
+                    <h3>Program Details</h3>
+                    <p>10-week deep dive program bringing high school seniors into the Talbot County Sheriff's Office precinct.</p>
+                    
+                    <h3>Key Contact</h3>
+                    <p>Sheriff Joe Gamble</p>
+                    
+                    <h3>Coverage Opportunities</h3>
+                    <ul>
+                        <li>Program graduation ceremonies</li>
+                        <li>Student perspectives on law enforcement</li>
+                        <li>Community engagement success stories</li>
+                    </ul>
+                `
+            },
+            'talbot-first': {
+                title: 'Talbot FiRST Program',
+                content: `
+                    <h3>Program Overview</h3>
+                    <p>Peer-support program providing confidential mental health hotline for first responders dealing with trauma and high-stress incidents.</p>
+                    
+                    <h3>Funding</h3>
+                    <p>Rural Maryland Council grant</p>
+                    
+                    <h3>Key Contact</h3>
+                    <p>Rachael Cox, Program Coordinator</p>
+                    
+                    <h3>Story Angles</h3>
+                    <p>Follow up after tragedies or high-stress incidents to report on mental health support for emergency personnel.</p>
+                `
+            },
+            'easton': {
+                title: 'Easton (County Seat)',
+                content: `
+                    <h3>Population</h3>
+                    <p>Approximately 16,800 residents</p>
+                    
+                    <h3>Key Facilities</h3>
+                    <ul>
+                        <li>Talbot County Sheriff's Office</li>
+                        <li>Easton Police Department</li>
+                        <li>Department of Emergency Services</li>
+                        <li>County government offices</li>
+                    </ul>
+                    
+                    <h3>Major Events</h3>
+                    <ul>
+                        <li>National Night Out festivals</li>
+                        <li>Citizens Police Academy</li>
+                        <li>Protest permit hearings (2025 headlines)</li>
+                        <li>Complete Streets study</li>
+                    </ul>
+                    
+                    <h3>Coverage Focus</h3>
+                    <p>Where the beat converges—most day-to-day police-community events, traffic engineering studies, and emergency management drills originate here.</p>
+                `
+            },
+            'waterfront': {
+                title: 'Waterfront Towns',
+                content: `
+                    <h3>Towns</h3>
+                    <ul>
+                        <li>St. Michael's</li>
+                        <li>Oxford</li>
+                        <li>Trappe</li>
+                    </ul>
+                    
+                    <h3>Characteristics</h3>
+                    <ul>
+                        <li>Volunteer-run fire departments</li>
+                        <li>Tourism-driven seasonal population swells</li>
+                        <li>Historic properties requiring specialized fire response</li>
+                        <li>Summer staffing challenges</li>
+                    </ul>
+                    
+                    <h3>Story Angles</h3>
+                    <p>Follow seasonal crime spikes, temporary traffic controls for boat ramps, and mutual-aid fire responses when blazes threaten historic waterfront buildings.</p>
+                `
+            },
+            'rural': {
+                title: 'Rural Talbot County',
+                content: `
+                    <h3>Characteristics</h3>
+                    <ul>
+                        <li>Farms and horse ranches</li>
+                        <li>Miles of low-traffic county roads</li>
+                        <li>Longer EMS response times</li>
+                        <li>Sheriff's office primary responder</li>
+                    </ul>
+                    
+                    <h3>Story Focus Areas</h3>
+                    <ul>
+                        <li>Deer-season collision data</li>
+                        <li>Three-way stop installations on quiet crossroads</li>
+                        <li>First responder mask-fit-test program (winter storms)</li>
+                        <li>Sheriff deputies as "all-hands" responders</li>
+                    </ul>
+                    
+                    <h3>Coverage Tip</h3>
+                    <p>In outlying areas, deputies handle everything from water main breaks to missing seniors, making geographic context essential to understanding response patterns.</p>
+                `
+            },
+            'task-forces': {
+                title: 'Multi-County Task Forces',
+                content: `
+                    <h3>Typical Composition</h3>
+                    <ul>
+                        <li>Talbot County Sheriff's Office</li>
+                        <li>Easton Police Department</li>
+                        <li>Cambridge Police Department</li>
+                        <li>Maryland State Police</li>
+                        <li>Neighboring county sheriffs</li>
+                    </ul>
+                    
+                    <h3>Recent Cases</h3>
+                    <ul>
+                        <li>Feb 2024 Cambridge kidnapping</li>
+                        <li>39-person drug trafficking task force</li>
+                        <li>Cross-county homicide investigations</li>
+                    </ul>
+                    
+                    <h3>Regional Contacts</h3>
+                    <p>Sheriff Donnie Baker (Caroline), Sheriff Gary Hofmann (Queen Anne's), Chief Justin Todd (Cambridge PD)</p>
+                `
+            },
+            'talbot-cares': {
+                title: 'Talbot CaRES / AED Network',
+                content: `
+                    <h3>Program Overview</h3>
+                    <p>Public-access AED (Automated External Defibrillator) deployment network managed by Talbot County Department of Emergency Services.</p>
+                    
+                    <h3>Partners</h3>
+                    <ul>
+                        <li>Talbot Paramedic Foundation</li>
+                        <li>Bluepoint Hospitality (restaurant installations)</li>
+                        <li>Senior citizen advocacy groups</li>
+                    </ul>
+                    
+                    <h3>Story Angles</h3>
+                    <p>Follow AED installations at businesses, success stories of lives saved, and community lobbying for better cardiac arrest response in aging population.</p>
+                `
+            },
+            'chuck-callahan': {
+                title: 'Council President Chuck Callahan',
+                content: `
+                    <h3>Position</h3>
+                    <p>Council President, Talbot County Council (also chairs grant approval committee)</p>
+                    
+                    <h3>Coverage Areas</h3>
+                    <ul>
+                        <li>Budget-related questions</li>
+                        <li>Firehouse construction funding</li>
+                        <li>Route 662 detour decisions</li>
+                        <li>Grant approvals</li>
+                        <li>Burn ban ordinance</li>
+                    </ul>
+                    
+                    <h3>When to Contact</h3>
+                    <p>Go-to source for policy decisions affecting public safety funding and county legislative matters.</p>
+                `
+            },
+            'burn-ban': {
+                title: 'Burn Ban Ordinance',
+                content: `
+                    <h3>Timeline</h3>
+                    <p>Rolled out late 2024 during protracted drought to curb wildfire risk.</p>
+                    
+                    <h3>Controversy</h3>
+                    <p>Sparked lively town hall debate in Easton over enforcement on private property—balance between fire prevention and property rights.</p>
+                    
+                    <h3>Key Contacts</h3>
+                    <ul>
+                        <li>Council President Chuck Callahan</li>
+                        <li>Talbot County Council members</li>
+                        <li>Department of Emergency Services</li>
+                    </ul>
+                    
+                    <h3>Follow-Up Angles</h3>
+                    <p>Enforcement statistics, community compliance, legal challenges, and effectiveness during next dry season.</p>
+                `
+            },
+            'storm-drills': {
+                title: 'Storm Preparedness Drills',
+                content: `
+                    <h3>Sept 2024 Joint Drill</h3>
+                    <p>Shelter-opening exercise during National Preparedness Month brought together:</p>
+                    <ul>
+                        <li>Fire department personnel</li>
+                        <li>County EMS</li>
+                        <li>Maryland Emergency Management Agency (MEMA)</li>
+                        <li>Utility crews</li>
+                    </ul>
+                    
+                    <h3>Key Contact</h3>
+                    <p>Brian LeCates, DES Director</p>
+                    
+                    <h3>Coverage Timing</h3>
+                    <p>Hurricane season (June-November) generates recurring preparedness stories on the low-lying Eastern Shore peninsula.</p>
+                `
+            }
+        };
+
+        // Create a network
+        const container = document.getElementById('mynetwork');
+        const data = { nodes: nodes, edges: edges };
+        const options = {
+            groups: {
+                center: {
+                    color: { background: '#ef4444', border: '#991b1b' },
+                    font: { color: 'white' }
+                },
+                coverage: {
+                    color: { background: '#6366f1', border: '#4338ca' },
+                    font: { color: 'white' }
+                },
+                people: {
+                    color: { background: '#10b981', border: '#047857' },
+                    font: { color: 'white' }
+                },
+                organization: {
+                    color: { background: '#f59e0b', border: '#d97706' },
+                    font: { color: 'white' }
+                },
+                geography: {
+                    color: { background: '#8b5cf6', border: '#6d28d9' },
+                    font: { color: 'white' }
+                }
+            },
+            nodes: {
+                shape: 'dot',
+                scaling: {
+                    min: 10,
+                    max: 30
+                },
+                font: {
+                    size: 14,
+                    face: 'Tahoma'
+                }
+            },
+            edges: {
+                width: 1,
+                color: { color: '#848484', highlight: '#2d3748' },
+                smooth: {
+                    type: 'continuous'
+                }
+            },
+            physics: {
+                stabilization: { iterations: 200 },
+                barnesHut: {
+                    gravitationalConstant: -30000,
+                    springConstant: 0.001,
+                    springLength: 200
+                }
+            },
+            interaction: {
+                hover: true,
+                tooltipDelay: 200,
+                hideEdgesOnDrag: true
+            }
+        };
+
+        const network = new vis.Network(container, data, options);
+
+        // Handle node clicks
+        network.on('click', function(params) {
+            if (params.nodes.length > 0) {
+                const nodeId = params.nodes[0];
+                showNodeInfo(nodeId);
+            }
+        });
+
+        // Function to show node information
+        function showNodeInfo(nodeId) {
+            const info = nodeInfo[nodeId];
+            if (info) {
+                document.getElementById('info-content').innerHTML = `
+                    <h2>${info.title}</h2>
+                    ${info.content}
+                `;
+                document.getElementById('info-panel').classList.add('open');
+            }
+        }
+
+        // Function to close info panel
+        function closeInfoPanel() {
+            document.getElementById('info-panel').classList.remove('open');
+        }
+
+        // Function to focus on specific node
+        function focusOnNode(nodeId) {
+            network.focus(nodeId, {
+                scale: 1.0,
+                animation: {
+                    duration: 1000,
+                    easingFunction: 'easeInOutQuad'
+                }
+            });
+        }
+
+        // Function to filter by category
+        function filterByCategory(category) {
+            if (category === 'all') {
+                nodes.forEach(node => {
+                    nodes.update({ id: node.id, hidden: false });
+                });
+                edges.forEach(edge => {
+                    edges.update({ id: edge.id, hidden: false });
+                });
+            } else {
+                const groupMap = {
+                    'coverage': 'coverage',
+                    'people': 'people',
+                    'organizations': 'organization'
+                };
+                
+                const targetGroup = groupMap[category];
+                
+                nodes.forEach(node => {
+                    if (node.id === 'center' || node.group === targetGroup) {
+                        nodes.update({ id: node.id, hidden: false });
+                    } else {
+                        nodes.update({ id: node.id, hidden: true });
+                    }
+                });
+                
+                // Show edges connected to visible nodes
+                edges.forEach(edge => {
+                    const fromNode = nodes.get(edge.from);
+                    const toNode = nodes.get(edge.to);
+                    if ((fromNode && !fromNode.hidden) && (toNode && !toNode.hidden)) {
+                        edges.update({ id: edge.id, hidden: false });
+                    } else {
+                        edges.update({ id: edge.id, hidden: true });
+                    }
+                });
+            }
+            
+            network.fit({
+                animation: {
+                    duration: 1000,
+                    easingFunction: 'easeInOutQuad'
+                }
+            });
+        }
+
+        // Initialize with fit view
+        network.once('stabilizationIterationsDone', function() {
+            network.fit();
+        });
+    </script>
+</body>
+</html>
