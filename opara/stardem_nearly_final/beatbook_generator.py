@@ -194,10 +194,10 @@ def generate_beatbook(stories, metadata, model, batch_summaries, topic="this bea
             for i, summary in enumerate(current_level)
         )
     
-    prompt = f"""You're helping onboard a new reporter covering public safety in Talbot County, Maryland. Write a practical, narrative-driven beat book that reads like a story, not a reference document.
+    prompt = f"""You're helping onboard a new reporter covering public safety in Talbot County, Maryland. Write a practical, business-casual beat book.
 
 DATASET INFO:
-- {metadata['total_stories']} stories from Star Democrat  
+- {metadata['total_stories']} stories from Star Democrat
 - Date range: {metadata['date_range'][0]} to {metadata['date_range'][1]}
 - Top topics: {', '.join([f"{t[0]} ({t[1]})" for t in metadata['topics'][:5]])}
 
@@ -211,7 +211,7 @@ KEY ORGANIZATIONS:
 {chr(10).join([f"- {o[0]} ({o[1]} mentions)" for o in metadata['top_orgs'][:12]])}
 
 **TALBOT COUNTY DEMOGRAPHIC CONTEXT:**
-Weave this information naturally into your narrative where relevant:
+Use this demographic information to provide context where relevant:
 
 **Population & Geography:**
 - Population: ~37,500 residents (2023 estimate)
@@ -237,30 +237,15 @@ Weave this information naturally into your narrative where relevant:
 - Mix of working waterfront, agriculture, and service economy
 - Rural geography affecting response times
 
-INSTRUCTIONS FOR WRITING:
+INSTRUCTIONS:
+1. Write a SHORT, friendly introduction (2-3 paragraphs max—no "executive summary" language, just welcome them to the beat)
+2. Brief "What You're Covering" section (main themes only)
+3. CONCISE "Geographic Notes" section—only truly important patterns. Don't make demographic claims unless clearly supported by the dataset or the demographic context above.
+4. "Who's Who" section with key contacts (based on frequency)
+5. "Organizations to Know" section
+6. Keep it conversational and practical, like briefing a colleague over coffee
 
-**1. INTRODUCTION (2-3 short paragraphs)**
-Write a warm, welcoming introduction that sets the scene. No "executive summary" tone—just talk colleague-to-colleague about what this beat is like. Paint a picture of Talbot County's public safety landscape. Make it feel like you're sitting down with coffee saying "Here's what you need to know."
-
-**2. WHAT YOU'RE COVERING (3-4 paragraphs of narrative)**
-Tell the story of the main themes in Talbot County public safety. Write in flowing paragraphs, not bullet points. Connect the dots between different issues. Use specific examples from the coverage summaries to illustrate patterns. Make this read like good feature writing.
-
-**3. GEOGRAPHIC NOTES (2-3 concise paragraphs)**
-Briefly describe how public safety plays out differently in Easton vs. the waterfront towns vs. rural areas. Only include genuinely important patterns. Don't make demographic claims unless they're clearly supported by the dataset OR explicitly stated in the demographic context above. Keep this tight and practical.
-
-**4. WHO'S WHO (Brief narrative + short list)**
-Write 1-2 paragraphs introducing the key players, then list the most frequent contacts with their roles. Make it conversational: "You'll hear from Sheriff Joe Gamble a lot..." rather than just listing names.
-
-**5. ORGANIZATIONS TO KNOW (Brief narrative + short list)**
-Same approach—short narrative intro, then quick reference list. Focus on the agencies that appear most in coverage.
-
-OVERALL TONE:
-- Business-casual, like briefing a colleague
-- Narrative and flowing, not listy or academic
-- Direct and helpful
-- Use storytelling techniques—set scenes, connect threads
-- Keep it concise but engaging
-- Write in paragraphs, not bullets (except for reference lists)
+Tone: Business-casual, direct, helpful. Not formal or academic.
 
 COVERAGE SUMMARIES:
 {combined}
