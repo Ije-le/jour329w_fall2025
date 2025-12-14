@@ -1,4 +1,4 @@
-# How to Build a Beat Book with AI & Data‑Journalism  
+# Beat Book Gudie               12/13/2025 
 *A beginner‑friendly, step‑by‑step guide for reporters who want a quick, repeatable workflow that turns a pile of news stories into a practical “beat book.”*  
 
 ---  
