@@ -1,0 +1,10 @@
+# STARDEM_FINAL
+My nearly_final beatbook had a few limitations, particularly some mix up in events that occurred and geograaphical locations. The beginning was quite flowery and since that flowery beginning was taken care of in the draft beatbook you created, I saved the beatbook_willis.md as talbot_beatbook_v7 in my directory and the improved on that to produce a final version.
+
+To begin, I created a script that extracted these entities from the stories json file: All individuals mentioned, all events and organizations and all places. I only needed entities prominently featured throughout the json, but I also wanted to have all these places and people and events in one place in case I neeeded to do a quick factcheck or something. I made the script to categorize prominently featured entities by extracting those mentioned 4 or more times, and putting them in a seperate header. The script for this extraction was saved as entity_extractor.py and the entities themselves were saved as entity_report.
+Then, I asked Copilot to cross-reference the talbot_beatbook_v7 with the entity_report.
+The beatbook mostly remained the same, but there were a few positive updates:
+In the final draft, Alan Lowrey is not just the Easton Police Chief but also served as Interim TOwn Manager. When I factchecked this myself, it true that Lowrey served in this capacity, but someone else had been appointed to occupy the position and Lowry was helping him transition as of the last information we have in our json. So while the new document does not mention the transition, it is not wrong in identifyimng him as an Interim Townm Manager. That was not a role that came up before.
+Also, the talbot_beatbok_v7 had a Laura Henderson listed as Council President instead of Chuck Callahan. 
+It removed a few names like Milton Orellana, J.R. Dobson and I am not sure why because they do appear a number of times in the source json file, but I didn't mind, because there were other relevant names listed.
+Otherwise, there were not much chnages in the structure of the final beatbook and the wordings mostly remained the same.
