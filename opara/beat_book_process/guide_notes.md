@@ -1,4 +1,4 @@
-# 12/14/2025
+# 12/14/2025 GUIDE NOTES
 Before creating the guide book, I asked Copilot to generate a script with which I could create the book.
 I ran into some issues because the combined.txt had too much information and was above the context window for the model I used: groq/openai/gpt-oss-120b
 So I tried it with claude-3.5-sonnet. I also told Copilot to process it in batches, like we did for the main beatbook.
